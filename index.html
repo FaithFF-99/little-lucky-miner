@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff9ed">
+  <meta name="description" content="有人为你藏了一点小惊喜。点一下，挖黄金、收钻石，再打开一个藏着喜欢的神秘口袋。">
+  <meta property="og:title" content="小小矿工 · 有个惊喜想送给你">
+  <meta property="og:description" content="黄金、钻石，还有藏在问号袋里的小心意。点开就能玩的像素小游戏。">
+  <meta property="og:type" content="website">
+  <title>小小矿工 · 把快乐挖出来</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iI2ZmZjRkNSIvPjxwYXRoIGQ9Ik03IDhoNnY0aDZWOGg2djRoM3Y4aC00djRoLTR2NGgtOHYtNEg4di00SDR2LThoM1oiIGZpbGw9IiNkYzdiOTEiLz48cGF0aCBkPSJNOCAxMWg0djRIOFoiIGZpbGw9IiNmNGI2YzIiLz48L3N2Zz4K" type="image/svg+xml">
+  <style>
+:root{--paper:#fffaf0;--ink:#514b3e;--muted:#928a79;--line:#e8dfce;--green:#6a8055;--pink:#cf7f96;--yellow:#f0c56f;--font:ui-rounded,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--font);-webkit-font-smoothing:antialiased;background-image:radial-gradient(#a9926e14 .8px,transparent .8px);background-size:7px 7px}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default}button,a,input,textarea,canvas{ -webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,canvas:focus-visible{outline:3px solid #7f9c6a;outline-offset:5px}button{color:inherit}a{color:inherit}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}svg{width:22px;height:22px;display:block;flex-shrink:0}.page-wrap{max-width:1120px;margin:auto;padding:0 32px}button{transition:transform .16s ease,background .16s ease,box-shadow .16s ease}button:active:not(:disabled){transform:translateY(2px)}.site-header{height:99px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:19px;letter-spacing:1px;font-weight:800}.brand-mark{display:grid;place-items:center;background:#f8eac8;border:1px solid #e3d1a7;border-radius:10px;box-shadow:0 2px #e6d9bf;width:43px;height:43px;transform:rotate(-5deg)}.brand-mark svg{width:29px;height:29px}.brand-en{display:block;font-size:8px;font-family:monospace;letter-spacing:1.65px;color:#9c9078;margin-top:5px;font-weight:500}.header-actions{display:flex;align-items:center;gap:22px}.tiny-note{font-size:11px;letter-spacing:1px;color:#958c77;display:flex;align-items:center;gap:7px}.status-dot{width:6px;height:6px;background:#97aa75;border-radius:50%;box-shadow:0 0 0 3px #9bad7712}.icon-button{height:38px;width:38px;display:grid;place-items:center;border:1px solid var(--line);background:#fffaf0;border-radius:50%;color:#8c826f}.icon-button svg{width:18px;height:18px}.sound-off{display:none}.muted .sound-wave{display:none}.muted .sound-off{display:initial}.intro{position:relative;text-align:center;padding:38px 0 31px}.intro-kicker{font-size:10px;color:#a3977a;letter-spacing:2.1px;display:inline-flex;align-items:center;gap:10px}.intro-kicker span{color:#d4aa61;font-size:14px}.intro h1{font-size:35px;letter-spacing:1.3px;margin:14px 0 12px;font-weight:750;line-height:1.45}.title-surprise{color:#bd7786;position:relative;display:inline-block}.title-surprise:after{content:"";position:absolute;bottom:0;left:1px;right:5px;height:5px;background:#ebbdc259;z-index:-1;transform:rotate(-1deg)}.title-heart{position:absolute;width:16px;height:16px;right:-21px;top:-5px;color:#dda2b1;transform:rotate(12deg)}.intro p{font-size:12px;line-height:1.9;letter-spacing:.7px;color:var(--muted);margin:0}.mobile-only{display:none}.play-layout{display:grid;grid-template-columns:minmax(0,1fr) 233px;gap:23px;align-items:start}.game-shell{border:2px solid #7a725e;border-radius:13px;background:#f8f0dc;overflow:hidden;box-shadow:0 5px 0 #dfd5bc}.stage-toolbar{height:39px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#f8f1de;border-bottom:2px solid #7a725e;font:9px monospace;color:#8a7f65;letter-spacing:1.1px}.stage-toolbar>span{display:flex;align-items:center;gap:7px}.toolbar-dot{width:6px;height:6px;background:#a4af7b;border-radius:1px}.stage-mode{font:10px var(--font);letter-spacing:.5px}.stage-mode svg{width:9px;height:9px;color:#ca9b9a}.stage-wrap{position:relative;isolation:isolate;overflow:hidden;background:#ead2a6}#game{width:100%;height:auto;aspect-ratio:800/520;display:block;image-rendering:pixelated;touch-action:manipulation;cursor:crosshair;user-select:none;-webkit-user-select:none;outline-offset:-4px}.stage-controls{height:67px;background:#fff8e9;padding:10px 15px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #7a725e;gap:7px}.control-hint{display:flex;align-items:center;gap:9px;font-size:10px;color:#9a8c71}.key-cap{font-family:monospace;font-size:9px;border:1px solid #d6cbb2;border-bottom:3px solid #d6cbb2;border-radius:4px;background:#f9f3e4;padding:5px 6px;color:#8d826b}.drop-button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #6b7b50;border-bottom:3px solid #566640;background:#829267;color:#fffcee;font-size:12px;font-weight:700;padding:10px 16px;border-radius:6px;min-width:123px}.drop-button:hover:not(:disabled){background:#6d8057}.drop-button:disabled{opacity:.55}.drop-button svg{width:16px;height:16px}.under-game{text-align:center;color:#a69a81;font-size:10px;letter-spacing:.9px;margin:17px 0 0}.under-game>span:first-child{color:#c8a36a;margin-right:5px}.treasure-panel{display:flex;flex-direction:column;gap:13px}.haul-card,.surprise-card{border:1px solid #e0d8c4;border-radius:11px;padding:18px;background:#fffaf0;position:relative}.haul-card:before{content:"";position:absolute;height:5px;top:4px;left:6px;right:6px;background:repeating-linear-gradient(90deg,#e7d9b9 0 5px,transparent 5px 10px);border-radius:2px;opacity:.3}.card-heading{display:flex;justify-content:space-between;align-items:center}.card-heading h2{font-size:12px;letter-spacing:.8px;font-weight:650;margin:0}.mini-spark{color:#d5b679;font-size:16px}.score{display:flex;align-items:baseline;gap:8px;margin:15px 0 18px}.score strong{font:500 36px/1 ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:-1.2px;color:#74664b}.score>span{font-size:10px;color:#a5987f}.haul-stats{display:grid;gap:12px}.haul-stats>div{display:flex;align-items:center;gap:9px;font-size:11px;color:#8e846f}.haul-stats svg{width:18px;height:18px}.haul-stats b{font:12px ui-monospace,monospace;font-weight:500;margin-left:auto}.best-line{display:flex;justify-content:space-between;font-size:9px;color:#aa9d86;border-top:1px dashed #e4d9c1;padding-top:13px;margin-top:17px;letter-spacing:.2px}.best-line b{font:10px ui-monospace,monospace}.surprise-card{background:#f9ede9;border-color:#ecd5cf;padding-top:15px}.surprise-card .card-heading h2{color:#9e6f74}.handwritten{font-family:Georgia,serif;font-size:12px;font-style:italic;color:#c9969f;transform:rotate(-7deg)}.surprise-card p{font-size:10px;line-height:1.8;color:#b08f8a;margin:11px 0 15px}.bag-stamps{display:flex;gap:11px;justify-content:center}.bag-stamps span{display:grid;place-items:center;width:44px;height:47px;background:#f5e3de;border:1px dashed #cfaaa2;border-radius:9px;font:22px monospace;color:#c69d96;transition:.25s}.bag-stamps span.open{background:#fff7f0;border-style:solid;color:#bd768d;font-size:24px;transform:rotate(-5deg)}.bag-stamps span.open:nth-child(2){transform:rotate(5deg)}.surprise-caption{text-align:center;font-size:9px;letter-spacing:.6px;color:#b18d88;margin-top:13px}.note-button,.share-button{width:100%;display:flex;justify-content:center;align-items:center;gap:8px;border-radius:7px;font-size:11px;min-height:41px;letter-spacing:.4px}.note-button{background:#f2efdf;border:1px solid #e1dbc3;color:#887b5a}.note-button:hover{background:#eae6ce}.note-button svg,.share-button svg{width:15px;height:15px}.note-button>span:last-child{margin-left:7px;color:#a59573}.share-button{border:1px solid #d8d8bf;background:#ecf0e0;color:#78825e;margin-top:-5px}.share-button:hover{background:#e1e8d0}.restart-button{border:0;background:transparent;font-size:10px;color:#aa9f89;display:flex;align-items:center;justify-content:center;gap:5px;margin-top:-3px;min-height:29px}.restart-button:hover{color:#7e725d}.restart-button svg{width:13px;height:13px}.field-guide{margin-top:25px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:21px 17px;gap:18px}.guide-title{font-size:10px;letter-spacing:1px;color:#aa9e85;white-space:nowrap}.guide-item{display:flex;align-items:center;gap:12px}.guide-item svg{width:26px;height:26px}.guide-item>span{font-size:10px;letter-spacing:.5px}.guide-item small{display:block;font-size:9px;color:#ab9e85;margin-top:5px;letter-spacing:.3px}footer{display:flex;align-items:center;justify-content:center;gap:13px;padding:25px 0 28px;color:#b5aa93;font-size:9px;letter-spacing:.7px}footer span:first-child{font-family:monospace;font-size:8px;letter-spacing:1.3px}footer svg{width:8px;height:8px;color:#d0a7a7}.start-overlay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:#e6d8be30;backdrop-filter:blur(1px);transition:opacity .25s}.start-overlay.is-hidden{opacity:0;pointer-events:none}.start-card{position:relative;text-align:center;padding:27px 36px 21px;border:1.5px solid #b9a78a;background:#fff9eefa;box-shadow:5px 6px 0 #806a4a30;border-radius:9px;transform:translateY(7px)}.start-card:after,.start-card:before{content:"✦";position:absolute;top:12px;left:14px;font-size:10px;color:#d6b375}.start-card:after{left:auto;right:14px}.start-spark{display:block;font-size:31px;color:#b9a16d;line-height:1}.eyebrow{font:7px monospace;letter-spacing:1.45px;color:#b4a080;display:block;margin:11px 0 12px}.start-card h2{font-size:21px;margin:0 0 10px;letter-spacing:1px}.start-card p{font-size:11px;line-height:1.95;color:#9a8a70;margin:0 0 19px}.primary-button{border:1px solid #738052;border-bottom:4px solid #606e43;border-radius:7px;background:#8b9b6e;color:#fffdf2;padding:12px 21px;display:flex;align-items:center;justify-content:center;gap:11px;font-size:13px;font-weight:650;letter-spacing:.6px;min-height:46px;margin:auto;min-width:178px}.primary-button:hover{background:#7a8d5e;box-shadow:0 3px 10px #7b8b4f18}.primary-button svg{width:17px;height:17px}.start-footnote{font-size:8px;letter-spacing:1px;color:#b7a98e;display:block;margin-top:13px}.floating-label{position:absolute;left:50%;top:25%;padding:7px 13px;color:#6d6146;background:#fff6d6ed;border:1px solid #c8ad70;border-radius:5px;font-size:12px;font-weight:650;white-space:nowrap;opacity:0;pointer-events:none;z-index:1;transform:translate(-50%,0)}.floating-label.show{animation:float-up 1.6s ease forwards}@keyframes float-up{0%{opacity:0;transform:translate(-50%,10px)}15%,65%{opacity:1}100%{opacity:0;transform:translate(-50%,-22px)}}dialog{position:fixed;border:1.5px solid #b7a68a;border-radius:15px;box-shadow:6px 7px 0 #52422c20,0 25px 80px #453a3433;padding:0;color:var(--ink);background:#fff9ee;width:calc(100% - 40px);max-width:390px;overflow:visible;max-height:calc(100dvh - 48px)}dialog::backdrop{background:#453b3159;backdrop-filter:blur(4px)}dialog[open]{animation:dialog-in .25s ease-out}@keyframes dialog-in{from{opacity:0;transform:translateY(15px) scale(.96)}to{opacity:1;transform:none}}.dialog-content{position:relative;text-align:center;padding:34px 26px 26px;overflow:auto;max-height:calc(100dvh - 48px);border-radius:14px}.dialog-kicker{font-size:9px;letter-spacing:1.7px;color:#b2987f;display:block}.dialog-content h2{font-size:29px;margin:14px 0 13px;letter-spacing:1px;color:#b76f86}.dialog-content p{font-size:12px;color:#a18c7d;line-height:1.95;margin:0 0 25px;overflow-wrap:anywhere;white-space:pre-line}.dialog-content .primary-button{min-width:215px}.dialog-footnote{font-size:9px;letter-spacing:.8px;color:#b8a591;display:block;margin-top:17px}.surprise-art{height:111px;display:grid;place-items:center;margin:14px 0 0;position:relative}.surprise-art canvas{width:120px;height:112px;image-rendering:pixelated}.surprise-art .cute-face{font-size:51px;line-height:1.2;animation:face-bob 1.6s ease-in-out infinite}.surprise-art:before,.surprise-art:after{content:"✦";position:absolute;top:35px;left:45px;color:#ddba74;font-size:18px;animation:face-bob 1.8s ease-in-out infinite}.surprise-art:after{left:auto;right:41px;top:60px;color:#d39aad;font-size:13px;animation-delay:.5s}@keyframes face-bob{50%{transform:translateY(-5px) rotate(3deg)}}.close-dialog{position:absolute;right:12px;top:11px;border:0;background:transparent;color:#ac9e8b;font-size:25px;line-height:30px;width:33px;height:33px}.note-dialog{max-width:423px}.note-dialog form{position:relative;padding:35px 27px 27px;overflow:auto;max-height:calc(100dvh - 48px);border-radius:14px}.note-dialog h2{font-size:22px;margin:17px 0 13px;letter-spacing:.5px}.note-dialog p{font-size:11px;color:#a4977f;line-height:1.95;margin:0 0 22px}.note-dialog label{font-size:11px;color:#8e8068;display:flex;justify-content:space-between;margin-bottom:9px}.note-dialog label span{font-size:9px;color:#b4a68b}.note-dialog textarea,.note-dialog input{background:#fffdf7;border:1px solid #dfd3bc;border-radius:7px;color:#887055;padding:12px;width:100%;font-size:12px;line-height:1.7;resize:vertical}.note-dialog textarea::placeholder{color:#c1b5a1}.note-dialog .form-tip{font-size:9px;color:#b8a78d;margin:8px 0 23px}.note-dialog .primary-button{width:100%;font-size:12px;min-height:47px}.copy-link-box{margin-top:20px;padding-top:17px;border-top:1px dashed #dfd3bc}.copy-link-box label{font-size:9px}.copy-link-box input,.fallback-link{font-family:monospace;font-size:10px!important}.small-copy{background:#f2ead5;border:1px solid #d9ccb0;border-radius:5px;font-size:11px;margin:10px auto 0;display:block;padding:7px 18px}.finish-icon{font-size:71px;color:#dbb26a;margin:7px 0}.finish-dialog h2{font-size:23px}.finish-letter{padding:14px 0;border-top:1px dashed #dfd3bc;border-bottom:1px dashed #dfd3bc;font-size:12px!important;color:#ac8d78!important}.text-button{font-size:11px;color:#b0927e;border:0;background:transparent;margin-top:14px;min-height:30px}.fallback-link{margin-bottom:20px}.toast{position:fixed;bottom:max(30px,env(safe-area-inset-bottom));left:50%;transform:translate(-50%,15px);border:1px solid #d3c6ac;box-shadow:0 4px 20px #705b3320;padding:13px 19px;font-size:12px;line-height:1.6;background:#fffbf0;color:#87724f;border-radius:9px;z-index:20;opacity:0;pointer-events:none;transition:.2s;text-align:center;max-width:90%;white-space:nowrap}.toast.visible{opacity:1;transform:translate(-50%,0)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.noscript-message{text-align:center;padding:20px;background:#f5d9cb}
+.round-pet{display:grid;place-items:center;height:115px;margin:16px 0 -3px}.round-pet canvas{width:120px;height:112px;image-rendering:pixelated}
+@media(min-width:1400px){.page-wrap{padding-top:10px}.intro{padding-top:46px;padding-bottom:38px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(max-width:880px){.page-wrap{padding:0 23px}.play-layout{grid-template-columns:minmax(0,1fr) 200px;gap:17px}.haul-card,.surprise-card{padding:16px}.bag-stamps{gap:9px}.bag-stamps span{width:40px;height:43px}.stage-mode{font-size:8px}.intro h1{font-size:30px}.control-hint{font-size:9px;gap:6px}.drop-button{min-width:107px;font-size:11px;padding:9px 11px}.stage-controls{padding:9px 11px}.field-guide{padding:18px 8px;gap:12px}.guide-item{gap:7px}.guide-title{font-size:9px}.start-card{padding:20px 24px 17px}.start-card h2{font-size:18px}.eyebrow{font-size:6px}.start-spark{font-size:24px}.start-card p{font-size:10px;margin-bottom:15px}.start-footnote{margin-top:10px}.primary-button{font-size:12px;min-height:43px;padding:10px 18px}}
+@media(max-width:680px){.page-wrap{padding:0 18px}.site-header{height:76px}.brand{font-size:17px;gap:9px}.brand-mark{width:36px;height:36px;border-radius:8px}.brand-mark svg{width:25px;height:25px}.brand-en{font-size:6px;letter-spacing:1.2px;margin-top:4px}.header-actions{gap:12px}.tiny-note{font-size:9px;letter-spacing:.3px;gap:6px}.icon-button{height:34px;width:34px}.intro{padding:27px 0 24px}.intro-kicker{font-size:9px;letter-spacing:1.8px;gap:9px}.intro h1{font-size:27px;letter-spacing:.6px;margin:12px 0 10px;line-height:1.55}.title-surprise{display:block;width:max-content;margin:auto}.title-heart{width:13px;height:13px;right:-20px;top:8px}.intro h1>.title-surprise:after{bottom:4px}.title-first{display:block}.title-period{display:none}.title-surprise{font-size:27px}.intro p{font-size:11px;line-height:1.8;letter-spacing:.5px}.mobile-only{display:block}.desktop-only{display:none}.play-layout{display:flex;flex-direction:column;gap:20px}.game-column{width:100%}.game-shell{border-radius:10px}.stage-toolbar{height:34px;padding:0 11px;font-size:8px;letter-spacing:.7px}.stage-mode{font-size:8px}.stage-mode svg{width:8px;height:8px}.stage-toolbar>span{gap:5px}#game{aspect-ratio:800/650}.stage-controls{height:65px;padding:9px 12px}.control-hint{font-size:10px;gap:7px}.tap-icon{font-size:19px;color:#a49272;line-height:1}.drop-button{padding:11px 15px;min-width:120px;font-size:12px}.under-game{font-size:9px;margin-top:15px;letter-spacing:.5px}.treasure-panel{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}.haul-card,.surprise-card{padding:15px;min-height:187px;border-radius:9px}.card-heading h2{font-size:11px;letter-spacing:.2px}.score{margin:14px 0 14px;gap:6px}.score strong{font-size:30px}.score>span{font-size:9px}.haul-stats{display:flex;gap:14px}.haul-stats>div{font-size:9px;gap:4px}.haul-stats b{margin-left:2px;font-size:10px}.haul-stats svg{width:16px;height:16px}.best-line{font-size:8px;padding-top:12px;margin-top:13px}.handwritten{font-size:10px}.surprise-card p{font-size:9px;line-height:1.8;margin:13px 0 14px;white-space:nowrap;letter-spacing:-.3px}.bag-stamps{gap:7px}.bag-stamps span{width:35px;height:38px;font-size:19px;border-radius:7px}.surprise-caption{font-size:8px;letter-spacing:.1px;margin-top:14px}.note-button,.share-button{font-size:10px;min-height:43px;gap:6px;margin:0;letter-spacing:0}.note-button>span:last-child{margin-left:1px}.note-button svg,.share-button svg{width:13px;height:13px}.restart-button{grid-column:1/-1;margin:0;min-height:28px;font-size:10px}.field-guide{margin-top:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px 8px;padding:20px 0}.guide-title{grid-column:1/-1;text-align:center;font-size:9px;letter-spacing:1.6px}.guide-item{gap:7px;justify-content:center}.guide-item svg{width:21px;height:21px}.guide-item>span{font-size:9px;letter-spacing:0}.guide-item small{font-size:7px;margin-top:4px;letter-spacing:0}footer{flex-wrap:wrap;gap:10px;padding:23px 0 27px;font-size:8px}footer span:first-child{font-size:7px;letter-spacing:.8px}.start-card{padding:22px 23px 18px;transform:translateY(12px);max-width:88%}.start-spark{font-size:27px}.eyebrow{font-size:6px;letter-spacing:1.1px;margin:9px 0 10px}.start-card h2{font-size:19px;letter-spacing:.5px}.start-card p{font-size:10px;line-height:1.9;margin-bottom:15px}.start-card .primary-button{font-size:12px;min-width:169px;min-height:43px}.start-footnote{font-size:8px}.floating-label{font-size:11px;padding:6px 10px}}
+@media(max-width:355px){.page-wrap{padding:0 12px}.tiny-note{display:none}.intro h1,.title-surprise{font-size:25px}.stage-mode{font-size:7px}.stage-toolbar{padding:0 8px}.haul-card,.surprise-card{padding:12px}.surprise-card p{font-size:8px}.bag-stamps{gap:5px}.bag-stamps span{width:30px;height:35px}.start-card{padding:12px 16px 11px;transform:none}.start-card h2{font-size:16px;margin-bottom:8px}.start-card p{font-size:8.5px;margin-bottom:12px}.start-spark{font-size:18px}.eyebrow{font-size:5.5px;margin:7px 0}.start-card .primary-button{min-height:36px;padding:7px 14px;min-width:154px}.start-footnote{font-size:7px;margin-top:8px}.guide-item{gap:4px}.guide-item svg{width:18px;height:18px}.guide-item>span{font-size:8px}.guide-item small{font-size:6px}}
+
+</style>
+  <script defer>document.addEventListener("DOMContentLoaded",()=>{
+(() => {
+  'use strict';
+
+  const $ = (id) => document.getElementById(id);
+  const canvas = $('game');
+  const ctx = canvas.getContext('2d');
+  const W = 800;
+  let H = 520;
+  let ground = 148;
+  let anchor = { x: 400, y: 164 };
+  let background;
+  let lastTime = 0;
+  let elapsed = 0;
+  let toastTimeout;
+  let announcementTimeout;
+  let audioContext;
+  let soundEnabled = false;
+  let secret = readSecret();
+  let lastShareURL = '';
+  let closingSurprise = false;
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  const game = {
+    started: false, round: 1, completed: false, score: 0,
+    gold: 0, diamonds: 0, bags: 0, roundTreasures: 0, roundBag: false,
+    items: [], particles: [], hook: { phase: 'swing', angle: -.6, length: 34, cargo: null },
+    best: readBest(), special: new Set(),
+  };
+
+  const COLORS = {
+    gold: ['#8c663e', '#edb749', '#ffdf88', '#ca913a'],
+    diamond: ['#568b80', '#8acdc4', '#d2f5df', '#62a99e'],
+    bag: ['#a26b73', '#df9cac', '#f7bdc6', '#be7f92'],
+  };
+
+  const SURPRISES = [
+    { pet: 'cat', title: 'miss you', kicker: '小猫带来了一句悄悄话', message: '小猫伸了个懒腰，我又想起了你。\n愿你今天，也有暖暖的好心情。', button: '收到想念啦，继续挖 ♡' },
+    { pet: 'dog', title: 'my beloved', kicker: '小狗把偏爱叼给了你', message: '开心的事想告诉你，好吃的想留给你。\n你永远是我想偏心的那一个。', button: '这份偏爱，我收好啦 ♡' },
+    { pet: 'heart', title: 'love you', kicker: '最后一只口袋，藏着满满的喜欢', message: '黄金和钻石都很闪亮，\n但今天最想找到的宝藏，是你。', button: '喜欢收到啦 ♡' },
+  ];
+
+  function readBest() {
+    try { return Math.max(0, Number(localStorage.getItem('little-lucky-miner-best-v1')) || 0); }
+    catch { return 0; }
+  }
+
+  function readSecret() {
+    try {
+      const params = new URLSearchParams(location.hash.slice(1));
+      return (params.get('note') || '').slice(0, 60).trim();
+    } catch { return ''; }
+  }
+
+  function makeShareURL(message = secret) {
+    const url = new URL(location.href);
+    url.hash = message ? new URLSearchParams({ note: message }).toString() : '';
+    return url.href;
+  }
+
+  function rect(c, x, y, w, h, color) {
+    c.fillStyle = color;
+    c.fillRect(Math.round(x), Math.round(y), Math.round(w), Math.round(h));
+  }
+
+  function poly(c, points, color) {
+    c.fillStyle = color;
+    c.beginPath();
+    c.moveTo(points[0][0], points[0][1]);
+    for (let i = 1; i < points.length; i++) c.lineTo(points[i][0], points[i][1]);
+    c.closePath(); c.fill();
+  }
+
+  function sprite(c, rows, palette, x, y, s = 3) {
+    rows.forEach((row, j) => [...row].forEach((key, i) => {
+      if (palette[key]) rect(c, x + i * s, y + j * s, s, s, palette[key]);
+    }));
+  }
+
+  function pixelHeart(c, x, y, s, color = '#db8ca0') {
+    sprite(c, ['.xx.xx.', 'xxxxxxx', 'xxxxxxx', '.xxxxx.', '..xxx..', '...x...'], { x: color }, x, y, s);
+    rect(c, x + s, y + s, s, s, '#f9c7cc');
+  }
+
+  function drawCloud(c, x, y, size = 1) {
+    rect(c, x + 13 * size, y, 46 * size, 9 * size, '#faf7e8');
+    rect(c, x, y + 9 * size, 86 * size, 13 * size, '#faf7e8');
+    rect(c, x + 7 * size, y + 22 * size, 65 * size, 5 * size, '#f3eddb');
+  }
+
+  function drawTree(c, x, y, s, shade) {
+    rect(c, x - 3 * s, y - 19 * s, 6 * s, 24 * s, '#a18e69');
+    rect(c, x - 5 * s, y - 20 * s, 3 * s, 11 * s, '#baa27a');
+    const f = shade || '#9eaf79';
+    rect(c, x - 12 * s, y - 42 * s, 24 * s, 12 * s, f);
+    rect(c, x - 21 * s, y - 31 * s, 42 * s, 17 * s, f);
+    rect(c, x - 15 * s, y - 15 * s, 30 * s, 6 * s, f);
+    rect(c, x - 10 * s, y - 40 * s, 13 * s, 8 * s, '#bdc78d');
+    rect(c, x + 4 * s, y - 26 * s, 12 * s, 7 * s, '#8fa370');
+  }
+
+  function createBackground() {
+    background = document.createElement('canvas');
+    background.width = W; background.height = H;
+    const c = background.getContext('2d');
+    c.imageSmoothingEnabled = false;
+    rect(c, 0, 0, W, ground, '#e9ead3');
+    rect(c, 0, ground * .47, W, ground * .53, '#e8e6c9');
+    rect(c, 657, 27, 42, 42, '#f4c994');
+    rect(c, 648, 36, 60, 24, '#f4c994');
+    rect(c, 661, 31, 34, 34, '#f6d29f');
+    drawCloud(c, 51, 35, .9); drawCloud(c, 272, 20, .65); drawCloud(c, 512, 53, .7);
+    poly(c, [[0, ground - 38], [39, ground - 38], [39, ground - 48], [79, ground - 48], [79, ground - 58], [133, ground - 58], [133, ground - 71], [191, ground - 71], [191, ground - 55], [246, ground - 55], [246, ground - 42], [304, ground - 42], [304, ground], [0, ground]], '#c5cba7');
+    poly(c, [[420, ground], [420, ground - 32], [462, ground - 32], [462, ground - 45], [510, ground - 45], [510, ground - 67], [574, ground - 67], [574, ground - 81], [633, ground - 81], [633, ground - 66], [688, ground - 66], [688, ground - 51], [746, ground - 51], [746, ground - 33], [800, ground - 33], [800, ground]], '#c4caaa');
+    poly(c, [[0, ground - 20], [30, ground - 20], [30, ground - 35], [76, ground - 35], [76, ground - 24], [155, ground - 24], [155, ground - 13], [256, ground - 13], [256, ground - 25], [319, ground - 25], [319, ground - 16], [456, ground - 16], [456, ground - 31], [530, ground - 31], [530, ground - 18], [639, ground - 18], [639, ground - 34], [716, ground - 34], [716, ground - 20], [800, ground - 20], [800, ground], [0, ground]], '#b1be90');
+    drawTree(c, 65, ground - 7, 1.2); drawTree(c, 127, ground - 6, .8, '#a6b585');
+    drawTree(c, 736, ground - 5, 1.05); drawTree(c, 690, ground - 5, .65, '#a5b783');
+    rect(c, 0, ground - 7, W, 11, '#9bac76');
+    rect(c, 0, ground + 4, W, H, '#e6be87');
+    rect(c, 0, ground + 16, W, H, '#edcc98');
+    poly(c, [[0, ground + 125], [62, ground + 125], [62, ground + 140], [173, ground + 140], [173, ground + 132], [307, ground + 132], [307, ground + 152], [470, ground + 152], [470, ground + 141], [579, ground + 141], [579, ground + 130], [701, ground + 130], [701, ground + 145], [800, ground + 145], [800, H], [0, H]], '#e3bc85');
+    poly(c, [[0, H - 95], [68, H - 95], [68, H - 81], [194, H - 81], [194, H - 106], [288, H - 106], [288, H - 87], [403, H - 87], [403, H - 72], [550, H - 72], [550, H - 91], [662, H - 91], [662, H - 115], [800, H - 115], [800, H], [0, H]], '#d6aa75');
+    rect(c, 0, H - 21, W, 21, '#cca06c');
+    let seed = 417 + game.round * 217;
+    const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+    for (let i = 0; i < 105; i++) {
+      const x = 12 + rand() * 776, y = ground + 35 + rand() * (H - ground - 57);
+      const color = rand() > .46 ? '#b8885738' : '#fff1c24a';
+      const size = 2 + Math.floor(rand() * 3);
+      rect(c, x, y, size * 2, size, color);
+      if (i % 3 === 0) rect(c, x + size * 2, y - size, size, size, color);
+    }
+    for (let x = 0; x < W; x += 17) {
+      const hh = (x * 17 % 11) + 4;
+      rect(c, x, ground - 8 - hh, 4, hh, '#a4b57c');
+      if (x % 3 === 0) rect(c, x + 4, ground - 8 - hh, 4, 4, '#bdc78c');
+      if (x % 5 === 0) { rect(c, x + 3, ground + 4, 4, 13, '#b59b68'); rect(c, x + 7, ground + 13, 7, 3, '#b59b68'); }
+    }
+    // A tiny sign, flowers, and a resting bunny make the mine feel lived in.
+    rect(c, 196, ground - 31, 5, 32, '#a18b64');
+    rect(c, 163, ground - 53, 73, 30, '#a18b64');
+    rect(c, 166, ground - 50, 67, 24, '#e6d7a9');
+    c.font = '8px monospace'; c.textAlign = 'center'; c.fillStyle = '#8b7b58';
+    c.fillText('GOOD LUCK', 200, ground - 34);
+    pixelHeart(c, 567, ground - 28, 2, '#d9a094');
+    sprite(c, ['..w.w...', '..w.w...', '.wwwww..', 'wwkwwkw.', 'wwwppww.', '.wwwww..', '..ww.ww.'], { w: '#fff2dc', k: '#887655', p: '#edbdab' }, 592, ground - 31, 3);
+    for (const [x, y] of [[90, ground - 8], [268, ground - 8], [630, ground - 8], [757, ground - 8]]) {
+      rect(c, x, y - 9, 3, 11, '#889d65');
+      rect(c, x - 3, y - 10, 9, 3, '#eab3a0'); rect(c, x, y - 13, 3, 9, '#eab3a0');
+      rect(c, x, y - 10, 3, 3, '#f7dd9e');
+    }
+  }
+
+  function drawMiner(c, t) {
+    const busy = game.hook.phase === 'return' && game.hook.cargo;
+    const bob = busy && !reduceMotion.matches ? Math.floor(Math.sin(t * 13) * 1.4) : 0;
+    const palette = { o: '#816e51', y: '#e7bc62', l: '#f8d88e', s: '#f4d4a1', b: '#697f80', d: '#526b6e', k: '#6e634f', p: '#dd9d8c', w: '#fff1c9' };
+    sprite(c, [
+      '.....yyyyyyy.....', '....yyylllyyy....', '...yyyyyyyyyyy...', '..yyyyyyyyyyyyy..',
+      '....sssssssss....', '....sksssksss....', '....spssspsss....', '.....sssss.......',
+      '....ybbbyyy......', '...yybbbbbys.....', '...sybbbbbys.....', '...sybbbbbys.....',
+      '.....ddddd.......', '.....dd.dd.......', '....kkk.kkk......',
+    ], palette, 339, ground - 52 + bob, 3);
+    // Wooden hand winch and a little stool.
+    rect(c, 343, ground - 8, 43, 6, '#a88c62');
+    rect(c, 348, ground - 2, 5, 9, '#9c815a'); rect(c, 377, ground - 2, 5, 9, '#9c815a');
+    rect(c, 393, ground - 26, 7, 35, '#8d7857');
+    rect(c, 429, ground - 26, 7, 35, '#8d7857');
+    rect(c, 388, ground - 27, 54, 7, '#ac9364');
+    rect(c, 397, ground - 20, 36, 19, '#bba06d');
+    rect(c, 404, ground - 18, 21, 15, '#7f765e');
+    rect(c, 410, ground - 18, 4, 15, '#d0bd88');
+    rect(c, 400, ground - 13, 32, 4, '#d0bd88');
+    rect(c, 387, ground - 16, 13, 4, '#827252');
+    rect(c, 384, ground - 20 + bob * 2, 5, 11, '#a58656');
+    rect(c, anchor.x - 4, ground - 7, 8, 23, '#847152');
+  }
+
+  function drawOre(c, item, x, y, time = 0) {
+    const r = item.r;
+    if (item.type === 'gold') {
+      const p = COLORS.gold;
+      poly(c, [[x-r*.6,y-r], [x+r*.45,y-r], [x+r*.45,y-r*.7], [x+r*.85,y-r*.7], [x+r*.85,y-r*.25], [x+r,y-r*.25], [x+r,y+r*.48], [x+r*.6,y+r*.48], [x+r*.6,y+r*.83], [x-r*.55,y+r*.83], [x-r*.55,y+r*.58], [x-r,y+r*.58], [x-r,y-r*.38], [x-r*.6,y-r*.38]], p[0]);
+      poly(c, [[x-r*.5,y-r*.83], [x+r*.3,y-r*.83], [x+r*.3,y-r*.52], [x+r*.7,y-r*.52], [x+r*.7,y-r*.1], [x+r*.83,y-r*.1], [x+r*.83,y+r*.33], [x+r*.45,y+r*.33], [x+r*.45,y+r*.64], [x-r*.45,y+r*.64], [x-r*.45,y+r*.4], [x-r*.82,y+r*.4], [x-r*.82,y-r*.22], [x-r*.5,y-r*.22]], p[1]);
+      rect(c, x-r*.48, y-r*.67, r*.72, r*.22, p[2]); rect(c, x-r*.65, y-r*.2, r*.22, r*.5, p[2]);
+      rect(c, x+r*.1, y+r*.3, r*.6, r*.24, p[3]);
+      rect(c, x-r*.17, y+r*.13, r*.22, r*.18, '#ffdc77');
+    } else if (item.type === 'diamond') {
+      const p = COLORS.diamond;
+      poly(c, [[x-r*.55,y-r*.8], [x+r*.55,y-r*.8], [x+r,y-r*.1], [x,y+r], [x-r,y-r*.1]], p[0]);
+      poly(c, [[x-r*.45,y-r*.63], [x+r*.45,y-r*.63], [x+r*.8,y-r*.1], [x,y+r*.76], [x-r*.8,y-r*.1]], p[1]);
+      poly(c, [[x-r*.4,y-r*.6], [x,y-r*.6], [x-r*.24,y-r*.08], [x-r*.75,y-r*.08]], p[2]);
+      poly(c, [[x+r*.1,y-r*.6], [x+r*.4,y-r*.6], [x+r*.72,y-r*.08], [x+r*.26,y-r*.08]], '#b7e7d4');
+      poly(c, [[x-r*.18,y+r*.02], [x+r*.18,y+r*.02], [x,y+r*.65]], '#d3f3de');
+      if (Math.sin(time * 2.1 + item.id) > .5) drawSpark(c, x + r*.8, y-r*.9, 2, '#fff9db');
+    } else if (item.type === 'bag') {
+      const p = COLORS.bag;
+      const s = r / 10;
+      sprite(c, [
+        '....oo.oo....', '....ollol....', '.....ooo.....', '....ooooo....', '...olllloo...',
+        '..olllllllo..', '.ollllllllo..', '.ollllllllo..', 'ollllllllllo.', 'ollllllllllo.',
+        'ollllllllllo.', 'ollllllllllo.', '.ollllllllo..', '..oooooooo...',
+      ], { o:p[0], l:p[1] }, x - 6.5*s, y - 7*s, s);
+      rect(c, x - 2*s, y - 1.5*s, 3*s, s, '#fff2df');
+      rect(c, x + s, y - .5*s, s, 2*s, '#fff2df');
+      rect(c, x - s, y + 1.5*s, 2*s, s, '#fff2df');
+      rect(c, x - s, y + 2.5*s, s, s, '#fff2df');
+      rect(c, x - s, y + 4.5*s, s, s, '#fff2df');
+      rect(c, x - 4*s, y - 3*s, s, 3*s, p[2]);
+      if (Math.sin(time * 2) > -.2) drawSpark(c, x+r, y-r*.6, 2, '#fff2c7');
+    } else if (item.type === 'hotpot') {
+      drawHotpot(c, x, y, r / 12);
+    } else if (item.type === 'helmet') {
+      drawHelmet(c, x, y, r / 12);
+    }
+  }
+
+  function drawSpark(c, x, y, s, color) {
+    rect(c, x-s, y-3*s, 2*s, 6*s, color);
+    rect(c, x-3*s, y-s, 6*s, 2*s, color);
+  }
+
+  function drawHotpot(c, x, y, s = 3) {
+    sprite(c, [
+      '....w...w.....', '...w...w......', '....w...w.....', '..............',
+      '...oooooooo...', '..orrrryrrro..', '.orrprryprrro.', 'oooorryrrroooo',
+      'o..ommmmmmo..o', 'oooogmmmggoooo', '....oggggo....', '.....oooo.....',
+      '....f.y.f.....', '.....yyy......',
+    ], { w:'#fff1d5', o:'#8b6654', r:'#c96d50', y:'#efbc6a', p:'#e7bd95', m:'#b87859', g:'#d8a477', f:'#e99562' }, x-7*s, y-7*s, s);
+  }
+
+  function drawHelmet(c, x, y, s = 3) {
+    sprite(c, [
+      '.....oooo.....', '...ooggggoo...', '..ogggllgggo..', '.oggggllggggo.',
+      '.oggggllggggo.', 'ogggggllgggggo', 'oggggggggggggo', 'oooooooooooooo',
+      '.okkkkkkkkkko.', '..okkwwwwwko..', '..oggggggggo..', '...ooooooggo..',
+    ], { o:'#5f6a53', g:'#8e9b6c', l:'#afba85', k:'#4e574f', w:'#acc6b0' }, x-7*s, y-6*s, s);
+    rect(c, x + 6*s, y+4*s, 5*s, 3*s, '#d9cba7');
+    rect(c, x+7*s, y+3*s, s, 5*s, '#7e8367');
+    rect(c, x+5*s, y+5*s, 5*s, s, '#7e8367');
+  }
+
+  function drawPet(type, target, size = 3) {
+    target.replaceChildren();
+    const art = document.createElement('canvas');
+    art.width = 120; art.height = 112;
+    art.setAttribute('aria-hidden', 'true');
+    const c = art.getContext('2d');
+    c.imageSmoothingEnabled = false;
+    if (type === 'cat') {
+      sprite(c, [
+        '..oo.......oo..', '..ogoo...oogo..', '..ogpgogooggo..', '..ogggggggggo..',
+        '.ogggggggggggo.', '.ogkkgggggkkgo.', '.ogggggggggggo.', '.ogppggkggppgo.',
+        '..ogggkkkgggo..', '...oogggggoo...', '....ogggggo....', '..ooogggggooo..',
+        '.ogggggggggggo.', '..ooooooooooo..',
+      ], { o:'#a38360', g:'#efc893', p:'#e9a69a', k:'#81684f' }, 25, 15, size+1);
+      pixelHeart(c, 88, 16, 2, '#d58ba0');
+    } else if (type === 'dog') {
+      sprite(c, [
+        '...ooooooo.....', '..olllllllo....', '.ollllllllmo...', 'omllmmmmllmmo..',
+        'ommllmmmllmmo..', 'ommkklllkkmmo..', 'ommlllllllmmo..', '.omlppkppmmmo..',
+        '..olllkllloo...', '...oollloo.....', '....olllo......', '...olllllo.....',
+        '..olllllllo....', '..ooooooooo....',
+      ], { o:'#94785a', l:'#f3d8aa', m:'#c89f75', p:'#e5ac9a', k:'#6e614e' }, 25, 15, size+1);
+      pixelHeart(c, 86, 18, 2, '#d58ba0');
+    } else if (type === 'hotpot') {
+      drawHotpot(c, 60, 57, 5);
+    } else if (type === 'helmet') {
+      drawHelmet(c, 58, 57, 5);
+    } else {
+      pixelHeart(c, 24, 28, 10, '#d58ba0');
+      rect(c, 43, 55, 4, 7, '#8e5f66'); rect(c, 74, 55, 4, 7, '#8e5f66');
+      rect(c, 52, 71, 17, 3, '#8e5f66'); rect(c, 55, 74, 11, 3, '#8e5f66');
+    }
+    target.append(art);
+  }
+
+  function layout() {
+    const mobile = matchMedia('(max-width: 680px)').matches;
+    const newH = mobile ? 650 : 520;
+    if (newH === H && background) return;
+    H = newH; canvas.height = H; ground = mobile ? 172 : 148;
+    anchor = { x: 400, y: ground + 16 };
+    ctx.imageSmoothingEnabled = false;
+    createBackground();
+    game.items.forEach((item) => positionItem(item));
+  }
+
+  function positionItem(item) {
+    item.x = item.nx * W;
+    item.y = ground + 86 + item.ny * (H - ground - 126);
+  }
+
+  function populateRound() {
+    const placements = [
+      [[.13,.15,'gold',30], [.35,.22,'diamond',24], [.66,.12,'bag',32], [.87,.23,'gold',24], [.21,.68,'gold',43], [.49,.65,'gold',25], [.76,.69,'diamond',23], [.89,.91,'gold',35]],
+      [[.12,.25,'gold',35], [.36,.08,'hotpot',31], [.66,.25,'diamond',24], [.87,.12,'gold',26], [.23,.78,'diamond',25], [.45,.66,'bag',33], [.7,.83,'gold',44], [.88,.67,'gold',24]],
+      [[.13,.12,'diamond',23], [.36,.27,'gold',42], [.64,.09,'helmet',31], [.87,.31,'gold',28], [.16,.77,'bag',34], [.44,.83,'diamond',25], [.69,.72,'gold',33], [.89,.88,'gold',22]],
+    ];
+    game.items = placements[game.round - 1].map(([nx, ny, type, r], i) => {
+      const value = type === 'diamond' ? 300 : type === 'bag' ? 100 : type === 'gold' ? (r >= 40 ? 200 : r >= 28 ? 100 : 50) : 150;
+      const item = { id: i, nx, ny, type, r, value, collected: false };
+      positionItem(item); return item;
+    });
+    game.roundTreasures = 0; game.roundBag = false;
+    game.hook = { phase: 'swing', angle: -.6, length: 34, cargo: null };
+    elapsed = -.55;
+    canvas.dataset.round = game.round;
+    canvas.dataset.phase = 'swing';
+    createBackground();
+    updateUI();
+  }
+
+  function dialogOpen() { return Boolean(document.querySelector('dialog[open]')); }
+  function active() { return game.started && !game.completed && !dialogOpen(); }
+
+  function updateUI() {
+    $('score').textContent = game.score.toLocaleString();
+    $('best-score').textContent = Math.max(game.best, game.score).toLocaleString();
+    $('gold-count').textContent = game.gold;
+    $('diamond-count').textContent = game.diamonds;
+    $('mine-label').textContent = `LUCKY MINE / 0${game.round} · 03`;
+    $('round-goal').textContent = ['第一局 · 3 件宝藏 + 1 个问号袋', '第二局 · 3 件宝藏（含火锅）+ 1 个问号袋', '第三局 · 3 件宝藏（含头盔）+ 1 个问号袋'][game.round-1];
+    const stamps = $('bag-stamps').children;
+    const icons = ['♡', '♡', '♡'];
+    for (let i = 0; i < stamps.length; i++) {
+      stamps[i].classList.toggle('open', i < game.bags);
+      stamps[i].textContent = i < game.bags ? icons[i] : '?';
+      stamps[i].setAttribute('aria-label', i < game.bags ? ['已收到小猫的想念', '已收到小狗的偏爱', '已收到满满的喜欢'][i] : `第 ${i+1} 局的惊喜`);
+    }
+    $('bag-stamps').setAttribute('aria-label', `已打开 ${game.bags} 个惊喜袋，共 3 个`);
+    $('surprise-caption').textContent = game.bags === 3 ? '三份小心意，都送给你啦 ♡' : `已收到 ${game.bags} / 3 份小心意`;
+    updateControls();
+    if (game.score > game.best) {
+      game.best = game.score;
+      try { localStorage.setItem('little-lucky-miner-best-v1', String(game.best)); } catch { /* Storage is optional. */ }
+    }
+  }
+
+  function updateControls() {
+    const ready = active() && game.hook.phase === 'swing';
+    $('drop-btn').disabled = !ready;
+    $('drop-btn').querySelector('span').textContent = game.hook.phase === 'swing' ? '下钩抓取' : game.hook.phase === 'extend' ? '宝藏，我来啦' : '正在收钩…';
+    $('play-hint').textContent = !game.started ? '点击开始，收集三份小心意' : game.completed ? '三局完成，快乐收好啦' : game.hook.phase === 'swing' ? '点击画面 / 按空格下钩' : game.hook.cargo ? '抓住啦，慢慢拉回来' : '不着急，再试一次也很好';
+    canvas.dataset.phase = game.hook.phase;
+    canvas.setAttribute('aria-label', `第 ${game.round} 局，共 3 局。宝藏 ${Math.min(game.roundTreasures,3)}/3，问号袋 ${game.roundBag ? 1 : 0}/1。${ready ? '点击或按空格下钩。' : '正在收集宝藏。'}`);
+  }
+
+  function startGame() {
+    if (game.started) return;
+    game.started = true;
+    $('start-overlay').classList.add('is-hidden');
+    $('start-btn').disabled = true;
+    $('start-btn').tabIndex = -1;
+    $('start-overlay').setAttribute('aria-hidden', 'true');
+    tone('start'); updateUI();
+    announce('第一局开始。点一下画面就能下钩。找到三件宝藏和一个问号袋吧。');
+    canvas.focus({ preventScroll: true });
+  }
+
+  function fire() {
+    if (!active() || game.hook.phase !== 'swing') return;
+    game.hook.phase = 'extend';
+    tone('fire'); updateControls();
+  }
+
+  function hookPoint() {
+    return { x: anchor.x + Math.sin(game.hook.angle) * game.hook.length, y: anchor.y + Math.cos(game.hook.angle) * game.hook.length };
+  }
+
+  function segmentDistance(px, py, ax, ay, bx, by) {
+    const dx = bx-ax, dy = by-ay;
+    const amount = Math.max(0, Math.min(1, ((px-ax)*dx + (py-ay)*dy) / (dx*dx+dy*dy || 1)));
+    return Math.hypot(px-ax-amount*dx, py-ay-amount*dy);
+  }
+
+  function step(dt) {
+    game.particles = game.particles.filter((p) => p.life > 0);
+    game.particles.forEach((p) => { p.life -= dt; p.x += p.vx*dt; p.y += p.vy*dt; p.vy += 90*dt; });
+    if (!active()) return;
+    elapsed += dt;
+    const hook = game.hook;
+    if (hook.phase === 'swing') {
+      hook.angle = Math.sin(elapsed * 1.04) * 1.28;
+    } else if (hook.phase === 'extend') {
+      const before = hookPoint();
+      hook.length += 350*dt;
+      const point = hookPoint();
+      const hit = game.items.filter((item) => !item.collected).find((item) => segmentDistance(item.x,item.y,before.x,before.y,point.x,point.y) < item.r*.82+10);
+      if (hit) {
+        hit.collected = true; hook.cargo = hit; hook.phase = 'return';
+        tone('hook'); updateControls();
+        if (navigator.vibrate) { try { navigator.vibrate(15); } catch { /* Optional haptics. */ } }
+      } else if (point.x < 22 || point.x > W-22 || point.y > H-25) {
+        hook.phase = 'return'; updateControls();
+      }
+    } else {
+      const speed = hook.cargo?.type === 'gold' && hook.cargo.r > 35 ? 245 : hook.cargo ? 340 : 530;
+      hook.length -= speed*dt;
+      if (hook.length <= 34) {
+        const cargo = hook.cargo;
+        hook.length = 34; hook.phase = 'swing'; hook.cargo = null;
+        if (cargo) collect(cargo);
+        else { showCatch('差一点点，再来就好 ♡'); announce('这次没有抓到。没关系，再点一下试试吧。'); }
+        updateControls();
+      }
+    }
+  }
+
+  function showCatch(message) {
+    const label = $('catch-label');
+    label.textContent = message; label.classList.remove('show');
+    void label.offsetWidth; label.classList.add('show');
+  }
+
+  function particles(color, n = 19) {
+    if (reduceMotion.matches) return;
+    for (let i=0; i<n; i++) game.particles.push({ x:anchor.x, y:anchor.y+15, vx:(Math.random()-.5)*170, vy:-80-Math.random()*140, life:1.2, color, size:3+Math.random()*4 });
+  }
+
+  function collect(item) {
+    game.score += item.value;
+    if (item.type === 'gold') game.gold++;
+    if (item.type === 'diamond') game.diamonds++;
+    if (item.type === 'bag') { game.bags++; game.roundBag = true; }
+    else game.roundTreasures++;
+    particles(item.type === 'bag' ? '#d78da0' : item.type === 'diamond' ? '#8fcdb7' : '#f2cc73');
+    updateUI();
+    const names = { gold:'金闪闪的好运', diamond:'闪亮亮的快乐', bag:'一份小心意', hotpot:'热气腾腾的小约定', helmet:'一起开黑的小约定' };
+    showCatch(`${names[item.type]} +${item.value}`);
+    announce(`抓到${names[item.type]}，增加 ${item.value} 幸运值。`);
+    tone(item.type === 'bag' || item.type === 'hotpot' || item.type === 'helmet' ? 'surprise' : 'collect');
+    if (item.type === 'bag') {
+      const surprise = { ...SURPRISES[game.round-1] };
+      if (game.round === 1 && secret) { surprise.message = secret; surprise.kicker = '有人托小猫，送来这句悄悄话'; }
+      openSurprise(surprise);
+    } else if (item.type === 'hotpot') {
+      game.special.add('hotpot');
+      openSurprise({ pet:'hotpot', title:'一起吃火锅吧', kicker:'捞到一份热乎乎的小约定', message:'把烦恼涮掉，把快乐捞起来。\n下一顿火锅，想坐在你对面。', button:'这顿火锅，约好啦 ♡' });
+    } else if (item.type === 'helmet') {
+      game.special.add('helmet');
+      openSurprise({ pet:'helmet', title:'和平精英，等你上线', kicker:'捡到一个属于我们的双排邀请', message:'装备可以慢慢捡，快乐要和你一起。\n下一局，记得带上我呀。', button:'收到，下一局一起 ♡' });
+    } else {
+      checkRound();
+    }
+  }
+
+  function openSurprise(data) {
+    $('surprise-title').textContent = data.title;
+    $('surprise-kicker').textContent = data.kicker;
+    $('surprise-message').textContent = data.message;
+    $('surprise-close').textContent = data.button;
+    drawPet(data.pet, $('surprise-art'));
+    $('surprise-dialog').showModal();
+    updateControls();
+  }
+
+  function closeSurprise() {
+    if (closingSurprise) return;
+    closingSurprise = true;
+    $('surprise-dialog').close();
+    checkRound(); updateControls();
+    closingSurprise = false;
+    if (!dialogOpen()) canvas.focus({ preventScroll: true });
+  }
+
+  function checkRound() {
+    const specialReady = game.round === 1 || game.special.has(game.round === 2 ? 'hotpot' : 'helmet');
+    if (!game.roundBag || game.roundTreasures < 3 || !specialReady || dialogOpen()) return;
+    if (game.round === 3) {
+      game.completed = true;
+      $('finish-score').textContent = game.score.toLocaleString();
+      $('finish-dialog').showModal();
+      tone('finish');
+      announce(`三局完成！一共 ${game.score} 幸运值和三份小心意。`);
+    } else {
+      $('round-kicker').textContent = `LITTLE ADVENTURE / 0${game.round} OF 03`;
+      $('round-title').textContent = game.round === 1 ? '第一袋快乐，收好啦。' : '第二份温柔，也送给你。';
+      $('round-message').textContent = game.round === 1 ? '带着小猫的惦记，去下一片矿洞吧。\n收集三件宝藏，记得带上小火锅和问号袋。' : '小狗送来了偏爱，好运也在等你。\n最后三件宝藏，记得带上头盔和问号袋。';
+      $('next-round').firstChild.textContent = game.round === 1 ? '去第二局，继续寻宝 ' : '去第三局，找到喜欢 ';
+      drawPet(game.round === 1 ? 'cat' : 'dog', $('round-pet'));
+      $('round-dialog').showModal();
+    }
+    updateControls();
+  }
+
+  function nextRound() {
+    if (game.round >= 3 || !game.roundBag || game.roundTreasures < 3) return;
+    $('round-dialog').close(); game.round++; populateRound();
+    announce(`第 ${game.round} 局开始。再找到三件宝藏和一个问号袋吧。`);
+    tone('start'); canvas.focus({ preventScroll: true });
+  }
+
+  function restart() {
+    document.querySelectorAll('dialog[open]').forEach((dialog) => dialog.close());
+    Object.assign(game, { started: true, completed: false, round: 1, score: 0, gold: 0, diamonds: 0, bags: 0, special:new Set(), particles:[] });
+    $('start-overlay').classList.add('is-hidden');
+    $('start-overlay').setAttribute('aria-hidden','true');
+    $('start-btn').disabled = true; $('start-btn').tabIndex = -1;
+    populateRound(); showCatch('新的三局，把好运再送你一遍 ♡');
+    canvas.focus({ preventScroll: true });
+  }
+
+  function drawHUD(c) {
+    const y = ground + 24;
+    const hudScale = H === 650 ? 1.45 : 1;
+    rect(c, 16, y, 141*hudScale, 29*hudScale, '#fff5dbb8');
+    rect(c, 16, y, 3, 29*hudScale, '#a49a70');
+    c.textAlign = 'left'; c.font = `${13*hudScale}px "PingFang SC",sans-serif`; c.fillStyle = '#877653';
+    c.fillText(`宝藏 ${Math.min(game.roundTreasures,3)}/3  ·  口袋 ${game.roundBag ? '1' : '0'}/1`, 26, y+19*hudScale);
+    if (game.round > 1) {
+      const special = game.round === 2 ? 'hotpot' : 'helmet';
+      rect(c,W-16-139*hudScale,y,139*hudScale,29*hudScale,'#fff5dbb8');
+      c.fillText(`${game.round===2?'小火锅':'开黑头盔'} ${game.special.has(special)?'1':'0'}/1`,W-139*hudScale,y+19*hudScale);
+    }
+    c.textAlign = 'right'; c.font = '10px monospace'; c.fillStyle = '#b29366';
+    c.fillText(['A LITTLE LUCK FOR YOU', 'A LITTLE WARMTH FOR YOU', 'A LITTLE LOVE FOR YOU'][game.round-1], W-20, H-10);
+  }
+
+  function drawHook(c) {
+    const point = hookPoint();
+    c.save();
+    c.strokeStyle = '#8b7a55'; c.lineWidth = 3;
+    c.beginPath(); c.moveTo(anchor.x, anchor.y); c.lineTo(point.x, point.y); c.stroke();
+    c.strokeStyle = '#d3bd80'; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(anchor.x+1, anchor.y); c.lineTo(point.x+1, point.y); c.stroke();
+    if (game.hook.cargo) drawOre(c, game.hook.cargo, point.x+Math.sin(game.hook.angle)*15, point.y+Math.cos(game.hook.angle)*15, elapsed);
+    c.translate(point.x, point.y); c.rotate(-game.hook.angle);
+    const closed = Boolean(game.hook.cargo);
+    c.strokeStyle = '#6e7465'; c.lineWidth = 5;
+    c.lineJoin = 'miter'; c.lineCap = 'square';
+    c.beginPath(); c.moveTo(0,-5); c.lineTo(0,4); c.stroke();
+    c.beginPath(); c.moveTo(0,2); c.lineTo(-11,10); c.lineTo(closed?-8:-13,18); c.lineTo(closed?-2:-8,23); c.stroke();
+    c.beginPath(); c.moveTo(0,2); c.lineTo(11,10); c.lineTo(closed?8:13,18); c.lineTo(closed?2:8,23); c.stroke();
+    rect(c,-3,-7,6,7,'#aaac8a');
+    c.restore();
+  }
+
+  function render(timestamp) {
+    const dt = Math.min((timestamp-lastTime)/1000 || 0, .04);
+    lastTime = timestamp;
+    step(dt);
+    ctx.drawImage(background,0,0);
+    drawMiner(ctx,timestamp/1000);
+    drawHUD(ctx);
+    for (const item of game.items) {
+      if (item.collected) continue;
+      const bob = item.type === 'bag' && !reduceMotion.matches ? Math.sin(timestamp/470)*2 : 0;
+      // A small soft shadow gives each pixel treasure room in the soil.
+      rect(ctx,item.x-item.r*.7,item.y+item.r*.8,item.r*1.4,5,'#9e774d20');
+      drawOre(ctx,item,item.x,item.y+bob,timestamp/1000);
+    }
+    drawHook(ctx);
+    for (const p of game.particles) {
+      ctx.globalAlpha = Math.max(0,Math.min(p.life,1));
+      rect(ctx,p.x,p.y,p.size,p.size,p.color);
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(render);
+  }
+
+  function announce(message) {
+    clearTimeout(announcementTimeout);
+    $('game-announcement').textContent = '';
+    announcementTimeout = setTimeout(() => { $('game-announcement').textContent = message; },80);
+  }
+
+  function toast(message) {
+    clearTimeout(toastTimeout);
+    $('toast').textContent = message; $('toast').classList.add('visible');
+    toastTimeout = setTimeout(() => $('toast').classList.remove('visible'),3000);
+  }
+
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true; }
+    } catch { /* Try the browser's older selection-based copy next. */ }
+    const field = document.createElement('textarea');
+    field.value = text; field.style.cssText = 'position:fixed;left:0;top:0;opacity:0;pointer-events:none';
+    (document.querySelector('dialog[open]') || document.body).append(field);
+    field.focus(); field.select(); field.setSelectionRange(0,text.length);
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch { /* A selectable link remains available. */ }
+    field.remove(); return copied;
+  }
+
+  async function share() {
+    const url = makeShareURL();
+    if (navigator.share) {
+      try {
+        await navigator.share({ title:'小小矿工 · 有个惊喜想送给你', text:'黄金、钻石，还有藏在问号袋里的小心意。点开玩三局吧 ♡', url });
+        return;
+      } catch (error) { if (error.name === 'AbortError') return; }
+    }
+    if (await copyText(url)) { toast('链接复制好了，把小惊喜送给朋友吧 ♡'); return; }
+    document.querySelectorAll('dialog[open]').forEach((dialog)=>dialog.close());
+    $('fallback-link').value = url; $('share-dialog').showModal();
+    $('fallback-link').focus(); $('fallback-link').select();
+  }
+
+  function openNote() {
+    $('secret-message').value = secret;
+    $('character-count').textContent = `${secret.length} / 60`;
+    $('copy-link-box').hidden = true;
+    $('note-dialog').showModal(); updateControls();
+  }
+
+  async function saveNote(event) {
+    event.preventDefault();
+    const message = $('secret-message').value.trim().slice(0,60);
+    if (!message) { toast('先藏一句想对朋友说的话吧 ♡'); $('secret-message').focus(); return; }
+    secret = message; lastShareURL = makeShareURL(message);
+    // The fragment stays in the link; no message is sent to a server.
+    try { history.replaceState(null,'',lastShareURL); } catch { /* The generated link is still usable. */ }
+    $('share-link-field').value = lastShareURL; $('copy-link-box').hidden = false;
+    if (await copyText(lastShareURL)) toast('专属链接复制好啦，第一只口袋里藏着你的话 ♡');
+    else { $('share-link-field').focus(); $('share-link-field').select(); toast('专属链接已生成，长按链接就能复制'); }
+  }
+
+  function tone(kind) {
+    if (!soundEnabled) return;
+    try {
+      if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioContext.state === 'suspended') audioContext.resume().catch(()=>{});
+      const patterns = { fire:[260,190], hook:[500], collect:[660,880,1100], surprise:[523,659,784,1047], start:[392,523,659], finish:[523,659,784,659,1047] };
+      (patterns[kind] || patterns.collect).forEach((freq,i) => {
+        const osc = audioContext.createOscillator(); const gain = audioContext.createGain();
+        const time = audioContext.currentTime+i*.095;
+        osc.type = 'triangle'; osc.frequency.setValueAtTime(freq,time);
+        gain.gain.setValueAtTime(0,time); gain.gain.linearRampToValueAtTime(.045,time+.01);
+        gain.gain.exponentialRampToValueAtTime(.001,time+.14);
+        osc.connect(gain); gain.connect(audioContext.destination);
+        osc.start(time); osc.stop(time+.16);
+      });
+    } catch { /* Audio never blocks the game. */ }
+  }
+
+  $('start-btn').addEventListener('click',startGame);
+  $('drop-btn').addEventListener('click',fire);
+  canvas.addEventListener('pointerdown',(event) => {
+    if (event.button !== 0 && event.pointerType === 'mouse') return;
+    if (active()) { event.preventDefault(); canvas.focus({preventScroll:true}); fire(); }
+  });
+  document.addEventListener('keydown',(event) => {
+    if (event.code !== 'Space' || event.repeat || dialogOpen()) return;
+    const tag = event.target.tagName;
+    if (['INPUT','TEXTAREA','BUTTON','A'].includes(tag)) return;
+    event.preventDefault(); game.started ? fire() : startGame();
+  });
+  $('sound-btn').addEventListener('click',() => {
+    soundEnabled = !soundEnabled;
+    $('sound-btn').classList.toggle('muted',!soundEnabled);
+    $('sound-btn').setAttribute('aria-label',soundEnabled?'关闭音效':'开启音效');
+    $('sound-btn').setAttribute('aria-pressed',String(soundEnabled));
+    $('sound-btn').title = soundEnabled?'关闭音效':'开启音效';
+    tone('start'); toast(soundEnabled?'音效开启，小小快乐有声音啦':'音效已关闭，安静地挖宝也很好');
+  });
+  $('surprise-close').addEventListener('click',closeSurprise);
+  $('surprise-dialog').addEventListener('cancel',(event) => { event.preventDefault(); closeSurprise(); });
+  $('round-dialog').addEventListener('cancel',(event) => event.preventDefault());
+  $('finish-dialog').addEventListener('cancel',(event) => event.preventDefault());
+  $('next-round').addEventListener('click',nextRound);
+  $('restart-btn').addEventListener('click',restart);
+  $('play-again').addEventListener('click',restart);
+  $('share-btn').addEventListener('click',share);
+  $('finish-share').addEventListener('click',share);
+  $('note-btn').addEventListener('click',openNote);
+  $('note-close').addEventListener('click',()=>$('note-dialog').close());
+  $('note-form').addEventListener('submit',saveNote);
+  $('secret-message').addEventListener('input',()=>{ $('character-count').textContent=`${$('secret-message').value.length} / 60`; $('copy-link-box').hidden=true; });
+  $('copy-note-link').addEventListener('click',async()=>{
+    if (await copyText(lastShareURL)) toast('专属链接已复制 ♡');
+    else { $('share-link-field').focus(); $('share-link-field').select(); toast('长按链接，就可以复制啦'); }
+  });
+  $('share-close').addEventListener('click',()=>$('share-dialog').close());
+  $('fallback-copy').addEventListener('click',async()=>{
+    if (await copyText($('fallback-link').value)) { $('share-dialog').close(); toast('分享链接已复制 ♡'); }
+    else { $('fallback-link').focus(); $('fallback-link').select(); toast('请长按上方链接复制'); }
+  });
+  document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('close',()=>{
+    updateControls();
+    if (!dialogOpen()) { checkRound(); updateControls(); }
+  }));
+  window.addEventListener('resize',layout);
+  window.addEventListener('hashchange',()=>{ secret=readSecret(); });
+  document.addEventListener('visibilitychange',()=>{ lastTime=performance.now(); });
+  layout(); populateRound();
+  requestAnimationFrame(render);
+})();
+
+});</script>
+</head>
+<body>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M3 4h6v3h6V4h6v3h3v8h-3v3h-3v3h-3v3H9v-3H6v-3H3v-3H0V7h3Z" fill="currentColor"/></symbol>
+      <symbol id="i-gold" viewBox="0 0 24 24"><path d="M6 4h11v3h3v11h-3v3H5v-3H2V9h4Z" fill="#efb944" stroke="#87623c" stroke-width="1.5"/><path d="M7 7h8v3H7Zm-2 5h4v4H5Z" fill="#ffde7f"/><path d="M14 16h5v3h-5Z" fill="#cf8f37"/></symbol>
+      <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M5 3h14l4 7-11 12L1 10Z" fill="#79c9c3" stroke="#497f7a" stroke-width="1.5"/><path d="m5 3 3 7 4-7 4 7 3-7M1 10h22M8 10l4 12 4-12" fill="none" stroke="#d8f8e9" stroke-width="1.4"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M7 2h10l-2 5 5 5 2 8-3 3H5l-3-3 2-8 5-5Z" fill="#e9a0b5" stroke="#976372" stroke-width="1.5"/><path d="M8 8h8" stroke="#976372" stroke-width="2"/><path d="M10 12h4v3h-2v2m0 2v1" fill="none" stroke="#fff7e9" stroke-width="2"/></symbol>
+      <symbol id="i-share" viewBox="0 0 24 24"><path d="M15 3h6v6M21 3l-9 9M10 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path class="sound-wave" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path class="sound-off" d="m17 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L21 7l-4-4L5 15Zm0 0h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+  <div class="page-wrap">
+    <header class="site-header">
+      <a class="brand" href="" aria-label="小小矿工首页"><span class="brand-mark"><svg><use href="#i-gold"/></svg></span><span>小小矿工<span class="brand-en">LITTLE LUCKY MINER</span></span></a>
+      <div class="header-actions"><span class="tiny-note"><span class="status-dot"></span> 快乐正在营业</span><button class="icon-button muted" id="sound-btn" aria-label="开启音效" aria-pressed="false" title="开启音效"><svg><use href="#i-sound"/></svg></button></div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <span class="intro-kicker"><span>✦</span> 给你的，一份小小惊喜 <span>✦</span></span>
+        <h1 id="page-title"><span class="title-first">挖一点黄金，</span><span class="title-surprise">收一点惊喜</span><span class="title-period">。</span></h1>
+        <p id="intro-message">金子会发光，藏起来的心意也是。<br class="mobile-only">试着抓住那个「？」吧。</p>
+      </section>
+
+      <section class="play-layout" aria-label="黄金矿工小游戏">
+        <div class="game-column">
+          <div class="game-shell">
+            <div class="stage-toolbar"><span><span class="toolbar-dot"></span> <span id="mine-label">LUCKY MINE / 01 · 03</span></span><span class="stage-mode">三局小冒险 · 慢慢挖 <svg><use href="#i-heart"/></svg></span></div>
+            <div class="stage-wrap" id="stage-wrap">
+              <canvas id="game" width="800" height="520" tabindex="0" role="button" aria-label="像素矿洞。点击或按空格放下钩子，抓取金块、钻石和问号袋。">请使用支持 Canvas 的浏览器打开游戏。</canvas>
+              <div class="start-overlay" id="start-overlay">
+                <div class="start-card"><span class="start-spark">✧</span><span class="eyebrow">THREE LITTLE ROUNDS, JUST FOR YOU</span><h2>今天，也要有好运呀</h2><p>每局挖到 3 件宝藏和 1 个问号袋。<br>火锅与开黑的小约定，也要带回来。</p><button id="start-btn" class="primary-button">开始挖宝 <svg><use href="#i-arrow"/></svg></button><span class="start-footnote">三局小冒险 · 点击画面下钩</span></div>
+              </div>
+              <div class="floating-label" id="catch-label" aria-hidden="true"></div>
+            </div>
+            <div class="stage-controls"><div class="control-hint"><span class="key-cap desktop-only">SPACE</span><span class="tap-icon mobile-only">☝</span><span id="play-hint">点击画面 / 按空格下钩</span></div><button class="drop-button" id="drop-btn" disabled><svg><use href="#i-arrow"/></svg><span>下钩抓取</span></button></div>
+          </div>
+          <p class="under-game"><span>✧</span> <span id="round-goal">第一局 · 3 件宝藏 + 1 个问号袋</span></p>
+        </div>
+
+        <aside class="treasure-panel">
+          <section class="haul-card"><div class="card-heading"><h2>今日份收获</h2><span class="mini-spark">✦</span></div><div class="score"><strong id="score">0</strong><span>幸运值</span></div><div class="haul-stats"><div><svg><use href="#i-gold"/></svg><span>黄金</span><b id="gold-count">0</b></div><div><svg><use href="#i-diamond"/></svg><span>钻石</span><b id="diamond-count">0</b></div></div><div class="best-line">我的最高幸运值 <b id="best-score">0</b></div></section>
+          <section class="surprise-card"><div class="card-heading"><h2>神秘口袋</h2><span class="handwritten">for you ♡</span></div><p>有些宝藏，是专门留给你的。</p><div class="bag-stamps" id="bag-stamps" aria-label="已打开 0 个惊喜袋，共 3 个"><span>?</span><span>?</span><span>?</span></div><div class="surprise-caption" id="surprise-caption">抓住「？」· 解锁小心意</div></section>
+          <button class="note-button" id="note-btn"><svg><use href="#i-pen"/></svg><span>藏一句悄悄话</span><span>↗</span></button>
+          <button class="share-button" id="share-btn"><svg><use href="#i-share"/></svg><span>把好运分享给朋友</span></button>
+          <button class="restart-button" id="restart-btn"><svg><use href="#i-repeat"/></svg> 从第一局重新开始</button>
+        </aside>
+      </section>
+
+      <section class="field-guide" aria-label="宝藏图鉴"><span class="guide-title">矿洞里的小宝贝</span><div class="guide-item"><svg><use href="#i-gold"/></svg><span>大小金块 <small>+50 / 100 / 200</small></span></div><div class="guide-item"><svg><use href="#i-diamond"/></svg><span>闪亮钻石 <small>+300 幸运值</small></span></div><div class="guide-item"><svg><use href="#i-bag"/></svg><span>问号口袋 <small>藏着一点点喜欢</small></span></div></section>
+    </main>
+    <footer><span>MADE OF PIXELS & A LITTLE LOVE</span><svg><use href="#i-heart"/></svg><span>愿你今天，挖到好心情。</span></footer>
+  </div>
+
+  <dialog id="surprise-dialog" class="surprise-dialog" aria-labelledby="surprise-title"><div class="dialog-content"><span class="dialog-kicker" id="surprise-kicker">一份专属的小心意</span><div class="surprise-art" id="surprise-art" aria-hidden="true"></div><h2 id="surprise-title">love you</h2><p id="surprise-message">你是比钻石还要闪闪发光的存在。</p><button class="primary-button" id="surprise-close">把心意收好 <span>♡</span></button><span class="dialog-footnote">有些喜欢，藏不住就送给你。</span></div></dialog>
+  <dialog id="note-dialog" class="note-dialog" aria-labelledby="note-title"><form id="note-form"><button type="button" class="close-dialog" id="note-close" aria-label="关闭">×</button><span class="dialog-kicker">A SECRET JUST FOR THEM</span><h2 id="note-title">把心意，藏进问号袋。</h2><p>朋友打开你的链接，抓到第一个问号袋时，<br>就会看到你留下的这句话。</p><label for="secret-message">想说的话 <span id="character-count">0 / 60</span></label><textarea id="secret-message" maxlength="60" rows="3" placeholder="例如：今天的好运，和我的喜欢，都送给你。"></textarea><p class="form-tip">悄悄话会保存在分享链接里，拿到链接的人都能看到。</p><button class="primary-button" type="submit">生成专属分享链接 <svg><use href="#i-share"/></svg></button><div class="copy-link-box" id="copy-link-box" hidden><label for="share-link-field">专属链接已生成，长按或复制发给朋友</label><input id="share-link-field" readonly><button class="small-copy" id="copy-note-link" type="button">复制链接</button></div></form></dialog>
+  <dialog id="round-dialog" class="finish-dialog" aria-labelledby="round-title"><div class="dialog-content"><span class="dialog-kicker" id="round-kicker">LITTLE ADVENTURE / 01 OF 03</span><div class="round-pet" id="round-pet" aria-hidden="true"></div><h2 id="round-title">第一袋快乐，收好啦。</h2><p id="round-message">带着小猫的惦记，去看看下一片矿洞吧。</p><button class="primary-button" id="next-round">去第二局，继续寻宝 <svg><use href="#i-arrow"/></svg></button></div></dialog>
+  <dialog id="finish-dialog" class="finish-dialog" aria-labelledby="finish-title"><div class="dialog-content"><span class="dialog-kicker">THREE ROUNDS, A POCKET FULL OF LOVE</span><div class="finish-icon">♡</div><h2 id="finish-title">三局小冒险，圆满收工。</h2><p>挖到了 <b id="finish-score">0</b> 幸运值，<br>还收到了 <b>3 份</b> 藏起来的小心意。</p><p class="finish-letter">愿你被温柔惦记，也被快乐找到。<br>你一直都是，值得被喜欢的宝贝。</p><button class="primary-button" id="play-again">带着好运，再玩一次 <svg><use href="#i-repeat"/></svg></button><button class="text-button" id="finish-share">把这份惊喜送给朋友 ↗</button></div></dialog>
+  <dialog id="share-dialog" class="note-dialog" aria-labelledby="share-title"><div class="dialog-content"><button type="button" class="close-dialog" id="share-close" aria-label="关闭">×</button><span class="dialog-kicker">A LITTLE LUCK TO GO</span><h2 id="share-title">把好运，传递下去。</h2><p>复制链接发给朋友，手机点开就能玩。</p><input class="fallback-link" id="fallback-link" readonly aria-label="游戏分享链接"><button class="primary-button" id="fallback-copy">复制链接 <svg><use href="#i-share"/></svg></button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="game-announcement" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript-message">请在浏览器中开启 JavaScript，让小矿工出发吧。</p></noscript>
+</body>
+</html>
