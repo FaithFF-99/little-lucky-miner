@@ -1,0 +1,635 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fffaf0"><meta name="description" content="25局像素挖矿旅行：九种地貌、30秒寻宝、宠物陪伴，回家休息、开车买种子、经营一片小农场。"><title>小小矿工 · 和小伙伴一起生活</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iI2ZmZjRkNSIvPjxwYXRoIGQ9Ik03IDhoNnY0aDZWOGg2djRoM3Y4aC00djRoLTR2NGgtOHYtNEg4di00SDR2LThoM1oiIGZpbGw9IiNkYzdiOTEiLz48cGF0aCBkPSJNOCAxMWg0djRIOFoiIGZpbGw9IiNmNGI2YzIiLz48L3N2Zz4K"><style>:root{--paper:#fffaf0;--ink:#514b3e;--muted:#928a79;--line:#e8dfce;--green:#6a8055;--pink:#cf7f96;--yellow:#f0c56f;--font:ui-rounded,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--font);-webkit-font-smoothing:antialiased;background-image:radial-gradient(#a9926e14 .8px,transparent .8px);background-size:7px 7px}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default}button,a,input,textarea,canvas{ -webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,canvas:focus-visible{outline:3px solid #7f9c6a;outline-offset:5px}button{color:inherit}a{color:inherit}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}svg{width:22px;height:22px;display:block;flex-shrink:0}.page-wrap{max-width:1120px;margin:auto;padding:0 32px}button{transition:transform .16s ease,background .16s ease,box-shadow .16s ease}button:active:not(:disabled){transform:translateY(2px)}.site-header{height:99px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:19px;letter-spacing:1px;font-weight:800}.brand-mark{display:grid;place-items:center;background:#f8eac8;border:1px solid #e3d1a7;border-radius:10px;box-shadow:0 2px #e6d9bf;width:43px;height:43px;transform:rotate(-5deg)}.brand-mark svg{width:29px;height:29px}.brand-en{display:block;font-size:8px;font-family:monospace;letter-spacing:1.65px;color:#9c9078;margin-top:5px;font-weight:500}.header-actions{display:flex;align-items:center;gap:22px}.tiny-note{font-size:11px;letter-spacing:1px;color:#958c77;display:flex;align-items:center;gap:7px}.status-dot{width:6px;height:6px;background:#97aa75;border-radius:50%;box-shadow:0 0 0 3px #9bad7712}.icon-button{height:38px;width:38px;display:grid;place-items:center;border:1px solid var(--line);background:#fffaf0;border-radius:50%;color:#8c826f}.icon-button svg{width:18px;height:18px}.sound-off{display:none}.muted .sound-wave{display:none}.muted .sound-off{display:initial}.intro{position:relative;text-align:center;padding:38px 0 31px}.intro-kicker{font-size:10px;color:#a3977a;letter-spacing:2.1px;display:inline-flex;align-items:center;gap:10px}.intro-kicker span{color:#d4aa61;font-size:14px}.intro h1{font-size:35px;letter-spacing:1.3px;margin:14px 0 12px;font-weight:750;line-height:1.45}.title-surprise{color:#bd7786;position:relative;display:inline-block}.title-surprise:after{content:"";position:absolute;bottom:0;left:1px;right:5px;height:5px;background:#ebbdc259;z-index:-1;transform:rotate(-1deg)}.title-heart{position:absolute;width:16px;height:16px;right:-21px;top:-5px;color:#dda2b1;transform:rotate(12deg)}.intro p{font-size:12px;line-height:1.9;letter-spacing:.7px;color:var(--muted);margin:0}.mobile-only{display:none}.play-layout{display:grid;grid-template-columns:minmax(0,1fr) 233px;gap:23px;align-items:start}.game-shell{border:2px solid #7a725e;border-radius:13px;background:#f8f0dc;overflow:hidden;box-shadow:0 5px 0 #dfd5bc}.stage-toolbar{height:39px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#f8f1de;border-bottom:2px solid #7a725e;font:9px monospace;color:#8a7f65;letter-spacing:1.1px}.stage-toolbar>span{display:flex;align-items:center;gap:7px}.toolbar-dot{width:6px;height:6px;background:#a4af7b;border-radius:1px}.stage-mode{font:10px var(--font);letter-spacing:.5px}.stage-mode svg{width:9px;height:9px;color:#ca9b9a}.stage-wrap{position:relative;isolation:isolate;overflow:hidden;background:#ead2a6}#game{width:100%;height:auto;aspect-ratio:800/520;display:block;image-rendering:pixelated;touch-action:manipulation;cursor:crosshair;user-select:none;-webkit-user-select:none;outline-offset:-4px}.stage-controls{height:67px;background:#fff8e9;padding:10px 15px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #7a725e;gap:7px}.control-hint{display:flex;align-items:center;gap:9px;font-size:10px;color:#9a8c71}.key-cap{font-family:monospace;font-size:9px;border:1px solid #d6cbb2;border-bottom:3px solid #d6cbb2;border-radius:4px;background:#f9f3e4;padding:5px 6px;color:#8d826b}.drop-button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #6b7b50;border-bottom:3px solid #566640;background:#829267;color:#fffcee;font-size:12px;font-weight:700;padding:10px 16px;border-radius:6px;min-width:123px}.drop-button:hover:not(:disabled){background:#6d8057}.drop-button:disabled{opacity:.55}.drop-button svg{width:16px;height:16px}.under-game{text-align:center;color:#a69a81;font-size:10px;letter-spacing:.9px;margin:17px 0 0}.under-game>span:first-child{color:#c8a36a;margin-right:5px}.treasure-panel{display:flex;flex-direction:column;gap:13px}.haul-card,.surprise-card{border:1px solid #e0d8c4;border-radius:11px;padding:18px;background:#fffaf0;position:relative}.haul-card:before{content:"";position:absolute;height:5px;top:4px;left:6px;right:6px;background:repeating-linear-gradient(90deg,#e7d9b9 0 5px,transparent 5px 10px);border-radius:2px;opacity:.3}.card-heading{display:flex;justify-content:space-between;align-items:center}.card-heading h2{font-size:12px;letter-spacing:.8px;font-weight:650;margin:0}.mini-spark{color:#d5b679;font-size:16px}.score{display:flex;align-items:baseline;gap:8px;margin:15px 0 18px}.score strong{font:500 36px/1 ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:-1.2px;color:#74664b}.score>span{font-size:10px;color:#a5987f}.haul-stats{display:grid;gap:12px}.haul-stats>div{display:flex;align-items:center;gap:9px;font-size:11px;color:#8e846f}.haul-stats svg{width:18px;height:18px}.haul-stats b{font:12px ui-monospace,monospace;font-weight:500;margin-left:auto}.best-line{display:flex;justify-content:space-between;font-size:9px;color:#aa9d86;border-top:1px dashed #e4d9c1;padding-top:13px;margin-top:17px;letter-spacing:.2px}.best-line b{font:10px ui-monospace,monospace}.surprise-card{background:#f9ede9;border-color:#ecd5cf;padding-top:15px}.surprise-card .card-heading h2{color:#9e6f74}.handwritten{font-family:Georgia,serif;font-size:12px;font-style:italic;color:#c9969f;transform:rotate(-7deg)}.surprise-card p{font-size:10px;line-height:1.8;color:#b08f8a;margin:11px 0 15px}.bag-stamps{display:flex;gap:11px;justify-content:center}.bag-stamps span{display:grid;place-items:center;width:44px;height:47px;background:#f5e3de;border:1px dashed #cfaaa2;border-radius:9px;font:22px monospace;color:#c69d96;transition:.25s}.bag-stamps span.open{background:#fff7f0;border-style:solid;color:#bd768d;font-size:24px;transform:rotate(-5deg)}.bag-stamps span.open:nth-child(2){transform:rotate(5deg)}.surprise-caption{text-align:center;font-size:9px;letter-spacing:.6px;color:#b18d88;margin-top:13px}.note-button,.share-button{width:100%;display:flex;justify-content:center;align-items:center;gap:8px;border-radius:7px;font-size:11px;min-height:41px;letter-spacing:.4px}.note-button{background:#f2efdf;border:1px solid #e1dbc3;color:#887b5a}.note-button:hover{background:#eae6ce}.note-button svg,.share-button svg{width:15px;height:15px}.note-button>span:last-child{margin-left:7px;color:#a59573}.share-button{border:1px solid #d8d8bf;background:#ecf0e0;color:#78825e;margin-top:-5px}.share-button:hover{background:#e1e8d0}.restart-button{border:0;background:transparent;font-size:10px;color:#aa9f89;display:flex;align-items:center;justify-content:center;gap:5px;margin-top:-3px;min-height:29px}.restart-button:hover{color:#7e725d}.restart-button svg{width:13px;height:13px}.field-guide{margin-top:25px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:21px 17px;gap:18px}.guide-title{font-size:10px;letter-spacing:1px;color:#aa9e85;white-space:nowrap}.guide-item{display:flex;align-items:center;gap:12px}.guide-item svg{width:26px;height:26px}.guide-item>span{font-size:10px;letter-spacing:.5px}.guide-item small{display:block;font-size:9px;color:#ab9e85;margin-top:5px;letter-spacing:.3px}footer{display:flex;align-items:center;justify-content:center;gap:13px;padding:25px 0 28px;color:#b5aa93;font-size:9px;letter-spacing:.7px}footer span:first-child{font-family:monospace;font-size:8px;letter-spacing:1.3px}footer svg{width:8px;height:8px;color:#d0a7a7}.start-overlay{position:absolute;inset:0;z-index:2;display:grid;place-items:center;background:#e6d8be30;backdrop-filter:blur(1px);transition:opacity .25s}.start-overlay.is-hidden{opacity:0;pointer-events:none}.start-card{position:relative;text-align:center;padding:27px 36px 21px;border:1.5px solid #b9a78a;background:#fff9eefa;box-shadow:5px 6px 0 #806a4a30;border-radius:9px;transform:translateY(7px)}.start-card:after,.start-card:before{content:"✦";position:absolute;top:12px;left:14px;font-size:10px;color:#d6b375}.start-card:after{left:auto;right:14px}.start-spark{display:block;font-size:31px;color:#b9a16d;line-height:1}.eyebrow{font:7px monospace;letter-spacing:1.45px;color:#b4a080;display:block;margin:11px 0 12px}.start-card h2{font-size:21px;margin:0 0 10px;letter-spacing:1px}.start-card p{font-size:11px;line-height:1.95;color:#9a8a70;margin:0 0 19px}.primary-button{border:1px solid #738052;border-bottom:4px solid #606e43;border-radius:7px;background:#8b9b6e;color:#fffdf2;padding:12px 21px;display:flex;align-items:center;justify-content:center;gap:11px;font-size:13px;font-weight:650;letter-spacing:.6px;min-height:46px;margin:auto;min-width:178px}.primary-button:hover{background:#7a8d5e;box-shadow:0 3px 10px #7b8b4f18}.primary-button svg{width:17px;height:17px}.start-footnote{font-size:8px;letter-spacing:1px;color:#b7a98e;display:block;margin-top:13px}dialog{position:fixed;border:1.5px solid #b7a68a;border-radius:15px;box-shadow:6px 7px 0 #52422c20,0 25px 80px #453a3433;padding:0;color:var(--ink);background:#fff9ee;width:calc(100% - 40px);max-width:390px;overflow:visible;max-height:calc(100dvh - 48px)}dialog::backdrop{background:#453b3159;backdrop-filter:blur(4px)}dialog[open]{animation:none}@keyframes dialog-in{from{opacity:0;transform:translateY(15px) scale(.96)}to{opacity:1;transform:none}}.dialog-content{position:relative;text-align:center;padding:34px 26px 26px;overflow:auto;max-height:calc(100dvh - 48px);border-radius:14px}.dialog-kicker{font-size:9px;letter-spacing:1.7px;color:#b2987f;display:block}.dialog-content h2{font-size:29px;margin:14px 0 13px;letter-spacing:1px;color:#b76f86}.dialog-content p{font-size:12px;color:#a18c7d;line-height:1.95;margin:0 0 25px;overflow-wrap:anywhere;white-space:pre-line}.dialog-content .primary-button{min-width:215px}.dialog-footnote{font-size:9px;letter-spacing:.8px;color:#b8a591;display:block;margin-top:17px}.surprise-art{height:111px;display:grid;place-items:center;margin:14px 0 0;position:relative}.surprise-art canvas{width:120px;height:112px;image-rendering:pixelated}.surprise-art .cute-face{font-size:51px;line-height:1.2;animation:face-bob 1.6s ease-in-out infinite}.surprise-art:before,.surprise-art:after{content:"✦";position:absolute;top:35px;left:45px;color:#ddba74;font-size:18px;animation:face-bob 1.8s ease-in-out infinite}.surprise-art:after{left:auto;right:41px;top:60px;color:#d39aad;font-size:13px;animation-delay:.5s}@keyframes face-bob{50%{transform:translateY(-5px) rotate(3deg)}}.close-dialog{position:absolute;right:12px;top:11px;border:0;background:transparent;color:#ac9e8b;font-size:25px;line-height:30px;width:33px;height:33px}.note-dialog{max-width:423px}.note-dialog form{position:relative;padding:35px 27px 27px;overflow:auto;max-height:calc(100dvh - 48px);border-radius:14px}.note-dialog h2{font-size:22px;margin:17px 0 13px;letter-spacing:.5px}.note-dialog p{font-size:11px;color:#a4977f;line-height:1.95;margin:0 0 22px}.note-dialog label{font-size:11px;color:#8e8068;display:flex;justify-content:space-between;margin-bottom:9px}.note-dialog label span{font-size:9px;color:#b4a68b}.note-dialog textarea,.note-dialog input{background:#fffdf7;border:1px solid #dfd3bc;border-radius:7px;color:#887055;padding:12px;width:100%;font-size:12px;line-height:1.7;resize:vertical}.note-dialog textarea::placeholder{color:#c1b5a1}.note-dialog .form-tip{font-size:9px;color:#b8a78d;margin:8px 0 23px}.note-dialog .primary-button{width:100%;font-size:12px;min-height:47px}.copy-link-box{margin-top:20px;padding-top:17px;border-top:1px dashed #dfd3bc}.copy-link-box label{font-size:9px}.copy-link-box input,.fallback-link{font-family:monospace;font-size:10px!important}.small-copy{background:#f2ead5;border:1px solid #d9ccb0;border-radius:5px;font-size:11px;margin:10px auto 0;display:block;padding:7px 18px}.finish-icon{font-size:71px;color:#dbb26a;margin:7px 0}.finish-dialog h2{font-size:23px}.finish-letter{padding:14px 0;border-top:1px dashed #dfd3bc;border-bottom:1px dashed #dfd3bc;font-size:12px!important;color:#ac8d78!important}.text-button{font-size:11px;color:#b0927e;border:0;background:transparent;margin-top:14px;min-height:30px}.fallback-link{margin-bottom:20px}.toast{position:fixed;bottom:max(30px,env(safe-area-inset-bottom));left:50%;transform:translate(-50%,15px);border:1px solid #d3c6ac;box-shadow:0 4px 20px #705b3320;padding:13px 19px;font-size:12px;line-height:1.6;background:#fffbf0;color:#87724f;border-radius:9px;z-index:20;opacity:0;pointer-events:none;transition:.2s;text-align:center;max-width:90%;white-space:nowrap}.toast.visible{opacity:1;transform:translate(-50%,0)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.noscript-message{text-align:center;padding:20px;background:#f5d9cb}
+.round-pet{display:grid;place-items:center;height:115px;margin:16px 0 -3px}.round-pet canvas{width:120px;height:112px;image-rendering:pixelated}
+@media(min-width:1400px){.page-wrap{padding-top:10px}.intro{padding-top:46px;padding-bottom:38px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(max-width:880px){.page-wrap{padding:0 23px}.play-layout{grid-template-columns:minmax(0,1fr) 200px;gap:17px}.haul-card,.surprise-card{padding:16px}.bag-stamps{gap:9px}.bag-stamps span{width:40px;height:43px}.stage-mode{font-size:8px}.intro h1{font-size:30px}.control-hint{font-size:9px;gap:6px}.drop-button{min-width:107px;font-size:11px;padding:9px 11px}.stage-controls{padding:9px 11px}.field-guide{padding:18px 8px;gap:12px}.guide-item{gap:7px}.guide-title{font-size:9px}.start-card{padding:20px 24px 17px}.start-card h2{font-size:18px}.eyebrow{font-size:6px}.start-spark{font-size:24px}.start-card p{font-size:10px;margin-bottom:15px}.start-footnote{margin-top:10px}.primary-button{font-size:12px;min-height:43px;padding:10px 18px}}
+@media(max-width:680px){.page-wrap{padding:0 18px}.site-header{height:76px}.brand{font-size:17px;gap:9px}.brand-mark{width:36px;height:36px;border-radius:8px}.brand-mark svg{width:25px;height:25px}.brand-en{font-size:6px;letter-spacing:1.2px;margin-top:4px}.header-actions{gap:12px}.tiny-note{font-size:9px;letter-spacing:.3px;gap:6px}.icon-button{height:34px;width:34px}.intro{padding:27px 0 24px}.intro-kicker{font-size:9px;letter-spacing:1.8px;gap:9px}.intro h1{font-size:27px;letter-spacing:.6px;margin:12px 0 10px;line-height:1.55}.title-surprise{display:block;width:max-content;margin:auto}.title-heart{width:13px;height:13px;right:-20px;top:8px}.intro h1>.title-surprise:after{bottom:4px}.title-first{display:block}.title-period{display:none}.title-surprise{font-size:27px}.intro p{font-size:11px;line-height:1.8;letter-spacing:.5px}.mobile-only{display:block}.desktop-only{display:none}.play-layout{display:flex;flex-direction:column;gap:20px}.game-column{width:100%}.game-shell{border-radius:10px}.stage-toolbar{height:34px;padding:0 11px;font-size:8px;letter-spacing:.7px}.stage-mode{font-size:8px}.stage-mode svg{width:8px;height:8px}.stage-toolbar>span{gap:5px}#game{aspect-ratio:800/650}.stage-controls{height:65px;padding:9px 12px}.control-hint{font-size:10px;gap:7px}.tap-icon{font-size:19px;color:#a49272;line-height:1}.drop-button{padding:11px 15px;min-width:120px;font-size:12px}.under-game{font-size:9px;margin-top:15px;letter-spacing:.5px}.treasure-panel{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}.haul-card,.surprise-card{padding:15px;min-height:187px;border-radius:9px}.card-heading h2{font-size:11px;letter-spacing:.2px}.score{margin:14px 0 14px;gap:6px}.score strong{font-size:30px}.score>span{font-size:9px}.haul-stats{display:flex;gap:14px}.haul-stats>div{font-size:9px;gap:4px}.haul-stats b{margin-left:2px;font-size:10px}.haul-stats svg{width:16px;height:16px}.best-line{font-size:8px;padding-top:12px;margin-top:13px}.handwritten{font-size:10px}.surprise-card p{font-size:9px;line-height:1.8;margin:13px 0 14px;white-space:nowrap;letter-spacing:-.3px}.bag-stamps{gap:7px}.bag-stamps span{width:35px;height:38px;font-size:19px;border-radius:7px}.surprise-caption{font-size:8px;letter-spacing:.1px;margin-top:14px}.note-button,.share-button{font-size:10px;min-height:43px;gap:6px;margin:0;letter-spacing:0}.note-button>span:last-child{margin-left:1px}.note-button svg,.share-button svg{width:13px;height:13px}.restart-button{grid-column:1/-1;margin:0;min-height:28px;font-size:10px}.field-guide{margin-top:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px 8px;padding:20px 0}.guide-title{grid-column:1/-1;text-align:center;font-size:9px;letter-spacing:1.6px}.guide-item{gap:7px;justify-content:center}.guide-item svg{width:21px;height:21px}.guide-item>span{font-size:9px;letter-spacing:0}.guide-item small{font-size:7px;margin-top:4px;letter-spacing:0}footer{flex-wrap:wrap;gap:10px;padding:23px 0 27px;font-size:8px}footer span:first-child{font-size:7px;letter-spacing:.8px}.start-card{padding:22px 23px 18px;transform:translateY(12px);max-width:88%}.start-spark{font-size:27px}.eyebrow{font-size:6px;letter-spacing:1.1px;margin:9px 0 10px}.start-card h2{font-size:19px;letter-spacing:.5px}.start-card p{font-size:10px;line-height:1.9;margin-bottom:15px}.start-card .primary-button{font-size:12px;min-width:169px;min-height:43px}.start-footnote{font-size:8px}.floating-label{font-size:11px;padding:6px 10px}}
+@media(max-width:355px){.page-wrap{padding:0 12px}.tiny-note{display:none}.intro h1,.title-surprise{font-size:25px}.stage-mode{font-size:7px}.stage-toolbar{padding:0 8px}.haul-card,.surprise-card{padding:12px}.surprise-card p{font-size:8px}.bag-stamps{gap:5px}.bag-stamps span{width:30px;height:35px}.start-card{padding:12px 16px 11px;transform:none}.start-card h2{font-size:16px;margin-bottom:8px}.start-card p{font-size:8.5px;margin-bottom:12px}.start-spark{font-size:18px}.eyebrow{font-size:5.5px;margin:7px 0}.start-card .primary-button{min-height:36px;padding:7px 14px;min-width:154px}.start-footnote{font-size:7px;margin-top:8px}.guide-item{gap:4px}.guide-item svg{width:18px;height:18px}.guide-item>span{font-size:8px}.guide-item small{font-size:6px}}
+/* The little world expansion */
+[hidden]{display:none!important}.biome-route{display:flex;gap:7px;overflow-x:auto;padding:0 0 15px;scrollbar-width:thin}.biome-chip{flex:1;min-width:105px;border:1px solid var(--line);background:#fff8e8;border-radius:8px;padding:10px 9px;color:#a39780;font-size:10px;white-space:nowrap}.biome-chip small{display:block;font:8px monospace;margin-top:5px;color:#b5a68d}.biome-chip.current{border-color:#8f9e76;background:#ebefdc;color:#647750;box-shadow:0 2px #dbe2ca}.biome-chip.done{background:#f2ecdf;color:#958169}.world-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:4px 0 18px}.world-nav button{background:#f7efdf;border:1px solid #e1d5be;border-radius:7px;padding:12px 6px;color:#97866b;font-size:12px}.world-nav button small{font-size:9px;display:block;margin-top:3px}.world-nav button.selected{background:#7d8e63;border-color:#6a7e51;color:#fff9e9;box-shadow:0 2px #5f704e}.world-nav button:disabled{opacity:.48}.timer{font:700 17px ui-monospace,monospace;color:#70825a;letter-spacing:0}.timer.urgent{color:#b65e53}.activity-tools{margin-top:20px;background:#fff9ed;border:1px solid #e0d3b8;border-radius:11px;padding:18px}.activity-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px}.activity-heading h2{font-size:14px;margin:0;letter-spacing:.5px}.activity-heading>span{font-size:10px;color:#a38e71}.activity-tools p{font-size:10px;line-height:1.9;color:#a38f73;margin:12px 0 0}.secondary-button,.room-buttons button{font-size:11px;background:#f1ead7;color:#837355;border:1px solid #d9cdae;border-radius:6px;min-height:38px;padding:7px 11px}.secondary-button:disabled{opacity:.45}.room-buttons{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.room-buttons button{flex:1;min-width:48px;padding:7px 4px}.action-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.action-row .primary-button{margin:0;min-width:0;font-size:11px;padding:9px 12px}.action-row>span{font-size:10px;color:#9a8769}.pet-card{border:1px solid #e4d4ca;border-radius:11px;background:#f9efea;padding:17px}.pet-card .card-heading h2{color:#a67876}.pet-card .card-heading>span{font-size:10px;color:#b58b81}.pet-card p{font-size:10px;line-height:1.8;color:#b18d81;margin:10px 0}.pet-roster{display:flex;flex-wrap:wrap;gap:5px;max-height:172px;overflow:auto}.pet-mini{width:54px;text-align:center;font-size:8px;color:#9f7f71;background:#fff6ee;border:1px solid #e9d6c8;border-radius:7px;padding:3px 0}.pet-mini canvas{width:38px;height:35px;image-rendering:pixelated;display:block;margin:auto}.pet-mini small{display:block;font-size:7px;color:#b59480}.pet-mode-label{font-size:10px;color:#a48274;display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:12px}select{font:11px var(--font);color:#7c745c;border:1px solid #dbceb6;border-radius:5px;background:#fffbf1;padding:7px 5px;max-width:100%}.unlock-card{border:1px solid #e0d8c4;background:#f4f2e3;border-radius:9px;padding:15px}.unlock-card h2{font-size:11px;font-weight:600;margin:0 0 12px}.unlock-card div{font-size:9px;line-height:2.2;color:#a1987c}.unlock-card div.unlocked{color:#71835b}.wallet-detail{font-size:8px;line-height:1.8;color:#aa9b80;margin-top:10px}.seed-select{display:flex;align-items:center;gap:10px;font-size:11px;color:#8b7a60;margin-bottom:12px}.plot-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.plot-button{min-height:73px;border:1px dashed #b9ab80;border-radius:7px;background:#f2e7ce;color:#927951;font-size:10px;padding:8px 3px;line-height:1.8}.plot-button.ready{background:#e8edcf;border-style:solid;border-color:#91a66f;color:#667d4e}.plot-button strong{display:block;font-size:12px;font-weight:600}.shop-products{display:grid;gap:9px;margin-top:15px}.crop-product{display:grid;grid-template-columns:43px 1fr auto;gap:9px;align-items:center;padding:11px;background:#f8f0df;border:1px solid #e7d8bc;border-radius:8px}.crop-product canvas{width:40px;height:40px;image-rendering:pixelated}.crop-product h3{font-size:12px;margin:0 0 5px}.crop-product p{font-size:9px;line-height:1.8;margin:0}.crop-buy{display:flex;gap:5px;flex-direction:column}.crop-buy button{font-size:9px;padding:8px;background:#e8ecd7;border:1px solid #bac7a0;border-radius:5px;color:#70805b}.crop-buy button:disabled{opacity:.4}.sell-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;padding-top:14px;border-top:1px dashed #ddcdb0}.sell-row>span{font-size:10px;color:#9c886c}.sell-row .primary-button{font-size:10px;min-width:0;padding:9px 12px;margin:0}.sell-row button:disabled{opacity:.45}.settlement-stats{background:#f4edda;border:1px solid #e4d4b7;border-radius:7px;margin:-10px 0 23px;padding:12px;font-size:12px;color:#8f7754;line-height:1.9}.settlement-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.surprise-art canvas{width:120px;height:112px}.stage-controls{height:auto;min-height:67px}.control-hint{max-width:65%;line-height:1.7}.start-card{max-width:88%}#home-tools button:disabled{opacity:.4}body[data-scene="home"] #game,body[data-scene="farm"] #game{cursor:pointer}.pet-card .card-heading h2{font-size:12px}.score strong{font-size:32px}.field-guide{gap:10px}.stage-toolbar>span.timer{display:inline}
+@media(max-width:680px){.intro{padding-top:22px;padding-bottom:19px}.intro p{font-size:10px}.biome-route{margin-right:-18px;gap:6px;padding-bottom:13px}.biome-chip{min-width:88px;font-size:9px;padding:9px}.world-nav{gap:5px;margin-bottom:13px}.world-nav button{font-size:10px;padding:10px 2px;min-height:48px}.world-nav button small{font-size:8px}.stage-toolbar{height:37px}.timer{font-size:16px}.treasure-panel{gap:10px}.haul-card,.pet-card{padding:13px;min-height:190px}.pet-card .card-heading h2{font-size:10px}.pet-card p{font-size:8px;margin:8px 0}.pet-roster{max-height:110px;gap:4px}.pet-mini{width:43px;font-size:7px}.pet-mini canvas{width:31px;height:29px}.pet-mode-label{font-size:8px;flex-wrap:wrap;margin-top:8px}.pet-mode-label select{font-size:9px;padding:5px}.unlock-card{grid-column:1/-1;padding:12px 14px;display:grid;grid-template-columns:1fr 1fr;gap:2px 8px}.unlock-card h2{grid-column:1/-1;font-size:10px;margin-bottom:5px}.unlock-card div{font-size:8px}.unlock-card #progress-label{grid-column:1/-1}.wallet-detail{font-size:7px}.activity-tools{padding:13px;margin-top:15px}.activity-heading h2{font-size:12px}.activity-heading>span{font-size:8px}.activity-heading .secondary-button{font-size:9px;padding:6px 8px}.activity-tools p{font-size:9px}.secondary-button,.room-buttons button{font-size:10px}.plot-buttons{gap:6px}.plot-button{font-size:9px;min-height:66px}.plot-button strong{font-size:10px}.crop-product{grid-template-columns:31px 1fr auto;gap:7px;padding:9px}.crop-product canvas{width:30px;height:30px}.crop-product h3{font-size:11px}.crop-product p{font-size:8px}.crop-buy button{font-size:8px;padding:7px}.sell-row>span{font-size:9px}.control-hint{font-size:9px;max-width:58%}.stage-controls .drop-button{font-size:11px;padding:10px 11px;min-width:106px}.start-card p{font-size:10px;line-height:1.8}.start-card h2{font-size:18px}.start-footnote{font-size:7px}.seed-select{font-size:10px;gap:7px}.seed-select select{font-size:10px;width:175px}.under-game{line-height:1.8}.plot-buttons button{touch-action:manipulation}}
+@media(max-width:355px){.biome-route{margin-right:-12px}.world-nav button{font-size:9px}.start-card{padding:12px 14px}.start-card h2{font-size:16px}.start-card p{font-size:9px;line-height:1.7}.pet-mini{width:39px}.pet-roster{max-height:100px}.score strong{font-size:26px}.world-nav button small{font-size:7px}.activity-heading h2{font-size:11px}.action-row .primary-button{font-size:10px}.crop-product{grid-template-columns:25px 1fr auto}.crop-product canvas{width:24px;height:24px}.crop-product p{font-size:7px}}
+
+/* Five named dogs, kitchen and hunting preparation. */
+.world-nav{grid-template-columns:repeat(5,minmax(0,1fr))}.world-nav button{font-size:11px;line-height:1.6;min-height:45px}.income-detail{font-size:9px;line-height:1.8;color:#74845c;margin-top:8px;border-top:1px dashed #e0d4b8;padding-top:7px;min-height:24px}.pet-roster{max-height:270px}.pet-mini{width:82px;padding:5px 2px;font-size:10px}.pet-mini canvas{width:54px;height:45px}.pet-mini small{font-size:8px;line-height:1.7}.pet-card p{font-size:10px}.kitchen-panel{margin-top:16px;padding-top:16px;border-top:1px dashed #d9cbb0}.kitchen-panel h3{font-size:12px;margin:0;line-height:1.8}.kitchen-panel label,#hunt-tools label{font-size:11px;color:#8c7c62;display:flex;align-items:center;gap:12px;margin:12px 0}.food-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.food-buttons button{flex:1}.kitchen-panel p{white-space:normal}.kitchen-panel .secondary-button:disabled,#hunt-tools button:disabled{opacity:.4}#feed-btn{margin:10px 0 0;width:100%}#kitchen-notice{min-height:22px;color:#7b8c5d}#food-ledger{background:#f0edda;padding:10px;border-radius:7px}.hunt-checklist{padding:10px 14px;background:#eef0df;border-radius:8px}.hunt-checklist p{margin:0}.unlock-card #hunt-unlock{grid-column:1/-1}#import-old{font-size:9px;margin:6px 0 0;min-height:24px}
+@media(max-width:680px){.world-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.world-nav button{font-size:10px;min-height:40px;padding:8px 2px}.world-nav button:nth-child(4),.world-nav button:nth-child(5){grid-column:auto}.pet-mini{width:60px;font-size:9px}.pet-mini canvas{width:42px;height:35px}.pet-mini small{font-size:7px}.pet-roster{max-height:210px}.pet-card p{font-size:8px}.pet-card .card-heading>span{font-size:9px}.kitchen-panel h3{font-size:10px}.kitchen-panel label,#hunt-tools label{font-size:10px;gap:8px}.kitchen-panel .secondary-button{font-size:10px}.income-detail{font-size:8px}.kitchen-panel .activity-heading{align-items:flex-start}}
+@media(max-width:355px){.pet-mini{width:51px;font-size:8px}.pet-mini canvas{width:38px;height:32px}.world-nav button{font-size:9px}.pet-roster{gap:4px}.kitchen-panel .activity-heading{display:block}.kitchen-panel .activity-heading button{margin-top:7px}.food-buttons button{font-size:9px}.kitchen-panel select{max-width:165px}.income-detail{font-size:7px}}
+
+.surprise-art:before,.surprise-art:after{animation:none!important}
+
+/* A quieter page. The house is explored by walking, with one nearby action. */
+.page-wrap{max-width:960px}.site-header{height:72px}.tiny-note{display:none}.intro{padding:24px 0 20px}.intro-kicker{display:none}.intro h1{font-size:27px;margin:0 0 8px}.intro p{font-size:11px}.playing .intro{padding:15px 0}.playing .intro h1{font-size:17px;letter-spacing:1px;margin:0}.playing .intro h1 span{display:inline!important;font-size:inherit!important}.playing .intro p{display:none}.playing .title-surprise:after{display:none}.title-period{display:none!important}
+.play-layout{display:block}.game-column{width:100%;min-width:0}.world-nav{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.world-nav button{flex:1;min-width:85px;min-height:38px;padding:7px 10px;font-size:11px}.world-nav button:disabled{display:none}.world-nav #nav-shop{display:none}.map-drawer,.life-drawer,.guide-drawer{border-top:1px solid var(--line);font-size:11px;color:#8c846e}.map-drawer summary,.life-drawer summary,.guide-drawer summary{cursor:pointer;min-height:40px;padding:12px 2px;list-style:none}.map-drawer summary:before,.life-drawer summary:before,.guide-drawer summary:before{content:'＋';margin-right:9px;color:#9b9e87}.map-drawer[open]>summary:before,.life-drawer[open]>summary:before,.guide-drawer[open]>summary:before{content:'−'}.map-drawer .biome-route{margin:0;padding:4px 0 12px}.life-drawer{margin-top:12px}.life-drawer summary{display:flex;align-items:center;gap:8px}.life-drawer summary span{margin-left:auto;font-size:11px;color:#75835f}.treasure-panel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:5px 0 15px}.treasure-panel>*{min-width:0}.treasure-panel .note-button,.treasure-panel .share-button,.treasure-panel .restart-button{min-height:40px}.guide-drawer{margin-top:8px}.field-guide{border:0;margin:0;padding:14px 0}.under-game{font-size:10px;margin:10px 0}.haul-card,.pet-card{min-height:0}.pet-roster{max-height:none}.control-hint{font-size:10px}footer{padding:20px 0;margin-top:10px}
+#home-tools{display:none!important}body[data-scene="home"] .stage-controls{display:none}.home-walkbar{display:flex;align-items:center;gap:18px;padding:12px 16px;background:#f4efdf;border:1px solid #d8cfb7;border-radius:0 0 12px 12px;margin-top:4px;min-height:114px}.home-walkbar>div:last-child{flex:1;min-width:0}.home-walkbar #explore-status{font-size:12px;color:#7e8068;line-height:1.8;display:block}.home-walkbar small{display:block;color:#aaa08b;font-size:9px;line-height:1.7;margin-top:7px}.joystick{width:88px;height:88px;flex:none;border-radius:50%;background:#e7e7d7;border:1px solid #c6cbb3;position:relative;touch-action:none;user-select:none;box-shadow:inset 0 2px 8px #7a80571a}.stick-cross{position:absolute;inset:0;display:grid;place-items:center;color:#bec6a8;font-size:76px;font-weight:200;pointer-events:none}.stick-knob{position:absolute;left:24px;top:24px;width:38px;height:38px;border-radius:50%;background:#8d9b78;border:2px solid #f1eedf;box-shadow:0 2px 5px #66714c40;pointer-events:none}.joystick:focus-visible{outline:2px solid #8b9c74;outline-offset:3px}.near-actions{position:absolute;z-index:2;transform:translate(-50%,-100%);padding:8px 9px;border:1px solid #c9c6ac;border-radius:9px;background:#fffbefed;box-shadow:0 3px 8px #71654c15;max-width:190px;min-width:130px;text-align:center;pointer-events:none}.near-actions:after{content:'';position:absolute;left:50%;bottom:-6px;width:9px;height:9px;background:#fffbef;border-right:1px solid #c9c6ac;border-bottom:1px solid #c9c6ac;transform:rotate(45deg)}.near-actions span{font-size:10px;display:block;color:#8f816b;line-height:1.6}.near-actions button{pointer-events:auto;min-height:36px;font-size:11px;padding:7px 12px;background:#e3e9d4;border:1px solid #adb993;border-radius:6px;color:#65734e;white-space:nowrap;margin-top:5px}.near-actions small{display:block;font-size:8px;color:#a49378;line-height:1.6;margin-top:3px;max-width:150px}.near-actions small:empty{display:none}#kitchen-dialog{width:min(430px,92vw)}#kitchen-dialog .dialog-content{padding:20px}#kitchen-dialog .kitchen-panel{border:0;padding:0;margin:0;text-align:left}#kitchen-dialog h3{font-size:15px;line-height:1.7;color:#777e61}#kitchen-dialog p{font-size:11px;line-height:1.9;color:#9a8a70}#kitchen-close{font-size:24px;margin:0}#home-moment{width:min(440px,92vw);background:#f6f0df}.moment-scene{padding:24px;text-align:center}.moment-screen{background:#e9d8c6;border:10px solid #8d8d7b;border-bottom-width:20px;border-radius:18px;padding:25px 12px 22px;box-shadow:inset 0 0 0 2px #6e766622}.moment-heart{display:block;font-size:50px;color:#c77d88;line-height:1.2}.moment-screen h2{font-family:var(--font);font-size:27px;color:#80645e;margin:14px 0 10px}.moment-screen p{font-size:13px;color:#9c7d6d;line-height:2;white-space:pre-line;margin:0}.moment-caption{display:block;font-size:10px;color:#a3987e;line-height:1.8;margin:20px 0}#home-moment[data-kind="fridge"] .moment-screen{background:#fff9df;border-color:#b6c1b3;border-radius:8px}#home-moment[data-kind="fridge"] h2{font-size:22px}#home-moment[data-kind="fridge"] .moment-heart{font-size:35px}#home-moment[data-kind="fridge"] #tv-off{display:none}#home-moment .primary-button{min-width:160px;font-size:12px}body[data-scene="home"] #round-goal{display:none}
+@media(max-width:680px){.site-header{height:65px}.intro h1{font-size:23px}.intro{padding:20px 0 15px}.playing .intro{padding:12px 0}.playing .intro h1{font-size:14px}.page-wrap{padding-left:14px;padding-right:14px}.world-nav button{font-size:10px;min-width:72px;min-height:36px}.treasure-panel{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.treasure-panel .unlock-card{grid-column:1/-1}.treasure-panel .restart-button{grid-column:1/-1}.home-walkbar{gap:13px;padding:10px 12px;min-height:110px}.home-walkbar #explore-status{font-size:10px}.home-walkbar small{font-size:8px}.near-actions{min-width:118px;max-width:147px;padding:6px 7px}.near-actions span{font-size:9px}.near-actions button{font-size:10px;min-height:36px;padding:6px 9px}.near-actions small{font-size:7px}.life-drawer summary{font-size:11px}.life-drawer summary span{font-size:10px}.moment-scene{padding:18px}.moment-screen{padding:20px 8px}.moment-screen h2{font-size:24px}.moment-screen p{font-size:12px}}
+</style></head><body>  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M3 4h6v3h6V4h6v3h3v8h-3v3h-3v3h-3v3H9v-3H6v-3H3v-3H0V7h3Z" fill="currentColor"/></symbol>
+      <symbol id="i-gold" viewBox="0 0 24 24"><path d="M6 4h11v3h3v11h-3v3H5v-3H2V9h4Z" fill="#efb944" stroke="#87623c" stroke-width="1.5"/><path d="M7 7h8v3H7Zm-2 5h4v4H5Z" fill="#ffde7f"/><path d="M14 16h5v3h-5Z" fill="#cf8f37"/></symbol>
+      <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M5 3h14l4 7-11 12L1 10Z" fill="#79c9c3" stroke="#497f7a" stroke-width="1.5"/><path d="m5 3 3 7 4-7 4 7 3-7M1 10h22M8 10l4 12 4-12" fill="none" stroke="#d8f8e9" stroke-width="1.4"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M7 2h10l-2 5 5 5 2 8-3 3H5l-3-3 2-8 5-5Z" fill="#e9a0b5" stroke="#976372" stroke-width="1.5"/><path d="M8 8h8" stroke="#976372" stroke-width="2"/><path d="M10 12h4v3h-2v2m0 2v1" fill="none" stroke="#fff7e9" stroke-width="2"/></symbol>
+      <symbol id="i-share" viewBox="0 0 24 24"><path d="M15 3h6v6M21 3l-9 9M10 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path class="sound-wave" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path class="sound-off" d="m17 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L21 7l-4-4L5 15Zm0 0h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+<div class="page-wrap">    <header class="site-header">
+      <a class="brand" href="" aria-label="小小矿工首页"><span class="brand-mark"><svg><use href="#i-gold"/></svg></span><span>小小矿工<span class="brand-en">LITTLE LUCKY MINER</span></span></a>
+      <div class="header-actions"><span class="tiny-note"><span class="status-dot"></span> 快乐正在营业</span><button class="icon-button muted" id="sound-btn" aria-label="开启音效" aria-pressed="false" title="开启音效"><svg><use href="#i-sound"/></svg></button></div>
+    </header>
+
+
+<main>
+<section class="intro"><span class="intro-kicker"><span>✦</span> 25 STOPS · A LITTLE LIFE <span>✦</span></span><h1 id="page-title"><span class="title-first">挖一点黄金，</span><span class="title-surprise">收一点惊喜</span><span class="title-period">。</span></h1><p>穿过九种地貌，带小伙伴回家。<br class="mobile-only">挖矿、好好睡觉，再种一片自己的小田。</p></section>
+<details class="map-drawer"><summary>旅行地图 · 25 站</summary><div id="biome-route" class="biome-route" aria-label="25局旅行地图"></div></details>
+<nav class="world-nav" aria-label="探索地点"><button id="nav-mine" class="selected">⛏ 挖矿旅行</button><button id="nav-home" disabled>⌂ 家园 <small>第2局钥匙</small></button><button id="nav-farm" disabled>♧ 小农场 <small>第6局技能</small></button><button id="nav-shop" disabled>▰ 开车去商店 <small>第6局技能</small></button><button id="nav-hunt" disabled>♜ 第21局狩猎技能</button></nav>
+<section class="play-layout" aria-label="小小矿工生活冒险">
+<div class="game-column"><div class="game-shell"><div class="stage-toolbar"><span><i class="toolbar-dot"></i><span id="mine-label">春日草原 / 01 · 25</span></span><span id="timer" class="timer" role="timer" aria-label="本局剩余30秒">30s</span></div>
+<div class="stage-wrap"><canvas id="game" width="800" height="520" tabindex="0" role="button" aria-label="矿洞。点击画面下钩">请开启浏览器 JavaScript。</canvas><div id="near-actions" class="near-actions" hidden><span id="near-title"></span><button id="near-act"></button><small id="near-hint"></small></div><div class="start-overlay" id="start-overlay"><div class="start-card"><span class="start-spark">✧</span><span class="eyebrow">A LITTLE WORLD, JUST FOR YOU</span><h2 id="start-title">带着好运，出发吧</h2><p id="start-copy">25 局旅行，每局 30 秒。<br>有时是小伙伴，有时是一把钥匙。<br>慢慢挖，也慢慢发现自己的小生活。</p><button id="start-btn" class="primary-button">开始挖宝 ↓</button><button id="import-old" class="text-button" hidden>导入本机旧旅程</button><span class="start-footnote">手机点画面下钩 · 进度自动保存在本机</span></div></div></div>
+<div class="stage-controls"><span id="play-hint" class="control-hint">看准方向，点一下就下钩</span><button id="drop-btn" class="drop-button" disabled><span>下钩抓取</span></button></div></div>
+<div id="home-walkbar" class="home-walkbar" hidden><div id="joystick" class="joystick" role="group" aria-label="虚拟摇杆，拖动移动，也可使用方向键" tabindex="0"><span class="stick-cross">＋</span><span id="stick-knob" class="stick-knob"></span></div><div><span id="explore-status" role="status">四处走走，看看会发现什么。</span><small>拖动摇杆移动 · 也可点空地走过去</small></div></div><p id="round-goal" class="under-game">30秒内自由挖宝 · 以收回的宝藏计入金币</p>
+<section id="home-tools" hidden><span id="sleep-status"></span><button id="sleep-btn" hidden>睡觉</button><button id="stop-btn" hidden>停下</button></section><section id="farm-tools" class="activity-tools" hidden><div class="activity-heading"><h2>六块小田 · 慢慢长大</h2><button id="farm-drive" class="secondary-button">开车去商店 →</button></div><label class="seed-select">要播种的种子 <select id="seed-select"></select></label><div id="plot-buttons" class="plot-buttons"></div><div class="action-row"><button id="harvest-all" class="secondary-button">收获已成熟作物</button><span id="produce-summary"></span></div><p>有种子就能播种；成熟后点击收获，再开车去商店卖出。离开页面后作物也会继续生长。</p></section>
+<section id="shop-tools" class="activity-tools" hidden><div class="activity-heading"><h2>山间种子铺</h2><button id="shop-return" class="secondary-button">开车回农场 →</button></div><p>种子按颗购买，一颗结一份作物。往返开车免费，金币不足时不能购买。</p><div id="shop-products" class="shop-products"></div><div class="sell-row"><span id="sell-summary">篮子里还没有作物</span><button id="sell-all" class="primary-button">卖出全部作物</button></div></section><section id="hunt-tools" class="activity-tools" hidden><div class="activity-heading"><h2>狩猎营地 · 为下一段冒险做准备</h2></div><p id="hunt-status"></p><div class="hunt-checklist"><p id="hunt-skill-state"></p><p id="hunt-adult-state"></p></div><p id="hunt-growth"></p><label>同行的成年伙伴 <select id="hunt-pet"></select></label><div class="action-row"><button id="hunt-enable" class="primary-button">开启狩猎模式</button></div><p>狩猎模式开放后会记住所选同伴。狩猎地图准备中，下一次再一起出发。</p></section>
+</div>
+<details class="life-drawer"><summary>背包与伙伴 <span id="compact-balance">0 金币 · 0/5 伙伴</span></summary><aside class="treasure-panel"><section class="haul-card"><div class="card-heading"><h2>我的小金库</h2><span class="mini-spark">✦</span></div><div class="score"><strong id="score">0</strong><span>金币</span></div><div class="haul-stats"><div><svg><use href="#i-gold"/></svg><span>黄金</span><b id="gold-count">0</b></div><div><svg><use href="#i-diamond"/></svg><span>钻石</span><b id="diamond-count">0</b></div></div><div class="best-line">累计挖矿收入 <b id="total-income">0</b></div><div class="wallet-detail" id="wallet-detail">本局 +0 · 种子支出 0</div><div class="income-detail" id="income-detail">本局收入只计算已收回的财物</div></section>
+<section class="pet-card"><div class="card-heading"><h2>我的小伙伴</h2><span id="pet-count">0 只</span></div><p id="pet-caption">只有五只指定狗狗，在不同的关卡相遇。</p><div id="pet-roster" class="pet-roster"></div><label class="pet-mode-label">陪伴方式 <select id="pet-mode"><option value="follow">跟着我</option><option value="roam">自由散步</option><option value="stay">原地停留</option></select></label></section>
+<section class="unlock-card"><h2>旅行里的新生活</h2><div id="home-unlock">⌂ 第 2 局问号袋 · 小家钥匙</div><div id="farm-unlock">♧ 第 6 局问号袋 · 种田技能</div><div id="hunt-unlock">♜ 第21局问号袋 · 狩猎技能</div><div id="progress-label">旅程进度 0 / 25</div></section>
+<button class="note-button" id="note-btn"><svg><use href="#i-pen"/></svg><span>藏一句悄悄话</span><span>↗</span></button><button class="share-button" id="share-btn"><svg><use href="#i-share"/></svg><span>把旅程分享给朋友</span></button><button class="restart-button" id="restart-btn"><svg><use href="#i-repeat"/></svg>新开一段旅程</button></aside></details></section>
+<details class="guide-drawer"><summary>玩法小册子</summary><section class="field-guide" aria-label="金币与玩法说明"><span class="guide-title">每一份收获，都有去处</span><div class="guide-item"><svg><use href="#i-gold"/></svg><span>大小金块<small>50 / 100 / 200 金币</small></span></div><div class="guide-item"><svg><use href="#i-diamond"/></svg><span>闪亮钻石<small>300 金币</small></span></div><div class="guide-item"><svg><use href="#i-bag"/></svg><span>神秘口袋<small>伙伴或技能 · 分散出现</small></span></div></section></details>
+</main><footer><span>MADE OF PIXELS & A LITTLE LOVE</span><svg><use href="#i-heart"/></svg><span id="save-status">进度保存在当前浏览器</span></footer></div>
+<dialog id="home-moment" aria-labelledby="moment-title"><div class="moment-scene"><div class="moment-screen"><span class="moment-heart">❤️</span><h2 id="moment-title">I love you</h2><p id="moment-copy">一起看电视很开心哦！</p></div><span class="moment-caption">把平凡的小日子，过得暖一点。</span><button id="moment-close" class="primary-button">继续逛逛</button><button id="tv-off" class="text-button">关掉电视</button></div></dialog><dialog id="kitchen-dialog" aria-label="厨房"><div class="dialog-content"><section class="kitchen-panel"><div class="activity-heading"><h3>厨房支线 · 先照顾自己，再照顾它们</h3><button id="kitchen-close" class="text-button" aria-label="关闭厨房">×</button></div><p id="kitchen-proximity">靠近厨房后才能做饭</p><p id="pantry-summary"></p><label>用哪种收成 <select id="recipe-crop"></select></label><p id="kitchen-rule">1份收成做2份田园炖菜。</p><div class="food-buttons"><button id="cook-btn" class="secondary-button">做2份田园炖菜</button><button id="eat-btn" class="secondary-button">矿工先吃1份</button></div><p id="food-ledger"></p><div hidden><select id="feed-pet"></select><button id="feed-btn">喂养</button></div><p id="kitchen-notice" role="status"></p></section></div></dialog><dialog id="surprise-dialog" aria-labelledby="surprise-title"><div class="dialog-content"><span id="surprise-kicker" class="dialog-kicker">遇见一位新朋友</span><div id="surprise-art" class="surprise-art"></div><h2 id="surprise-title"></h2><p id="surprise-message"></p><button id="surprise-close" class="primary-button">收好，继续挖宝</button><span class="dialog-footnote">看小惊喜时，倒计时会暂停。</span></div></dialog>
+<dialog id="round-dialog" aria-labelledby="round-title"><div class="dialog-content"><span id="round-kicker" class="dialog-kicker"></span><div id="round-pet" class="round-pet"></div><h2 id="round-title"></h2><p id="round-message"></p><div id="settlement-stats" class="settlement-stats"></div><button id="next-round" class="primary-button">继续下一局</button><div class="settlement-links"><button id="round-home" class="text-button" hidden>回家休息</button><button id="round-farm" class="text-button" hidden>去小农场</button><button id="round-dismiss" class="text-button">先看看收获</button></div></div></dialog>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-content"><span class="dialog-kicker">A NEW LITTLE JOURNEY</span><h2 id="reset-title">从头开始一段旅程？</h2><p>会清空本机的金币、宠物、农田和关卡进度。</p><button id="reset-confirm" class="primary-button">确认，重新开始</button><button id="reset-cancel" class="text-button">保留我的小世界</button></div></dialog>
+  <dialog id="note-dialog" class="note-dialog" aria-labelledby="note-title"><form id="note-form"><button type="button" class="close-dialog" id="note-close" aria-label="关闭">×</button><span class="dialog-kicker">A SECRET JUST FOR THEM</span><h2 id="note-title">把心意，藏进问号袋。</h2><p>朋友打开你的链接，抓到第一个问号袋时，<br>就会看到你留下的这句话。</p><label for="secret-message">想说的话 <span id="character-count">0 / 60</span></label><textarea id="secret-message" maxlength="60" rows="3" placeholder="例如：今天的好运，和我的喜欢，都送给你。"></textarea><p class="form-tip">悄悄话会保存在分享链接里，拿到链接的人都能看到。</p><button class="primary-button" type="submit">生成专属分享链接 <svg><use href="#i-share"/></svg></button><div class="copy-link-box" id="copy-link-box" hidden><label for="share-link-field">专属链接已生成，长按或复制发给朋友</label><input id="share-link-field" readonly><button class="small-copy" id="copy-note-link" type="button">复制链接</button></div></form></dialog>
+  <dialog id="share-dialog" class="note-dialog" aria-labelledby="share-title"><div class="dialog-content"><button type="button" class="close-dialog" id="share-close" aria-label="关闭">×</button><span class="dialog-kicker">A LITTLE LUCK TO GO</span><h2 id="share-title">把好运，传递下去。</h2><p>复制链接发给朋友，手机点开就能玩。</p><input class="fallback-link" id="fallback-link" readonly aria-label="游戏分享链接"><button class="primary-button" id="fallback-copy">复制链接 <svg><use href="#i-share"/></svg></button></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><div class="sr-only" id="game-announcement" role="status" aria-live="polite"></div><noscript><p>请在浏览器中开启 JavaScript。</p></noscript><script>
+/* Browser-independent rules, reward schedule, food and persistent progress. */
+const MinerLife = (() => {
+  'use strict';
+  const TOTAL=25, ROUND_SECONDS=30;
+  const KEY='little-lucky-miner-life-v3', LEGACY_KEY='little-lucky-miner-life-v2';
+  const BIOMES = [
+    {name:'春日草原',tag:'MEADOW',sky:'#e9ead3',soil:'#edcc98',deep:'#d6aa75',mount:'#b1be90',accent:'#81965f'},
+    {name:'冰蓝峡湾',tag:'FJORD',sky:'#dce9eb',soil:'#c7d4ce',deep:'#99b4b1',mount:'#74999e',accent:'#527f88'},
+    {name:'赤霞丹霞',tag:'DANXIA',sky:'#f5e0c7',soil:'#e9b18b',deep:'#bd7964',mount:'#c78468',accent:'#b56851'},
+    {name:'雾气雨林',tag:'RAINFOREST',sky:'#d5e5cf',soil:'#c0bc8d',deep:'#8d9b73',mount:'#6c9378',accent:'#517960'},
+    {name:'金色沙丘',tag:'DUNES',sky:'#f6e8ce',soil:'#ecd099',deep:'#cfaa70',mount:'#d7b77b',accent:'#b79053'},
+    {name:'雪山高原',tag:'ALPINE',sky:'#e1e9ee',soil:'#d5d6cd',deep:'#aab6b7',mount:'#9aaeb4',accent:'#718c98'},
+    {name:'星夜火山',tag:'VOLCANO',sky:'#343d57',soil:'#a39a9e',deep:'#6b697e',mount:'#60657e',accent:'#dc9a7f'},
+  ];
+  BIOMES.push(
+    {name:'海风群岛',tag:'ISLANDS',sky:'#dfebdf',soil:'#dfd3ac',deep:'#b7b88e',mount:'#8eb6a3',accent:'#6b9f91'},
+    {name:'花海山谷',tag:'FLOWER VALLEY',sky:'#eee5df',soil:'#ddc49a',deep:'#c1a881',mount:'#a7b698',accent:'#9b8d77'}
+  );
+  const PETS=[
+    {id:1,type:'golden',breed:'金毛',name:'漱口水',color:'#e3b66f',collar:'#7eaaa7',message:'miss you · 漱口水摇着尾巴，想和你一起回家。'},
+    {id:2,type:'westie',breed:'西高地',name:'牙膏',color:'#f4eee1',collar:'#91ab7e',message:'my beloved · 牙膏把一整天的好心情都带来了。'},
+    {id:3,type:'westie',breed:'西高地',name:'牙刷',color:'#f4eee1',collar:'#d89b9a',message:'love you · 牙刷会在你身边，陪你慢慢长大。'},
+    {id:4,type:'husky',breed:'哈士奇',name:'牙线',color:'#a0a8ac',collar:'#b19ac1',message:'牙线已经准备好，和你一起探索新风景。'},
+    {id:5,type:'golden',breed:'金毛',name:'牙签',color:'#e9c27f',collar:'#ce9a76',message:'有你，还有牙签，回家的路就很温暖。'}
+  ];
+  const REWARDS=[
+    {id:'pet-1',kind:'pet',petId:1,round:1},
+    {id:'home',kind:'skill',title:'自己的小家',round:2},
+    {id:'pet-2',kind:'pet',petId:2,round:4},
+    {id:'farm',kind:'skill',title:'种田技能',round:6},
+    {id:'pet-3',kind:'pet',petId:3,round:9},
+    {id:'pet-4',kind:'pet',petId:4,round:13},
+    {id:'pet-5',kind:'pet',petId:5,round:17},
+    {id:'hunt',kind:'skill',title:'狩猎技能',round:21}
+  ];
+  const CROPS=[
+    {id:'carrot',name:'胡萝卜',seed:25,sell:40,seconds:45,color:'#d99b60'},
+    {id:'tomato',name:'小番茄',seed:50,sell:85,seconds:75,color:'#cb7d73'},
+    {id:'pumpkin',name:'南瓜',seed:80,sell:140,seconds:120,color:'#d5a45f'}
+  ];
+  const integer=(v,max=1e9)=>Math.min(max,Math.max(0,Math.floor(Number(v)||0)));
+  function fresh(){return {version:3,round:1,cleared:0,remaining:30,settled:false,complete:false,wallet:0,earned:0,spent:0,sold:0,gold:0,diamonds:0,pets:[],claimed:[],skills:{home:false,farm:false,hunt:false},opened:[],petMode:'follow',items:null,layoutSeed:Math.floor(Math.random()*1e8)+1,roundIncome:0,roundGold:0,roundDiamonds:0,seeds:{carrot:0,tomato:0,pumpkin:0},produce:{carrot:0,tomato:0,pumpkin:0},plots:Array.from({length:6},()=>null),sleepUntil:0,homePosition:{x:330,y:390},dishes:0,feedingCredits:0,eatenMeals:0,cookedBatches:0,huntingMode:false,huntPetId:null,tvOn:false,plantWatered:[0,0,0],waterCount:0};}
+  function load(raw){
+    try{
+      const a=JSON.parse(raw);if(!a||![2,3].includes(a.version))return fresh();
+      const s=fresh(),legacy=a.version===2;
+      for(const k of ['wallet','earned','spent','sold','gold','diamonds','roundIncome','roundGold','roundDiamonds','dishes','feedingCredits','eatenMeals','cookedBatches'])s[k]=integer(a[k]);
+      s.round=Math.max(1,integer(a.round,TOTAL));s.cleared=Math.min(s.round,integer(a.cleared,TOTAL));
+      s.remaining=Math.max(0,Math.min(ROUND_SECONDS,Number(a.remaining)||0));s.settled=Boolean(a.settled);s.complete=s.cleared===TOTAL;
+      s.opened=Array.isArray(a.opened)?[...new Set(a.opened.filter(v=>Number.isInteger(v)&&v>=1&&v<=TOTAL))]:[];
+      s.claimed=legacy?[]:(Array.isArray(a.claimed)?[...new Set(a.claimed.filter(id=>REWARDS.some(r=>r.id===id)))]:[]);
+      s.skills={home:legacy?s.cleared>=7:Boolean(a.skills?.home),farm:legacy?s.cleared>=14:Boolean(a.skills?.farm),hunt:legacy?false:Boolean(a.skills?.hunt)};
+      for(const k of ['home','farm','hunt'])if(s.skills[k]&&!s.claimed.includes(k))s.claimed.push(k);
+      s.tvOn=Boolean(a.tvOn);s.plantWatered=Array.from({length:3},(_,i)=>integer(a.plantWatered?.[i],1e15));s.waterCount=integer(a.waterCount);
+      const oldPets=Array.isArray(a.pets)?a.pets:[];
+      const petIds=legacy?PETS.slice(0,Math.min(5,oldPets.length)).map(p=>p.id):[...new Set(oldPets.map(p=>p.id).filter(id=>Number.isInteger(id)&&id>=1&&id<=5))].slice(0,5);
+      s.pets=petIds.map(id=>{const data=oldPets.find(p=>p.id===id)||{};const p={...PETS[id-1],xp:legacy?0:integer(data.xp,4),joinsAt:legacy?1:Math.max(1,integer(data.joinsAt,TOTAL+1))};if(!s.claimed.includes('pet-'+id))s.claimed.push('pet-'+id);return p;});
+      // A claimed dog can never be lost by a partial save, nor duplicated.
+      for(const r of REWARDS.filter(r=>r.kind==='pet'&&s.claimed.includes(r.id)))if(!s.pets.some(p=>p.id===r.petId))s.pets.push({...PETS[r.petId-1],xp:0,joinsAt:Math.min(TOTAL,s.round)});
+      s.petMode=['follow','roam','stay'].includes(a.petMode)?a.petMode:'follow';
+      s.layoutSeed=integer(a.layoutSeed,1e8)||s.layoutSeed;
+      if(!legacy&&Array.isArray(a.items)&&a.items.length===12){s.items=a.items.map((it,i)=>({id:i,nx:Math.max(.06,Math.min(.94,Number(it.nx)||.5)),ny:Math.max(0,Math.min(1,Number(it.ny)||.5)),type:['gold','diamond','bag','hotpot','helmet'].includes(it.type)?it.type:'gold',r:Math.max(20,Math.min(42,Number(it.r)||25)),value:integer(it.value,300),collected:Boolean(it.collected),paid:Boolean(it.paid),rewardId:REWARDS.some(r=>r.id===it.rewardId)?it.rewardId:null}));}
+      for(const c of CROPS){s.seeds[c.id]=integer(a.seeds?.[c.id],9999);s.produce[c.id]=integer(a.produce?.[c.id],9999);}
+      s.plots=Array.from({length:6},(_,i)=>{const p=a.plots?.[i];return p&&CROPS.some(c=>c.id===p.crop)&&Number.isFinite(p.planted)?{crop:p.crop,planted:Math.max(0,p.planted)}:null;});
+      s.sleepUntil=Number.isFinite(a.sleepUntil)?Math.max(0,a.sleepUntil):0;
+      if(a.homePosition&&Number.isFinite(a.homePosition.x)&&Number.isFinite(a.homePosition.y)&&!blocked(a.homePosition.x,a.homePosition.y))s.homePosition={...a.homePosition};
+      s.huntPetId=s.pets.some(p=>p.id===a.huntPetId)?a.huntPetId:null;
+      s.huntingMode=Boolean(a.huntingMode)&&huntReady(s);
+      if(!s.settled&&s.remaining===0)settle(s);return s;
+    }catch{return fresh();}
+  }
+  function petForRound(round){const r=REWARDS.find(r=>r.round===round&&r.kind==='pet');return r?{...PETS[r.petId-1],xp:0,joinsAt:round+1}:null;}
+  function companions(s){return s.pets.filter(p=>p.joinsAt<=s.round||s.complete);}
+  function level(p){return Math.min(3,1+Math.floor(integer(p?.xp,4)/2));}
+  function adult(p){return level(p)>=3;}
+  function biome(round){return BIOMES[Math.min(BIOMES.length-1,Math.floor((round-1)/3))];}
+  function unlocks(s){return {home:s.skills.home&&(s.round>=3||s.cleared>=2),farm:s.skills.farm,hunt:s.skills.hunt};}
+  function rewardForRound(s){const due=REWARDS.filter(r=>s.round>=r.round&&!s.claimed.includes(r.id));due.sort((a,b)=>(a.kind==='skill'?0:1)-(b.kind==='skill'?0:1)||a.round-b.round);return due[0]||null;}
+  function generate(s){
+    let seed=(s.layoutSeed+s.round*7919)%2147483647||17;const rand=()=>{seed=seed*16807%2147483647;return seed/2147483647;};
+    const reward=rewardForRound(s),types=['diamond','gold','gold','diamond','gold','gold','diamond','gold','gold','gold','gold','gold'];
+    for(let i=types.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[types[i],types[j]]=[types[j],types[i]];}
+    const items=[];
+    for(let i=0;i<12;i++){
+      let type=reward&&i===0?'bag':types[i];if(type!=='bag'&&i===8&&s.round%7===2)type='hotpot';if(type!=='bag'&&i===9&&s.round%7===3)type='helmet';
+      let r=type==='gold'?[23,31,41][Math.floor(rand()*3)]:type==='bag'?31:24,nx,ny,placed=false;
+      for(let attempt=0;attempt<6000;attempt++){
+        if(attempt===1500&&type==='gold')r=23;
+        nx=type==='bag'?.26+rand()*.48:.065+rand()*.87;ny=type==='bag'?.02+rand()*.24:.015+rand()*.95;
+        if(items.every(b=>Math.hypot((nx-b.nx)*800,(ny-b.ny)*192)>=r+b.r+9)){placed=true;break;}
+      }
+      if(!placed)throw new Error('Treasure layout needs more room');
+      items.push({id:i,nx,ny,type,r,value:type==='bag'?0:type==='diamond'?300:type==='gold'?(r>=40?200:r>=28?100:50):150,collected:false,paid:false,rewardId:type==='bag'?reward.id:null});
+    }
+    return items;
+  }
+  function collect(s,item){
+    if(s.settled||s.remaining<=0||item.paid)return null;item.paid=true;
+    if(item.type==='bag'){
+      const r=REWARDS.find(r=>r.id===item.rewardId);if(!r||s.claimed.includes(r.id))return null;
+      s.claimed.push(r.id);if(!s.opened.includes(s.round))s.opened.push(s.round);
+      if(r.kind==='pet'){if(s.pets.length>=5)return null;const p={...PETS[r.petId-1],xp:0,joinsAt:s.round+1};s.pets.push(p);return{kind:'pet',pet:p,title:p.name};}
+      s.skills[r.id]=true;return{kind:'skill',id:r.id,title:r.title};
+    }
+    const amount=integer(item.value,300);s.wallet+=amount;s.earned+=amount;s.roundIncome+=amount;
+    if(item.type==='gold'){s.gold++;s.roundGold++;}if(item.type==='diamond'){s.diamonds++;s.roundDiamonds++;}return null;
+  }
+  function settle(s){if(s.settled)return false;s.remaining=0;s.settled=true;s.cleared=Math.max(s.cleared,s.round);s.complete=s.cleared>=TOTAL;return true;}
+  function tick(s,dt){if(s.settled)return false;s.remaining=Math.max(0,s.remaining-Math.max(0,dt));return s.remaining<=0?settle(s):false;}
+  function resetRound(s){s.remaining=ROUND_SECONDS;s.settled=false;s.roundIncome=0;s.roundGold=0;s.roundDiamonds=0;s.items=null;s.layoutSeed=(s.layoutSeed*16807+s.round*977)%1e8+1;}
+  function next(s){if(!s.settled||s.round>=TOTAL)return false;s.round++;resetRound(s);return true;}
+  function replay(s){if(!s.complete)return false;resetRound(s);return true;}
+  function buy(s,id,qty=1){const c=CROPS.find(c=>c.id===id);if(!unlocks(s).farm||!c||!Number.isInteger(qty)||qty<1||qty>99||s.wallet<c.seed*qty)return false;s.wallet-=c.seed*qty;s.spent+=c.seed*qty;s.seeds[id]+=qty;return true;}
+  function plant(s,index,id,now){if(!unlocks(s).farm||!Number.isInteger(index)||index<0||index>=6||s.plots[index]||!CROPS.some(c=>c.id===id)||s.seeds[id]<=0)return false;s.seeds[id]--;s.plots[index]={crop:id,planted:now};return true;}
+  function growth(plot,now){const c=CROPS.find(c=>c.id===plot?.crop);return c?Math.max(0,Math.min(1,(now-plot.planted)/(c.seconds*1000))):0;}
+  function harvest(s,index,now){const p=s.plots[index];if(!p||growth(p,now)<1)return false;s.produce[p.crop]++;s.plots[index]=null;return true;}
+  function sell(s){if(!unlocks(s).farm)return 0;let sum=0;for(const c of CROPS){sum+=s.produce[c.id]*c.sell;s.produce[c.id]=0;}s.wallet+=sum;s.sold+=sum;return sum;}
+  function atKitchen(position){return Boolean(position)&&Math.hypot(position.x-670,position.y-300)<=68;}
+  function cook(s,cropId,position){if(!unlocks(s).home||!unlocks(s).farm||!atKitchen(position)||!CROPS.some(c=>c.id===cropId)||s.produce[cropId]<=0)return false;s.produce[cropId]--;s.dishes+=2;s.cookedBatches++;return true;}
+  function eat(s){if(!unlocks(s).home||s.dishes<1)return false;s.dishes--;s.feedingCredits++;s.eatenMeals++;return true;}
+  function feed(s,id){const p=companions(s).find(p=>p.id===id);if(!unlocks(s).home||!p||s.dishes<1||s.feedingCredits<1)return false;s.dishes--;s.feedingCredits--;p.xp=Math.min(4,p.xp+1);return true;}
+  function waterPlant(s,index,position,now=Date.now()){
+    const x=252+index*41;if(!unlocks(s).home||!Number.isInteger(index)||index<0||index>2||!position||Math.hypot(position.x-x,position.y-420)>76||now-s.plantWatered[index]<60000)return false;
+    s.plantWatered[index]=now;s.waterCount++;return true;
+  }
+  function toggleTV(s,position){if(!unlocks(s).home||!position||Math.hypot(position.x-130,position.y-400)>80)return false;s.tvOn=!s.tvOn;return true;}
+  function walkHome(position,dx,dy){const distance=Math.hypot(dx,dy),steps=Math.max(1,Math.ceil(distance/3));let x=position.x,y=position.y;for(let n=0;n<steps;n++){if(!blocked(x+dx/steps,y))x+=dx/steps;if(!blocked(x,y+dy/steps))y+=dy/steps;}return{x,y};}
+  function huntReady(s){return Boolean(s.skills.hunt)&&companions(s).some(adult);}
+  function enableHunt(s,id){const p=companions(s).find(p=>p.id===id);if(!huntReady(s)||!p||!adult(p))return false;s.huntingMode=true;s.huntPetId=id;return true;}
+  const WALLS=[{x:40,y:30,w:720,h:10},{x:40,y:30,w:10,h:450},{x:750,y:30,w:10,h:450},{x:40,y:470,w:720,h:10},{x:280,y:40,w:10,h:140},{x:520,y:40,w:10,h:140},...[ [50,120],[210,180],[450,180],[690,60] ].map(([x,w])=>({x,y:180,w,h:10})),{x:400,y:230,w:10,h:70},{x:400,y:360,w:10,h:110},{x:600,y:230,w:10,h:50},{x:600,y:330,w:10,h:60},{x:600,y:440,w:10,h:30},{x:610,y:350,w:140,h:10}];
+  const FURNITURE=[{x:80,y:60,w:80,h:100},{x:320,y:60,w:80,h:100},{x:560,y:60,w:80,h:100},{x:70,y:260,w:55,h:100},{x:170,y:300,w:100,h:55},{x:450,y:270,w:100,h:60},{x:650,y:235,w:85,h:35},{x:690,y:380,w:45,h:65},{x:70,y:425,w:120,h:30}];
+  function blocked(x,y){return x<60||x>740||y<50||y>460||WALLS.concat(FURNITURE).some(b=>x>b.x-7&&x<b.x+b.w+7&&y>b.y-7&&y<b.y+b.h+7);}
+  function route(from,to){const step=10;const k=(x,y)=>`${x},${y}`;const start={x:Math.round(from.x/step)*step,y:Math.round(from.y/step)*step};const end={x:Math.round(to.x/step)*step,y:Math.round(to.y/step)*step};if(blocked(end.x,end.y))return [];const queue=[start],seen=new Map([[k(start.x,start.y),null]]);let found=false;for(let head=0;head<queue.length&&head<4200;head++){const a=queue[head];if(a.x===end.x&&a.y===end.y){found=true;break;}for(const [dx,dy]of [[10,0],[-10,0],[0,10],[0,-10]]){const b={x:a.x+dx,y:a.y+dy},key=k(b.x,b.y);if(!seen.has(key)&&!blocked(b.x,b.y)){seen.set(key,a);queue.push(b);}}}if(!found)return [];const path=[];let a=end;while(a){path.push(a);a=seen.get(k(a.x,a.y));}return path.reverse().slice(1);}
+  return {TOTAL,ROUND_SECONDS,KEY,LEGACY_KEY,BIOMES,PETS,REWARDS,CROPS,WALLS,FURNITURE,fresh,load,petForRound,companions,level,adult,biome,unlocks,rewardForRound,generate,collect,settle,tick,next,replay,buy,plant,growth,harvest,sell,atKitchen,cook,eat,feed,huntReady,enableHunt,waterPlant,toggleTV,walkHome,blocked,route};
+})();
+if(typeof module!=='undefined'&&module.exports)module.exports=MinerLife;
+
+(() => {
+'use strict';
+const E=MinerLife,$=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d'),W=800;
+let H=520,ground=148,anchor={x:400,y:164},background,lastTime=0,elapsed=0,uiClock=0,toastTimeout,announcementTimeout,audioContext,soundEnabled=false,lastShareURL='',secret=readSecret();
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+let raw='';try{raw=localStorage.getItem(E.KEY)||'';}catch{}
+let legacyRaw='';try{legacyRaw=localStorage.getItem(E.LEGACY_KEY)||'';}catch{}
+let state=E.load(raw),scene='mine',storageOK=true,selectedSeed='carrot',travel=null,sleepRequested=false;
+const game={lastCatch:'',started:false,hook:{phase:'swing',angle:-.6,length:34,cargo:null},particles:[]};
+let homePlayer={...state.homePosition,path:[]},petActors=[],petSignature='',rosterSignature='';
+if(E.blocked(homePlayer.x,homePlayer.y))homePlayer={x:330,y:390,path:[]};
+const COLORS={gold:['#8c663e','#edb749','#ffdf88','#ca913a'],diamond:['#568b80','#8acdc4','#d2f5df','#62a99e'],bag:['#a26b73','#df9cac','#f7bdc6','#be7f92']};
+function readSecret(){try{return(new URLSearchParams(location.hash.slice(1)).get('note')||'').slice(0,60).trim();}catch{return '';}}
+function makeShareURL(message=secret){const u=new URL(location.href);u.hash=message?new URLSearchParams({note:message}).toString():'';return u.href;}
+  function rect(c, x, y, w, h, color) {
+    c.fillStyle = color;
+    c.fillRect(Math.round(x), Math.round(y), Math.round(w), Math.round(h));
+  }
+
+  function poly(c, points, color) {
+    c.fillStyle = color;
+    c.beginPath();
+    c.moveTo(points[0][0], points[0][1]);
+    for (let i = 1; i < points.length; i++) c.lineTo(points[i][0], points[i][1]);
+    c.closePath(); c.fill();
+  }
+
+  function sprite(c, rows, palette, x, y, s = 3) {
+    rows.forEach((row, j) => [...row].forEach((key, i) => {
+      if (palette[key]) rect(c, x + i * s, y + j * s, s, s, palette[key]);
+    }));
+  }
+
+  function pixelHeart(c, x, y, s, color = '#db8ca0') {
+    sprite(c, ['.xx.xx.', 'xxxxxxx', 'xxxxxxx', '.xxxxx.', '..xxx..', '...x...'], { x: color }, x, y, s);
+    rect(c, x + s, y + s, s, s, '#f9c7cc');
+  }
+
+  function drawCloud(c, x, y, size = 1) {
+    rect(c, x + 13 * size, y, 46 * size, 9 * size, '#faf7e8');
+    rect(c, x, y + 9 * size, 86 * size, 13 * size, '#faf7e8');
+    rect(c, x + 7 * size, y + 22 * size, 65 * size, 5 * size, '#f3eddb');
+  }
+
+  function drawTree(c, x, y, s, shade) {
+    rect(c, x - 3 * s, y - 19 * s, 6 * s, 24 * s, '#a18e69');
+    rect(c, x - 5 * s, y - 20 * s, 3 * s, 11 * s, '#baa27a');
+    const f = shade || '#9eaf79';
+    rect(c, x - 12 * s, y - 42 * s, 24 * s, 12 * s, f);
+    rect(c, x - 21 * s, y - 31 * s, 42 * s, 17 * s, f);
+    rect(c, x - 15 * s, y - 15 * s, 30 * s, 6 * s, f);
+    rect(c, x - 10 * s, y - 40 * s, 13 * s, 8 * s, '#bdc78d');
+    rect(c, x + 4 * s, y - 26 * s, 12 * s, 7 * s, '#8fa370');
+  }
+
+  function drawMiner(c, t) {
+    const busy = game.hook.phase === 'return' && game.hook.cargo;
+    const bob = busy && !reduceMotion.matches ? Math.floor(Math.sin(t * 13) * 1.4) : 0;
+    const palette = { o: '#816e51', y: '#e7bc62', l: '#f8d88e', s: '#f4d4a1', b: '#697f80', d: '#526b6e', k: '#6e634f', p: '#dd9d8c', w: '#fff1c9' };
+    sprite(c, [
+      '.....yyyyyyy.....', '....yyylllyyy....', '...yyyyyyyyyyy...', '..yyyyyyyyyyyyy..',
+      '....sssssssss....', '....sksssksss....', '....spssspsss....', '.....sssss.......',
+      '....ybbbyyy......', '...yybbbbbys.....', '...sybbbbbys.....', '...sybbbbbys.....',
+      '.....ddddd.......', '.....dd.dd.......', '....kkk.kkk......',
+    ], palette, 339, ground - 52 + bob, 3);
+    // Wooden hand winch and a little stool.
+    rect(c, 343, ground - 8, 43, 6, '#a88c62');
+    rect(c, 348, ground - 2, 5, 9, '#9c815a'); rect(c, 377, ground - 2, 5, 9, '#9c815a');
+    rect(c, 393, ground - 26, 7, 35, '#8d7857');
+    rect(c, 429, ground - 26, 7, 35, '#8d7857');
+    rect(c, 388, ground - 27, 54, 7, '#ac9364');
+    rect(c, 397, ground - 20, 36, 19, '#bba06d');
+    rect(c, 404, ground - 18, 21, 15, '#7f765e');
+    rect(c, 410, ground - 18, 4, 15, '#d0bd88');
+    rect(c, 400, ground - 13, 32, 4, '#d0bd88');
+    rect(c, 387, ground - 16, 13, 4, '#827252');
+    rect(c, 384, ground - 20 + bob * 2, 5, 11, '#a58656');
+    rect(c, anchor.x - 4, ground - 7, 8, 23, '#847152');
+  }
+
+  function drawOre(c, item, x, y, time = 0) {
+    const r = item.r;
+    if (item.type === 'gold') {
+      const p = COLORS.gold;
+      poly(c, [[x-r*.6,y-r], [x+r*.45,y-r], [x+r*.45,y-r*.7], [x+r*.85,y-r*.7], [x+r*.85,y-r*.25], [x+r,y-r*.25], [x+r,y+r*.48], [x+r*.6,y+r*.48], [x+r*.6,y+r*.83], [x-r*.55,y+r*.83], [x-r*.55,y+r*.58], [x-r,y+r*.58], [x-r,y-r*.38], [x-r*.6,y-r*.38]], p[0]);
+      poly(c, [[x-r*.5,y-r*.83], [x+r*.3,y-r*.83], [x+r*.3,y-r*.52], [x+r*.7,y-r*.52], [x+r*.7,y-r*.1], [x+r*.83,y-r*.1], [x+r*.83,y+r*.33], [x+r*.45,y+r*.33], [x+r*.45,y+r*.64], [x-r*.45,y+r*.64], [x-r*.45,y+r*.4], [x-r*.82,y+r*.4], [x-r*.82,y-r*.22], [x-r*.5,y-r*.22]], p[1]);
+      rect(c, x-r*.48, y-r*.67, r*.72, r*.22, p[2]); rect(c, x-r*.65, y-r*.2, r*.22, r*.5, p[2]);
+      rect(c, x+r*.1, y+r*.3, r*.6, r*.24, p[3]);
+      rect(c, x-r*.17, y+r*.13, r*.22, r*.18, '#ffdc77');
+    } else if (item.type === 'diamond') {
+      const p = COLORS.diamond;
+      poly(c, [[x-r*.55,y-r*.8], [x+r*.55,y-r*.8], [x+r,y-r*.1], [x,y+r], [x-r,y-r*.1]], p[0]);
+      poly(c, [[x-r*.45,y-r*.63], [x+r*.45,y-r*.63], [x+r*.8,y-r*.1], [x,y+r*.76], [x-r*.8,y-r*.1]], p[1]);
+      poly(c, [[x-r*.4,y-r*.6], [x,y-r*.6], [x-r*.24,y-r*.08], [x-r*.75,y-r*.08]], p[2]);
+      poly(c, [[x+r*.1,y-r*.6], [x+r*.4,y-r*.6], [x+r*.72,y-r*.08], [x+r*.26,y-r*.08]], '#b7e7d4');
+      poly(c, [[x-r*.18,y+r*.02], [x+r*.18,y+r*.02], [x,y+r*.65]], '#d3f3de');
+      drawSpark(c, x + r*.8, y-r*.9, 2, '#fff9db');
+    } else if (item.type === 'bag') {
+      const p = COLORS.bag;
+      const s = r / 10;
+      sprite(c, [
+        '....oo.oo....', '....ollol....', '.....ooo.....', '....ooooo....', '...olllloo...',
+        '..olllllllo..', '.ollllllllo..', '.ollllllllo..', 'ollllllllllo.', 'ollllllllllo.',
+        'ollllllllllo.', 'ollllllllllo.', '.ollllllllo..', '..oooooooo...',
+      ], { o:p[0], l:p[1] }, x - 6.5*s, y - 7*s, s);
+      rect(c, x - 2*s, y - 1.5*s, 3*s, s, '#fff2df');
+      rect(c, x + s, y - .5*s, s, 2*s, '#fff2df');
+      rect(c, x - s, y + 1.5*s, 2*s, s, '#fff2df');
+      rect(c, x - s, y + 2.5*s, s, s, '#fff2df');
+      rect(c, x - s, y + 4.5*s, s, s, '#fff2df');
+      rect(c, x - 4*s, y - 3*s, s, 3*s, p[2]);
+      drawSpark(c, x+r, y-r*.6, 2, '#fff2c7');
+    } else if (item.type === 'hotpot') {
+      drawHotpot(c, x, y, r / 12);
+    } else if (item.type === 'helmet') {
+      drawHelmet(c, x, y, r / 12);
+    }
+  }
+
+  function drawSpark(c, x, y, s, color) {
+    rect(c, x-s, y-3*s, 2*s, 6*s, color);
+    rect(c, x-3*s, y-s, 6*s, 2*s, color);
+  }
+
+  function drawHotpot(c, x, y, s = 3) {
+    sprite(c, [
+      '....w...w.....', '...w...w......', '....w...w.....', '..............',
+      '...oooooooo...', '..orrrryrrro..', '.orrprryprrro.', 'oooorryrrroooo',
+      'o..ommmmmmo..o', 'oooogmmmggoooo', '....oggggo....', '.....oooo.....',
+      '....f.y.f.....', '.....yyy......',
+    ], { w:'#fff1d5', o:'#8b6654', r:'#c96d50', y:'#efbc6a', p:'#e7bd95', m:'#b87859', g:'#d8a477', f:'#e99562' }, x-7*s, y-7*s, s);
+  }
+
+  function drawHelmet(c, x, y, s = 3) {
+    sprite(c, [
+      '.....oooo.....', '...ooggggoo...', '..ogggllgggo..', '.oggggllggggo.',
+      '.oggggllggggo.', 'ogggggllgggggo', 'oggggggggggggo', 'oooooooooooooo',
+      '.okkkkkkkkkko.', '..okkwwwwwko..', '..oggggggggo..', '...ooooooggo..',
+    ], { o:'#5f6a53', g:'#8e9b6c', l:'#afba85', k:'#4e574f', w:'#acc6b0' }, x-7*s, y-6*s, s);
+    rect(c, x + 6*s, y+4*s, 5*s, 3*s, '#d9cba7');
+    rect(c, x+7*s, y+3*s, s, 5*s, '#7e8367');
+    rect(c, x+5*s, y+5*s, 5*s, s, '#7e8367');
+  }
+
+const ANIMALS={
+  golden:['....ooooooo.....','...ogggggggo....','..omgggggggmo...','.ommgkkkkgmmmo..','.ommggggggmmmo..','.ommggwkwgmmmo..','..omgwwwwwmmo...','...ogggggggo....','....occccco.....','...ogggggggo....','..ogggggggggo...','..oggggggggggo..','..ogggoooggggo..','...ooo...oooo...'],
+  westie:['...oo.....oo....','..owwo...owwo...','..owwwowowwwo...','.owwwwwwwwwwwo..','owwwwwwwwwwwwwo.','.owwkkwwwkkwwo..','owwwwwwnwwwwwwo.','.owwwwwnwwwwwo..','..owwwwwwwwwo...','...occccccco....','..owwwwwwwwwo...','.owwwwwwwwwwwo..','..owwwwoowwwwo..','...oooo..oooo...'],
+  husky:['...oo.....oo....','..ommo...ommo...','..omwmogomwmo...','.ommmggggmmmmo..','ommmwwgggwwmmmo.','ommwewgggwewmmo.','omwwwwwkwwwwwmo.','.owwwwwnwwwwwo..','..ogwwwwwwwgo...','...occccccco....','..ogggwwwgggo...','.ogggwwwwwgggo..','..ogggoooggggo..','...ooo...oooo...']
+};
+function drawAnimal(c,pet,x,y,s=2){pet=pet||E.PETS[0];s*=.66+(E.level(pet)-1)*.17;const rows=ANIMALS[pet.type]||ANIMALS.golden;sprite(c,rows,{o:'#827263',g:pet.color,p:'#eaa99e',k:'#565953',m:pet.type==='husky'?'#707d84':'#c39a64',w:'#fff7e8',n:'#535b58',e:'#82b1c8',c:pet.collar||'#8d9f82'},x-8*s,y-7*s,s);}
+
+function drawCharacter(c,x,y,s=2,sleeping=false){if(sleeping){rect(c,x-12,y-3,24,15,'#efcd9c');rect(c,x-13,y-7,26,7,'#e3b962');rect(c,x-5,y+2,5,2,'#7d6c53');return;}
+sprite(c,['.....yyyyyyy.....','....yyylllyyy....','...yyyyyyyyyyy...','..yyyyyyyyyyyyy..','....sssssssss....','....sksssksss....','....spssspsss....','.....sssss.......','....ybbbyyy......','...yybbbbbys.....','...sybbbbbys.....','...sybbbbbys.....','.....ddddd.......','.....dd.dd.......','....kkk.kkk......'],{y:'#e7bc62',l:'#f8d88e',s:'#f4d4a1',b:'#697f80',d:'#526b6e',k:'#6e634f',p:'#dd9d8c'},x-8*s,y-12*s,s);}
+function portrait(p,target){target.replaceChildren();const art=document.createElement('canvas');art.width=120;art.height=112;const c=art.getContext('2d');c.imageSmoothingEnabled=false;if(['home','farm','hunt'].includes(p?.type)){rect(c,17,22,86,74,'#ede5ce');if(p.type==='home'){poly(c,[[25,55],[60,24],[95,55]],'#a99279');rect(c,34,53,53,36,'#d4b78b');rect(c,55,67,15,22,'#8c9475');rect(c,39,61,11,12,'#e9edcf');}if(p.type==='farm'){rect(c,32,72,57,13,'#b69b72');for(const x of [43,62,81]){rect(c,x,49,4,26,'#7b9a67');rect(c,x-10,44,12,7,'#97b67d');rect(c,x+4,37,11,9,'#97b67d');}}if(p.type==='hunt'){poly(c,[[60,30],[88,58],[60,87],[31,58]],'#94aa85');poly(c,[[60,38],[72,68],[60,62],[48,68]],'#f7efda');}}else drawAnimal(c,p||E.PETS[0],60,60,5);target.append(art);}
+function createBackground(){background=document.createElement('canvas');background.width=W;background.height=H;const c=background.getContext('2d'),b=E.biome(state.round),n=Math.floor((state.round-1)/3);c.imageSmoothingEnabled=false;
+rect(c,0,0,W,ground,b.sky);drawCloud(c,44,26,.8);if(n!==6){drawCloud(c,440,33,.65);rect(c,672,29,38,38,n===5?'#f6f2dc':'#f2ce98');}
+if(n===0){poly(c,[[0,ground],[0,100],[70,100],[70,74],[170,74],[170,102],[250,102],[250,126],[480,126],[480,80],[570,80],[570,57],[640,57],[640,98],[800,98],[800,ground]],'#c3cba6');for(const x of [70,134,680,743])drawTree(c,x,ground-3,x%2?1:.8,b.mount);}
+if(n===1){rect(c,0,ground-30,W,32,'#9ac5cb');for(const x of [0,80,610,710]){poly(c,[[x,ground],[x,62],[x+35,62],[x+35,35],[x+90,35],[x+90,71],[x+130,71],[x+130,ground]],b.mount);poly(c,[[x+15,60],[x+35,60],[x+35,35],[x+75,35],[x+75,48],[x+90,48],[x+90,60]],'#d5e4df');}for(let x=220;x<570;x+=60)rect(c,x,ground-21+(x%13),31,3,'#d3e9df');}
+if(n===2){for(const [x,y,w]of [[40,52,95],[190,82,90],[530,47,110],[680,77,82]]){rect(c,x,y,w,ground-y,b.mount);rect(c,x+10,y-13,w-20,14,'#d49677');for(let z=y+14;z<ground;z+=20)rect(c,x,z,w,6,z%40?'#e1ac82':'#a96654');}poly(c,[[0,ground],[80,ground-20],[220,ground-8],[390,ground-35],[600,ground-10],[800,ground-30],[800,ground]],'#bd8060');}
+if(n===3){for(let x=20;x<W;x+=89){drawTree(c,x,ground-7,1.8+(x%4)*.12,b.mount);rect(c,x+12,45,2,ground-70,'#a1b98c');}rect(c,0,ground-50,W,14,'#cce0c64a');drawCloud(c,290,ground-61,1.8);}
+if(n===4){poly(c,[[0,ground],[0,110],[130,69],[270,115],[460,82],[610,118],[730,85],[800,112],[800,ground]],'#e5c58c');poly(c,[[0,ground],[0,145],[140,115],[300,ground-12],[540,114],[800,ground-12],[800,ground]],b.mount);for(const x of [93,716]){rect(c,x,ground-48,10,50,'#9aab76');rect(c,x-13,ground-35,14,8,'#9aab76');rect(c,x-15,ground-51,7,22,'#9aab76');rect(c,x+8,ground-25,17,7,'#9aab76');rect(c,x+20,ground-43,7,22,'#9aab76');}}
+if(n===5){for(const [x,y]of [[-80,21],[90,51],[480,18],[680,58]]){poly(c,[[x,ground],[x+110,y],[x+230,ground]],b.mount);poly(c,[[x+72,y+44],[x+110,y],[x+150,y+45],[x+130,y+37],[x+110,y+54],[x+94,y+38]],'#f6f7ec');}for(const x of [57,728])drawTree(c,x,ground-5,1,'#7b9990');}
+if(n===6){for(let i=0;i<45;i++)rect(c,11+(i*73)%790,10+(i*29)%100,i%3?2:4,2,'#d9d5c4');poly(c,[[0,ground],[100,ground-18],[210,ground-88],[280,ground-88],[370,ground],[510,ground],[610,ground-120],[640,ground-120],[800,ground]],b.mount);poly(c,[[610,ground-120],[640,ground-120],[665,ground-88],[630,ground-98],[605,ground-86]],'#e4a782');rect(c,622,ground-105,9,43,'#c08079');}
+if(n===7){rect(c,0,ground-53,W,53,'#a3c8bf');for(const x of [35,160,590,705]){poly(c,[[x,ground-24],[x+40,ground-75],[x+105,ground-24]],b.mount);rect(c,x+10,ground-15,75,4,'#e9e1bf');}for(let x=0;x<800;x+=97)rect(c,x,ground-34+(x%7),49,3,'#e3f0df');}if(n===8){poly(c,[[0,ground],[0,100],[150,57],[300,111],[500,66],[800,110],[800,ground]],'#c1c9ad');for(let x=20;x<800;x+=35){rect(c,x,ground-23-(x%13),3,22,'#8c9f72');rect(c,x-4,ground-27-(x%13),11,8,x%2?'#e2b0b7':'#e7c581');}}rect(c,0,ground-5,W,10,b.accent);rect(c,0,ground+5,W,H,b.soil);for(let y=ground+92;y<H;y+=106){poly(c,[[0,y],[80,y-15],[240,y+11],[410,y-8],[610,y+18],[800,y-9],[800,H],[0,H]],y>H-140?b.deep:b.soil);}
+for(let i=0;i<140;i++){const x=(i*137+state.round*17)%800,y=ground+28+(i*67)%(H-ground-35);rect(c,x,y,3+(i%3)*3,3,i%3?'#fff9de36':'#574e4a18');}rect(c,0,H-16,W,16,b.deep);
+}
+function layout(){H=matchMedia('(max-width:680px)').matches?650:520;canvas.height=H;ground=H===650?172:148;anchor={x:400,y:ground+16};ctx.imageSmoothingEnabled=false;createBackground();positionItems();}
+function positionItems(){if(!state.items)return;state.items.forEach(item=>{item.x=item.nx*W;item.y=ground+130+item.ny*(H-ground-180);});}
+function initRound(){if(!state.items)state.items=E.generate(state);positionItems();game.hook={phase:'swing',angle:-.6,length:34,cargo:null};elapsed=-.55;createBackground();petSignature='';syncActors();}
+function dialogOpen(){return Boolean(document.querySelector('dialog[open]'));}
+function active(){return game.started&&scene==='mine'&&!state.settled&&!document.hidden&&!dialogOpen();}
+function persist(){try{const snapshot={...state,homePosition:{x:homePlayer.x,y:homePlayer.y},items:state.items?.map(it=>({...it,collected:it===game.hook.cargo?false:it.collected}))};localStorage.setItem(E.KEY,JSON.stringify(snapshot));storageOK=true;}catch{storageOK=false;}$('save-status').textContent=storageOK?'进度已保存 · 当前浏览器':'浏览器未允许保存 · 本次仍可继续玩';}
+function hookPoint(){return{x:anchor.x+Math.sin(game.hook.angle)*game.hook.length,y:anchor.y+Math.cos(game.hook.angle)*game.hook.length};}
+function segmentDistance(px,py,ax,ay,bx,by){const dx=bx-ax,dy=by-ay,k=Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/(dx*dx+dy*dy||1)));return Math.hypot(px-ax-k*dx,py-ay-k*dy);}
+function fire(){if(!active()||game.hook.phase!=='swing')return;game.hook.phase='extend';tone('fire');updateControls();}
+function stepMine(dt){elapsed+=dt;const h=game.hook;if(h.phase==='swing'){h.angle=Math.sin(elapsed*1.04)*1.28;return;}if(h.phase==='extend'){const before=hookPoint();h.length+=410*dt;const p=hookPoint(),hit=state.items.filter(i=>!i.collected).find(i=>segmentDistance(i.x,i.y,before.x,before.y,p.x,p.y)<i.r*.8+9);if(hit){hit.collected=true;h.cargo=hit;h.phase='return';tone('hook');}else if(p.x<18||p.x>782||p.y>H-22)h.phase='return';}else{h.length-=(h.cargo?.type==='gold'&&h.cargo.r>35?250:h.cargo?370:560)*dt;if(h.length<=34){const item=h.cargo;h.length=34;h.phase='swing';h.cargo=null;if(item)collect(item);}}updateControls();}
+function collect(item){
+  const reward=E.collect(state,item),names={gold:'黄金',diamond:'钻石',hotpot:'小火锅',helmet:'开黑头盔'};
+  if(item.type!=='bag')game.lastCatch=`${names[item.type]} +${item.value} 金币`;
+  if(reward?.kind==='pet'){
+    const p=reward.pet;showSurprise(p,`${p.name}，跟我回家吧`,(state.claimed.filter(id=>id.startsWith('pet-')).length===1&&secret?secret:p.message)+`\n${p.breed} · 从第 ${Math.min(E.TOTAL,p.joinsAt)} 局开始陪伴你。`);
+  }else if(reward?.kind==='skill'){
+    const messages={home:'抓到小家钥匙啦！\n第 3 局起就能回家，三房两厅和暖暖的小床都在等你。',farm:'种田技能已获得！\n现在可以开车买种子，把收成拿去卖，或带回厨房做饭。',hunt:'狩猎技能已获得！\n把任意一只狗狗养到 Lv.3，就能开启狩猎模式。\n狩猎地图留待下一次冒险。'};
+    showSurprise({type:reward.id},reward.title+'，收好啦',messages[reward.id]);
+  }
+  tone(item.type==='bag'?'surprise':'collect');updateUI();persist();if(item.type!=='bag')announce(`${names[item.type]}增加${item.value}金币。本局累计${state.roundIncome}金币。`);
+}
+function showSurprise(p,title,message){portrait(p,$('surprise-art'));$('surprise-kicker').textContent=typeof p.id==='number'?'问号袋里，藏着一位朋友':'问号袋里，藏着新生活';$('surprise-title').textContent=title;$('surprise-message').textContent=message;$('surprise-dialog').showModal();updateControls();}
+
+function finishRound(){game.hook={phase:'swing',angle:0,length:34,cargo:null};persist();updateUI();showSettlement();tone('finish');}
+function showSettlement(){
+  if(!state.settled)return;const b=E.biome(state.round),u=E.unlocks(state),pending=E.rewardForRound(state);
+  $('round-kicker').textContent=`${b.tag} / ${String(state.round).padStart(2,'0')} OF ${E.TOTAL}`;
+  $('round-title').textContent=state.round===E.TOTAL?'25 局旅行，圆满收工。':`第 ${state.round} 局，收工啦。`;
+  $('round-message').textContent=pending?'这一局没带回的问号袋，会在之后的矿洞再遇见。':state.round===E.TOTAL?'家、农田和五位小伙伴都在。可以继续生活，也可以重访矿洞。':state.round%3===0?`下一站：${E.biome(state.round+1).name}。换一片风景，继续走走。`:'带着收获，去看看自己的小世界吧。';
+  $('settlement-stats').textContent=`本局 +${state.roundIncome} 金币 · 黄金 ${state.roundGold} / 钻石 ${state.roundDiamonds}\n小金库 ${state.wallet} 金币 · 小伙伴 ${state.pets.length} / 5`;
+  $('next-round').textContent=state.round===E.TOTAL?'重访矿洞，再挖 30 秒':`前往第 ${state.round+1} 局`;$('round-home').hidden=!u.home;$('round-farm').hidden=!u.farm;portrait(state.pets.at(-1)||{type:'home'},$('round-pet'));if(!$('round-dialog').open)$('round-dialog').showModal();updateControls();
+}
+function nextRound(){if(!state.settled)return;document.querySelectorAll('dialog[open]').forEach(d=>d.close());state.round===E.TOTAL?E.replay(state):E.next(state);game.started=true;game.lastCatch='';scene='mine';initRound();updateUI();persist();tone('start');announce(`第 ${state.round} 局开始，30秒。`);}
+
+function startGame(){game.started=true;hideStart();if(state.settled)showSettlement();updateUI();tone('start');canvas.focus({preventScroll:true});}
+function hideStart(){document.body.classList.add('playing');$('start-overlay').classList.add('is-hidden');$('start-overlay').setAttribute('aria-hidden','true');$('start-btn').disabled=true;$('start-btn').tabIndex=-1;}
+function changeScene(target){resetStick();if(target==='home'&&!E.unlocks(state).home||['farm','shop'].includes(target)&&!E.unlocks(state).farm||target==='hunt'&&!E.unlocks(state).hunt)return;if(state.sleepUntil>Date.now()&&target!=='home'){toast('还在床上休息，等睡醒再出发吧。');return;}if(scene==='road')return;game.started=true;hideStart();document.querySelectorAll('dialog[open]').forEach(d=>d.close());sleepRequested=false;if(target==='shop'){travel={to:'shop',started:Date.now()};scene='road';}else{scene=target;if(scene==='mine'&&state.settled)showSettlement();}syncActors(true);updateUI();persist();}
+function driveBack(){if(scene!=='shop')return;travel={to:'farm',started:Date.now()};scene='road';updateUI();}
+function updateControls(){const ready=active()&&game.hook.phase==='swing';let text='下钩抓取';if(scene==='mine'){if(state.settled)text=state.round===E.TOTAL?'重访矿洞':'前往下一局';else if(game.hook.phase!=='swing')text=game.hook.phase==='extend'?'下钩中…':'正在收钩…';$('drop-btn').disabled=!state.settled&&!ready;$('play-hint').textContent=state.settled?'本局已结算，金币已存入小金库':!game.started?'点击开始 · 每局 30 秒':dialogOpen()?'倒计时暂停中':game.hook.phase==='swing'?'点画面 / 空格下钩':'收回宝藏后才计入金币';}else{$('drop-btn').disabled=scene==='road'||state.sleepUntil>Date.now();text=['home','farm','hunt'].includes(scene)?'回矿洞':scene==='shop'?'开车回农场':'正在路上…';$('play-hint').textContent=scene==='home'?'点空地走动 · 墙壁与家具会挡路':scene==='farm'?'点田地播种或收获':scene==='shop'?'在下方挑种子或卖作物':scene==='hunt'?'成年伙伴准备好了吗':'免费往返 · 很快就到';}$('drop-btn').querySelector('span').textContent=text;
+canvas.dataset.scene=scene;canvas.dataset.round=state.round;canvas.dataset.phase=game.hook.phase;canvas.setAttribute('aria-label',scene==='mine'?`第 ${state.round} 局，共25局。剩余 ${Math.ceil(state.remaining)} 秒。${state.settled?'本局已结束':game.hook.phase==='swing'?'点击下钩':'正在收钩'}。本局收入${state.roundIncome}金币。`:scene==='home'?'三房两厅的家。拖动虚拟摇杆或点击空地移动，走近家具和狗狗发现互动。':scene==='farm'?'六块田地。可在下方选择种子，点击地块播种或收获。':scene==='hunt'?'狩猎营地，选择成年伙伴开启狩猎模式。':'开车与种子商店场景。');}
+function updateUI(){
+  document.body.dataset.scene=scene;$('home-walkbar').hidden=scene!=='home';$('compact-balance').textContent=state.wallet.toLocaleString()+' 金币 · '+state.pets.length+'/5 伙伴';const u=E.unlocks(state),sleep=state.sleepUntil>Date.now();
+  const labels={mine:'⛏ 挖矿旅行',home:u.home?'⌂ 我们的小家':state.skills.home?'⌂ 第3局回家':'⌂ 寻找小家钥匙',farm:u.farm?'♧ 小农场':'♧ 寻找种田技能',shop:'▰ 种子商店',hunt:u.hunt?'♜ 狩猎营地':'♜ 第21局狩猎技能'};
+  for(const v of ['mine','home','farm','shop','hunt']){const b=$('nav-'+v);b.classList.toggle('selected',scene===v||scene==='road'&&v==='shop');b.setAttribute('aria-current',scene===v?'page':'false');b.disabled=scene==='road'||(sleep&&v!=='home')||(v==='home'&&!u.home)||(['farm','shop'].includes(v)&&!u.farm)||(v==='hunt'&&!u.hunt);b.textContent=labels[v];}
+  $('score').textContent=state.wallet.toLocaleString();$('gold-count').textContent=state.gold;$('diamond-count').textContent=state.diamonds;$('total-income').textContent=state.earned.toLocaleString();$('wallet-detail').textContent=`本局 +${state.roundIncome} · 种子支出 ${state.spent} · 卖菜 +${state.sold}`;$('income-detail').textContent=game.lastCatch||'本局收入只计算已收回的财物';
+  $('mine-label').textContent=scene==='mine'?`${E.biome(state.round).name} / ${String(state.round).padStart(2,'0')} · ${E.TOTAL}`:({home:'HOME / 三房两厅',farm:'FARM / 六块小田',shop:'SHOP / 山间种子铺',road:'ON THE ROAD / 免费往返',hunt:'HUNT / 狩猎营地'})[scene];
+  for(const name of ['home','farm','shop','hunt'])$(name+'-tools').hidden=scene!==name;
+  const bag=state.items?.find(i=>i.type==='bag'&&!i.collected),r=bag&&E.REWARDS.find(r=>r.id===bag.rewardId);
+  const bagText=r?(r.kind==='pet'?E.PETS.find(p=>p.id===r.petId).name:r.title):null;
+  $('round-goal').textContent=scene==='mine'?`每局 30 秒 · ${bagText?'有一只神秘口袋，等你带回家':'看看今天能带回什么'}`:scene==='home'?'在家慢慢走，看看身边的小惊喜':scene==='farm'?'收成可以卖钱，也可以留给厨房做饭':scene==='hunt'?'狩猎技能 + 任意一位成年伙伴 · 准备下一段冒险':'金币来自挖矿与卖菜 · 开车免费往返';
+  $('home-unlock').textContent=u.home?'⌂ 小家钥匙 · 已获得':state.skills.home?'⌂ 已有钥匙 · 第3局起回家':'⌂ 第2局问号袋 · 小家钥匙';$('home-unlock').classList.toggle('unlocked',u.home);
+  $('farm-unlock').textContent=u.farm?'♧ 种田技能 · 已获得':'♧ 第6局问号袋 · 种田技能';$('farm-unlock').classList.toggle('unlocked',u.farm);
+  $('hunt-unlock').textContent=E.huntReady(state)?'♜ 狩猎技能与成年伙伴 · 已准备好':u.hunt?'♜ 已有狩猎技能 · 还需成年伙伴':'♜ 第21局问号袋 · 狩猎技能';$('hunt-unlock').classList.toggle('unlocked',E.huntReady(state));
+  $('progress-label').textContent=`旅程进度 ${state.cleared} / ${E.TOTAL}`;
+  $('pet-mode').value=state.petMode;$('pet-count').textContent=state.pets.length+' / 5';const pending=state.pets.filter(p=>p.joinsAt>state.round&&!state.complete).length;
+  $('pet-caption').textContent=state.pets.length?`${E.companions(state).length} 位在身边${pending?' · '+pending+' 位下一局加入':''}。喂食 4 次可到 Lv.3。`:'只有五只指定狗狗，藏在不同局的问号袋里。';
+  renderRoster();$('biome-route').replaceChildren(...E.BIOMES.map((b,i)=>{const el=document.createElement('div');el.className='biome-chip'+(Math.floor((state.round-1)/3)===i?' current':state.cleared>=Math.min(E.TOTAL,(i+1)*3)?' done':'');el.innerHTML=`${b.name}<small>${String(i*3+1).padStart(2,'0')}—${String(Math.min(E.TOTAL,i*3+3)).padStart(2,'0')} / ${E.TOTAL}</small>`;return el;}));
+  updateClock();refreshActivities();updateControls();
+}
+
+function updateClock(){const n=Math.ceil(state.remaining),paused=!active();$('timer').textContent=scene==='mine'?(state.settled?'已结算':`${n}s${game.started&&paused?' · 暂停':''}`):scene==='home'&&state.sleepUntil>Date.now()?`${Math.ceil((state.sleepUntil-Date.now())/1000)}s 休息`:'自由活动';$('timer').classList.toggle('urgent',scene==='mine'&&n<=10&&!state.settled);$('timer').setAttribute('aria-label',scene==='mine'?`本局剩余${n}秒${paused?'，已暂停':''}`:'挖矿倒计时已暂停');}
+function renderRoster(){
+  const sig=state.pets.map(p=>p.id+':'+p.xp).join(',')+':'+state.round+':'+state.complete;if(sig===rosterSignature)return;rosterSignature=sig;$('pet-roster').replaceChildren();
+  state.pets.forEach(p=>{const el=document.createElement('div');el.className='pet-mini';const a=document.createElement('canvas');a.width=72;a.height=60;drawAnimal(a.getContext('2d'),p,36,29,3);el.append(a,document.createTextNode(p.name));const breed=document.createElement('small');breed.textContent=p.breed;const progress=document.createElement('small');progress.textContent=p.joinsAt>state.round&&!state.complete?'下局加入':`Lv.${E.level(p)} · ${E.adult(p)?'已成年':p.xp+'/4 成长'}`;el.append(breed,progress);$('pet-roster').append(el);});
+}
+
+function refreshActivities(){const now=Date.now(),sleep=state.sleepUntil>now;$('sleep-status').textContent=sleep?`休息中，还剩 ${Math.ceil((state.sleepUntil-now)/1000)} 秒`:sleepRequested?'正在走向主卧…':'点击空地走过去';$('sleep-btn').disabled=sleep||sleepRequested;$('stop-btn').disabled=sleep;$('sleep-btn').textContent=sleep?'睡个好觉，正在休息':sleepRequested?'正在走向床边…':'去床上睡 30 秒';document.querySelectorAll('[data-room]').forEach(b=>b.disabled=sleep);
+if(scene==='farm'){const sel=$('seed-select');const old=sel.value||selectedSeed,seedSignature=E.CROPS.map(c=>state.seeds[c.id]).join(',');if(sel.dataset.inventory!==seedSignature){sel.dataset.inventory=seedSignature;sel.replaceChildren(...E.CROPS.map(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=`${c.name} · 库存 ${state.seeds[c.id]} 颗`;return o;}));sel.value=old;}selectedSeed=sel.value;const plots=$('plot-buttons');if(!plots.children.length){for(let i=0;i<6;i++){const b=document.createElement('button');b.className='plot-button';b.append(document.createElement('strong'),document.createElement('span'));b.addEventListener('click',()=>plotAction(i));plots.append(b);}}state.plots.forEach((p,i)=>{const button=plots.children[i],c=E.CROPS.find(c=>c.id===p?.crop),g=E.growth(p,now);button.classList.toggle('ready',g>=1);button.children[0].textContent=p?`${i+1} 号田 · ${c.name}`:`${i+1} 号空田`;button.children[1].textContent=p?(g>=1?'成熟啦 · 点击收获':`生长中 · ${Math.ceil((1-g)*c.seconds)} 秒`):'点击播种';});$('harvest-all').disabled=!state.plots.some(p=>E.growth(p,now)>=1);$('produce-summary').textContent='篮子：'+E.CROPS.map(c=>`${c.name} ${state.produce[c.id]}`).join(' · ');}
+if(scene==='shop'){const total=E.CROPS.reduce((a,c)=>a+state.produce[c.id]*c.sell,0);$('sell-summary').textContent=total?`篮子里的作物共可卖 ${total} 金币`:'篮子里还没有作物，先买种子吧';$('sell-all').disabled=!total;$('shop-products').replaceChildren(...E.CROPS.map(c=>{const el=document.createElement('div');el.className='crop-product';const a=document.createElement('canvas');a.width=50;a.height=50;drawCrop(a.getContext('2d'),c,25,30,1,1.5);const info=document.createElement('div');info.innerHTML=`<h3>${c.name}</h3><p>种子 ${c.seed} · 回收 ${c.sell} · 每份净赚 ${c.sell-c.seed}<br>${c.seconds} 秒成熟 · 种子库存 ${state.seeds[c.id]} / 作物 ${state.produce[c.id]}</p>`;const buy=document.createElement('div');buy.className='crop-buy';for(const qty of [1,5]){const b=document.createElement('button');b.textContent=`买 ${qty} 颗 · ${c.seed*qty} 金币`;b.disabled=state.wallet<c.seed*qty;b.addEventListener('click',()=>{if(E.buy(state,c.id,qty)){persist();updateUI();toast(`买好 ${qty} 颗${c.name}种子，花费 ${c.seed*qty} 金币`);}});buy.append(b);}el.append(a,info,buy);return el;}));}refreshKitchen();refreshHunt();}
+function label(c,text,x,y,size=12,color='#827965',align='center'){if(H===650)size=Math.max(size,17);c.font=`${size}px "PingFang SC",sans-serif`;c.fillStyle=color;c.textAlign=align;c.fillText(text,x,y);}
+function drawMine(t){ctx.drawImage(background,0,0);drawMiner(ctx,t);E.companions(state).slice(0,5).forEach((p,i)=>{const walk=state.petMode==='roam'&&!reduceMotion.matches?Math.sin(t*.3+i)*20:0;drawAnimal(ctx,p,475+i*48+walk,ground-17,2.3,t);});rect(ctx,18,ground+20,236,58,'#fff7e6e6');label(ctx,`本局 +${state.roundIncome} 金币`,28,ground+43,17,'#806b4b','left');if(game.lastCatch)label(ctx,game.lastCatch,28,ground+66,12,'#789064','left');for(const it of state.items){if(it.collected)continue;rect(ctx,it.x-it.r*.7,it.y+it.r*.8,it.r*1.4,4,'#62594720');drawOre(ctx,it,it.x,it.y,0);}drawHook(ctx);}
+function drawHook(c){const p=hookPoint();c.save();c.strokeStyle='#8b7a55';c.lineWidth=3;c.beginPath();c.moveTo(400,anchor.y);c.lineTo(p.x,p.y);c.stroke();if(game.hook.cargo)drawOre(c,game.hook.cargo,p.x+Math.sin(game.hook.angle)*15,p.y+Math.cos(game.hook.angle)*15,elapsed);c.translate(p.x,p.y);c.rotate(-game.hook.angle);const closed=Boolean(game.hook.cargo);c.strokeStyle='#6e7465';c.lineWidth=5;c.lineJoin='miter';c.beginPath();c.moveTo(0,-5);c.lineTo(0,4);c.moveTo(0,2);c.lineTo(-11,10);c.lineTo(closed?-8:-13,18);c.lineTo(closed?-2:-8,23);c.moveTo(0,2);c.lineTo(11,10);c.lineTo(closed?8:13,18);c.lineTo(closed?2:8,23);c.stroke();rect(c,-3,-7,6,7,'#aaac8a');c.restore();}
+function carpet(c,x,y,w,h,color){rect(c,x,y,w,h,color);rect(c,x+5,y+5,w-10,h-10,'#ffffff20');}
+function bed(c,x,y,color){rect(c,x-5,y-5,90,110,'#a28b71');rect(c,x,y,80,100,'#eee4ce');rect(c,x+7,y+5,66,23,'#fff8e5');rect(c,x+4,y+33,72,63,color);rect(c,x+7,y+39,66,4,'#fff4db66');}
+function drawHome(t){const c=ctx;c.save();c.scale(1,H/520);rect(c,0,0,800,520,'#e4e5d4');rect(c,46,36,709,438,'#eddfc5');for(let y=40;y<470;y+=24){rect(c,50,y,700,1,'#cbb68f3a');for(let x=55+(y%48)*4;x<740;x+=110)rect(c,x,y,1,24,'#cbb68f3a');}
+rect(c,50,40,230,140,'#f1e3d2');rect(c,290,40,230,140,'#e4e7d5');rect(c,530,40,220,140,'#e9e0db');rect(c,610,230,140,120,'#e3e5d9');rect(c,610,360,140,110,'#dae3df');for(let y=365;y<470;y+=22)for(let x=615;x<750;x+=22)rect(c,x,y,19,19,'#e5ede4');
+carpet(c,135,275,200,140,'#d2c59d');carpet(c,426,245,150,113,'#e0c6a7');bed(c,80,60,'#d8b4a8');bed(c,320,60,'#b8c6a0');bed(c,560,60,'#b7c9cb');
+rect(c,70,260,55,100,'#7d927c');rect(c,78,267,39,37,'#a5b599');rect(c,78,314,39,37,'#a5b599');rect(c,170,300,100,55,'#b39b77');rect(c,178,307,84,40,'#d7bd92');rect(c,70,425,120,30,'#a99275');rect(c,90,409,80,19,'#626a66');rect(c,95,412,70,12,'#9eb4aa');
+rect(c,450,270,100,60,'#b69b75');rect(c,457,277,86,46,'#dac39c');for(const x of [461,516]){rect(c,x,253,24,13,'#9e9276');rect(c,x,335,24,13,'#9e9276');}rect(c,650,235,85,35,'#b1b8aa');rect(c,660,241,25,20,'#5e706d');rect(c,665,245,13,12,'#becbba');rect(c,700,241,25,20,'#d2c9ab');rect(c,690,380,45,65,'#f3eee0');rect(c,699,388,27,44,'#b2d0cc');
+// Thick walls, with true walkable doorway gaps.
+for(const w of E.WALLS){rect(c,w.x+3,w.y+3,w.w,w.h,'#b9b6a4');rect(c,w.x,w.y,w.w,w.h,'#faf4e5');rect(c,w.x,w.y,w.w,2,'#b4ad98');}
+for(const [x,y]of [[190,185],[420,185],[660,185]]){rect(c,x-18,y-3,36,5,'#c8b38e');c.strokeStyle='#c5b392';c.lineWidth=1;c.beginPath();c.arc(x-18,y-2,35,-Math.PI/2,0);c.stroke();}
+for(const x of [83,323,563])rect(c,x,30,120,7,'#a3c7c5');label(c,'主卧',222,66,13);label(c,'次卧',461,66,13);label(c,'客卧',702,66,13);label(c,'玄关 / 走廊',390,214,12,'#ab997a');label(c,'客厅',326,258,14);label(c,'餐厅',504,251,13);label(c,'厨房',674,310,13);label(c,'卫生间',663,456,12);label(c,'阳台',300,452,11);rect(c,230,426,140,33,'#b6c3a0');for(const x of [242,283,324]){rect(c,x,438,22,14,'#c29b7b');drawTree(c,x+10,438,.45,'#8a9e76');}
+if(state.tvOn){rect(c,95,412,70,12,'#cbb9b1');pixelHeart(c,120,411,.9,'#d2858f');}rect(c,713,275,26,49,'#f6f0da');rect(c,716,279,20,14,'#e4dac1');rect(c,716,297,20,24,'#e8e3d0');rect(c,716,300,2,8,'#a99a7a');rect(c,722,282,10,7,'#f2c2bd');for(let i=0;i<3;i++){const wet=Date.now()-state.plantWatered[i]<60000;if(wet){drawTree(c,252+i*41,438,.48,'#77976e');rect(c,248+i*41,444,5,3,'#8cbec4');}}
+for(const p of petActors)drawAnimal(c,p.pet,p.x,p.y,1.65,t);if(homePlayer.path.length&&!sleepRequested){const end=homePlayer.path.at(-1);c.strokeStyle='#bf9b76';c.lineWidth=1;c.strokeRect(end.x-7,end.y-7,14,14);}
+if(state.sleepUntil>Date.now()){drawCharacter(c,119,88,2,true);label(c,'z z Z',176,94,15,'#a78da0');label(c,`还剩 ${Math.ceil((state.sleepUntil-Date.now())/1000)} 秒`,195,121,11,'#a48778');}else drawCharacter(c,homePlayer.x,homePlayer.y,2);label(c,'这里有你，也有等你回家的小伙伴',400,506,12,'#87917b');c.restore();}
+function drawCrop(c,crop,x,y,g=1,s=1){const col=crop.color;if(g<.25){rect(c,x-2*s,y-5*s,4*s,9*s,'#7e9b5e');rect(c,x-9*s,y-9*s,8*s,4*s,'#a4b575');rect(c,x+2*s,y-12*s,9*s,5*s,'#a4b575');return;}const size=g<1?.72:1;c.save();c.translate(x,y);c.scale(s*size,s*size);if(crop.id==='carrot'){poly(c,[[-8,-11],[8,-11],[5,5],[0,14],[-4,5]],col);rect(c,-3,-20,5,12,'#77965e');rect(c,-11,-21,9,6,'#94ac70');rect(c,1,-24,10,7,'#94ac70');rect(c,-5,-6,7,2,'#f0c98d');}else{rect(c,-13,-10,26,22,col);rect(c,-18,-5,36,12,col);rect(c,-8,-14,16,5,col);rect(c,-6,-19,10,8,'#81945e');if(crop.id==='pumpkin'){rect(c,-6,-9,3,19,'#bd8d51');rect(c,5,-9,3,19,'#e3be7c');}else rect(c,-9,-7,6,4,'#f2b2a0');}c.restore();}
+const PLOTS=Array.from({length:6},(_,i)=>({x:145+(i%3)*183,y:274+Math.floor(i/3)*124,w:146,h:91}));
+function drawFarm(t){const c=ctx;c.save();c.scale(1,H/520);rect(c,0,0,800,520,'#e9e9cf');rect(c,0,159,800,361,'#b9c393');drawCloud(c,65,33,1);drawCloud(c,530,53,.8);poly(c,[[0,168],[95,88],[210,164],[372,114],[540,169],[690,90],[800,167]],'#c4ceaa');for(const x of [55,740])drawTree(c,x,218,1.5,'#91a47a');rect(c,79,189,643,16,'#dbc7a1');for(let x=90;x<720;x+=36){rect(c,x,165,9,62,'#c8b18a');rect(c,x-4,161,17,8,'#d7c39f');}rect(c,0,471,800,49,'#d4cba7');for(const [i,b]of PLOTS.entries()){rect(c,b.x-6,b.y-7,b.w+12,b.h+14,'#9d8c66');rect(c,b.x,b.y,b.w,b.h,'#b69b72');for(let y=b.y+10;y<b.y+b.h;y+=20)rect(c,b.x+7,y,b.w-14,4,'#9c805d');const p=state.plots[i];if(p){const crop=E.CROPS.find(z=>z.id===p.crop),g=E.growth(p,Date.now());for(const x of [b.x+33,b.x+73,b.x+113])drawCrop(c,crop,x,b.y+50,g,1);label(c,g>=1?'成熟啦！':crop.name,b.x+b.w/2,b.y+80,12,g>=1?'#fff0c3':'#e2d2b1');}else label(c,`${i+1} 号空田`,b.x+b.w/2,b.y+51,14,'#e8d1a6');}
+drawCharacter(c,85,338,2.5);drawCar(c,706,424,.85);for(const p of E.companions(state).slice(0,4))drawAnimal(c,p,60+p.id%4*34,390,1.7,t);label(c,'选好种子，点击田地播种 / 收获',400,247,15,'#6c7b56');label(c,'开车去商店 →',698,484,12,'#8d7b59');c.restore();}
+function drawCar(c,x,y,s=1){c.save();c.translate(x,y);c.scale(s,s);rect(c,-46,-16,92,28,'#718f92');rect(c,-28,-37,53,24,'#718f92');rect(c,-20,-31,17,17,'#d3e6da');rect(c,3,-31,17,17,'#d3e6da');rect(c,-42,-7,9,8,'#f5d595');rect(c,33,-7,10,8,'#e2a795');for(const xx of [-27,28]){rect(c,xx-9,7,18,16,'#616b66');rect(c,xx-4,10,8,8,'#c6c6ac');}rect(c,-7,-10,10,3,'#e4d7ad');c.restore();}
+function drawShop(t){const c=ctx;c.save();c.scale(1,H/520);rect(c,0,0,800,520,'#e8e9d3');rect(c,0,225,800,295,'#bcc697');drawCloud(c,71,48,1);drawCloud(c,587,30,.8);for(const x of [75,719])drawTree(c,x,278,1.5,'#9bae7c');rect(c,162,157,476,218,'#e8d9b7');rect(c,144,135,514,31,'#a6826a');poly(c,[[140,138],[200,88],[599,88],[658,138]],'#8c9d85');rect(c,274,105,252,35,'#f6ecd2');label(c,'山 间 种 子 铺',400,129,19,'#8d7c5c');for(let x=168;x<638;x+=47)rect(c,x,163,45,32,x%2?'#c99e86':'#f1d7b3');rect(c,188,214,147,105,'#9cae99');rect(c,211,228,101,78,'#cfdbbe');rect(c,481,214,129,105,'#9cae99');rect(c,502,229,86,76,'#cfdbbe');rect(c,364,220,77,155,'#9b947c');rect(c,375,231,55,119,'#b6c6aa');rect(c,419,291,5,5,'#e2c58d');E.CROPS.forEach((crop,i)=>{rect(c,210+i*48,256,37,43,'#f8edcf');drawCrop(c,crop,228+i*48,284,1,.7);});drawCharacter(c,459,413,2.8);drawCar(c,235,442,1.05);label(c,'买种子，也把丰收带回来',400,480,15,'#7b8765');c.restore();}
+function drawRoad(t){const c=ctx;c.save();c.scale(1,H/520);rect(c,0,0,800,520,'#e7e7cc');rect(c,0,191,800,329,'#b8c491');drawCloud(c,87,49,1.2);drawCloud(c,556,38,.9);poly(c,[[0,210],[130,83],[280,202],[410,116],[580,205],[703,102],[800,181],[800,230],[0,230]],'#c5cba5');rect(c,0,311,800,108,'#9f9e88');rect(c,0,303,800,8,'#e5d9b3');rect(c,0,419,800,8,'#e5d9b3');for(let x=0;x<800;x+=90)rect(c,x,361,49,5,'#eee1bb');const progress=Math.min(1,(Date.now()-travel.started)/2600);drawCar(c,travel.to==='shop'?70+660*progress:730-660*progress,352,1.5);label(c,travel.to==='shop'?'开车去种子铺':'开车回小农场',400,257,23,'#7d8565');label(c,'不用油费，带着好心情就能出发',400,477,14,'#82906b');c.restore();}
+function syncActors(force=false){const pets=E.companions(state),sig=pets.map(p=>p.id).join(',')+scene;if(!force&&sig===petSignature)return;petSignature=sig;const places=[[300,380],[340,410],[360,350],[450,390],[510,410]];petActors=pets.map((pet,i)=>({pet,x:places[i][0],y:places[i][1],path:[],wait:Math.random()*3}));}
+function walkActor(a,dt,speed){let distance=dt*speed;while(a.path.length&&distance>0){const p=a.path[0],d=Math.hypot(p.x-a.x,p.y-a.y);if(d<=distance){a.x=p.x;a.y=p.y;a.path.shift();distance-=d;}else{a.x+=(p.x-a.x)/d*distance;a.y+=(p.y-a.y)/d*distance;distance=0;}}}
+function moveHome(x,y){if(state.sleepUntil>Date.now()){toast('正在休息，醒来后再走走吧。');return;}sleepRequested=false;const path=E.route(homePlayer,{x,y});if(!path.length){toast('这里是墙壁或家具，试着点一下旁边的空地。');return;}homePlayer.path=path;refreshActivities();}
+function requestSleep(){if(state.sleepUntil>Date.now())return;const p=E.route(homePlayer,{x:190,y:140});if(!p.length&&Math.hypot(homePlayer.x-190,homePlayer.y-140)>16){toast('先走到主卧门口，再试试。');return;}homePlayer.path=p;sleepRequested=true;refreshActivities();}
+function stepHome(dt){if(state.sleepUntil&&Date.now()>=state.sleepUntil){state.sleepUntil=0;homePlayer.x=190;homePlayer.y=140;homePlayer.path=[];homeNotice('睡醒啦，阳光和小伙伴都在等你。');persist();updateUI();}if(state.sleepUntil<=Date.now()){const kx=(heldKeys.has('ArrowRight')?1:0)-(heldKeys.has('ArrowLeft')?1:0),ky=(heldKeys.has('ArrowDown')?1:0)-(heldKeys.has('ArrowUp')?1:0);let dx=stick.x+kx,dy=stick.y+ky;const mag=Math.hypot(dx,dy);if(mag>.05){if(mag>1){dx/=mag;dy/=mag;}Object.assign(homePlayer,E.walkHome(homePlayer,dx*125*dt,dy*125*dt));homePlayer.path=[];sleepRequested=false;}else walkActor(homePlayer,dt,125);}if(sleepRequested&&!homePlayer.path.length){state.sleepUntil=Date.now()+30000;sleepRequested=false;homePlayer.x=190;homePlayer.y=140;persist();updateUI();}
+for(const a of petActors){if(state.petMode==='stay')continue;if(Math.hypot(a.x-homePlayer.x,a.y-homePlayer.y)<60&&clearSight(homePlayer,a)){a.path=[];a.wait=1.8;continue;}walkActor(a,dt,48+(a.pet.id%4)*5);a.wait-=dt;if(!a.path.length&&a.wait<=0){a.wait=2+Math.random()*4;let target=state.petMode==='follow'?{x:homePlayer.x+(Math.random()-.5)*100,y:homePlayer.y+(Math.random()-.5)*100}:{x:70+Math.random()*660,y:60+Math.random()*390};a.path=E.route(a,target);}}}
+function plotAction(i){const p=state.plots[i];if(p){if(E.harvest(state,i,Date.now())){toast('收获放进篮子啦，去商店可以卖出。');tone('collect');}else{const c=E.CROPS.find(c=>c.id===p.crop);toast(`再等 ${Math.ceil((1-E.growth(p,Date.now()))*c.seconds)} 秒就能收获啦。`);}}else if(E.plant(state,i,selectedSeed,Date.now())){toast('种下啦，一颗小期待正在长大。');tone('start');}else toast('这种种子用完了，开车去商店买一点吧。');persist();refreshActivities();}
+function render(ts){const rawDt=lastTime?Math.max(0,(ts-lastTime)/1000):0;lastTime=ts;const dt=Math.min(rawDt,.04);if(active()){if(E.tick(state,rawDt))finishRound();else stepMine(dt);}if(scene==='home'&&game.started&&!document.hidden&&!dialogOpen())stepHome(dt);refreshNearby();if(scene==='road'&&Date.now()-travel.started>=2600){scene=travel.to;travel=null;updateUI();persist();}game.particles=game.particles.filter(p=>p.life>0);game.particles.forEach(p=>{p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=90*dt;});if(scene==='mine')drawMine(ts/1000);else if(scene==='home')drawHome(ts/1000);else if(scene==='farm')drawFarm(ts/1000);else if(scene==='shop')drawShop(ts/1000);else if(scene==='hunt')drawHunt(ts/1000);else drawRoad(ts/1000);uiClock+=rawDt;if(uiClock>=1){uiClock=0;updateClock();updateControls();if(scene==='farm'||scene==='home')refreshActivities();if(game.started)persist();}requestAnimationFrame(render);}
+
+function announce(message){clearTimeout(announcementTimeout);$('game-announcement').textContent='';announcementTimeout=setTimeout(()=>{$('game-announcement').textContent=message;},80);}
+function toast(message){clearTimeout(toastTimeout);$('toast').textContent=message;$('toast').classList.add('visible');toastTimeout=setTimeout(()=>$('toast').classList.remove('visible'),3000);}
+
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); return true; }
+    } catch { /* Try the browser's older selection-based copy next. */ }
+    const field = document.createElement('textarea');
+    field.value = text; field.style.cssText = 'position:fixed;left:0;top:0;opacity:0;pointer-events:none';
+    (document.querySelector('dialog[open]') || document.body).append(field);
+    field.focus(); field.select(); field.setSelectionRange(0,text.length);
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch { /* A selectable link remains available. */ }
+    field.remove(); return copied;
+  }
+
+
+  function openNote() {
+    $('secret-message').value = secret;
+    $('character-count').textContent = `${secret.length} / 60`;
+    $('copy-link-box').hidden = true;
+    $('note-dialog').showModal(); updateControls();
+  }
+
+
+  async function saveNote(event) {
+    event.preventDefault();
+    const message = $('secret-message').value.trim().slice(0,60);
+    if (!message) { toast('先藏一句想对朋友说的话吧 ♡'); $('secret-message').focus(); return; }
+    secret = message; lastShareURL = makeShareURL(message);
+    // The fragment stays in the link; no message is sent to a server.
+    try { history.replaceState(null,'',lastShareURL); } catch { /* The generated link is still usable. */ }
+    $('share-link-field').value = lastShareURL; $('copy-link-box').hidden = false;
+    if (await copyText(lastShareURL)) toast('专属链接复制好啦，第一只口袋里藏着你的话 ♡');
+    else { $('share-link-field').focus(); $('share-link-field').select(); toast('专属链接已生成，长按链接就能复制'); }
+  }
+
+
+  function tone(kind) {
+    if (!soundEnabled) return;
+    try {
+      if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioContext.state === 'suspended') audioContext.resume().catch(()=>{});
+      const patterns = { fire:[260,190], hook:[500], collect:[660,880,1100], surprise:[523,659,784,1047], start:[392,523,659], finish:[523,659,784,659,1047] };
+      (patterns[kind] || patterns.collect).forEach((freq,i) => {
+        const osc = audioContext.createOscillator(); const gain = audioContext.createGain();
+        const time = audioContext.currentTime+i*.095;
+        osc.type = 'triangle'; osc.frequency.setValueAtTime(freq,time);
+        gain.gain.setValueAtTime(0,time); gain.gain.linearRampToValueAtTime(.045,time+.01);
+        gain.gain.exponentialRampToValueAtTime(.001,time+.14);
+        osc.connect(gain); gain.connect(audioContext.destination);
+        osc.start(time); osc.stop(time+.16);
+      });
+    } catch { /* Audio never blocks the game. */ }
+  }
+
+async function share(){const url=makeShareURL();if(navigator.share){try{await navigator.share({title:'小小矿工 · 和小伙伴一起生活',text:'25局、五只狗狗，还有挖矿、回家做饭与种田的小生活。',url});return;}catch(e){if(e.name==='AbortError')return;}}if(await copyText(url)){toast('链接已复制，发给朋友就能开始一段新旅程。');return;}$('fallback-link').value=url;$('share-dialog').showModal();}
+function updateSelect(id,options){const sel=$(id),sig=JSON.stringify(options);if(sel.dataset.options===sig)return;const before=sel.value;sel.dataset.options=sig;sel.replaceChildren(...options.map(([value,text])=>{const o=document.createElement('option');o.value=String(value);o.textContent=text;return o;}));if(options.some(([value])=>String(value)===before))sel.value=before;}
+function refreshKitchen(){
+  if(scene!=='home')return;const awake=state.sleepUntil<=Date.now(),near=E.atKitchen(homePlayer),farm=E.unlocks(state).farm;
+  $('kitchen-proximity').textContent=!awake?'先睡个好觉，醒来再做饭':near?'已经到厨房，可以开火啦':'靠近厨房后才能做饭';
+  $('food-ledger').textContent=`餐食 ${state.dishes} 份 · 矿工已吃 ${state.eatenMeals} 餐 · 可喂宠物 ${state.feedingCredits} 次`;
+  $('pantry-summary').textContent='收成篮子：'+E.CROPS.map(c=>`${c.name} ${state.produce[c.id]}`).join(' · ');
+  updateSelect('recipe-crop',E.CROPS.map(c=>[c.id,`${c.name} · 可用 ${state.produce[c.id]} 份`]));
+  updateSelect('feed-pet',E.companions(state).map(p=>[p.id,`${p.name} · ${p.breed} · Lv.${E.level(p)}`]));
+  $('cook-btn').disabled=!awake||!near||!farm||!state.produce[$('recipe-crop').value];$('eat-btn').disabled=!awake||state.dishes<1;
+  $('feed-btn').disabled=!awake||!$('feed-pet').value||state.dishes<1||state.feedingCredits<1;
+  $('kitchen-rule').textContent=farm?'1份收成做2份田园炖菜：矿工先吃1份，才能再喂1份。喂食4次可到Lv.3。':'先抓到种田技能，种出自己的食材，就可以做饭啦。';
+}
+function refreshHunt(){
+  if(scene!=='hunt')return;const ready=E.huntReady(state),adults=E.companions(state).filter(E.adult);
+  $('hunt-status').textContent=state.huntingMode?'狩猎模式已开启 · 地图准备中':ready?'狩猎技能和成年伙伴都准备好啦':'已有狩猎技能，还需要一位 Lv.3 成年伙伴';
+  $('hunt-growth').textContent=state.pets.map(p=>`${p.name} Lv.${E.level(p)}`).join(' · ')||'还没有遇见狗狗';
+  updateSelect('hunt-pet',adults.map(p=>[p.id,`${p.name} · ${p.breed} · Lv.${E.level(p)}`]));
+  $('hunt-enable').disabled=!ready||!adults.length;$('hunt-enable').textContent=state.huntingMode?'更换狩猎同伴':'开启狩猎模式';
+  $('hunt-skill-state').textContent=state.skills.hunt?'✓ 已获得狩猎技能':'○ 第21局起寻找狩猎技能';$('hunt-adult-state').textContent=adults.length?`✓ ${adults.length} 位成年伙伴可同行`:'○ 回家做饭，先吃再喂养狗狗';
+}
+function foodAction(kind){
+  let success=false,message='';
+  if(kind==='cook'){success=E.cook(state,$('recipe-crop').value,homePlayer);message='炖菜做好啦，得到 2 份餐食。先给自己盛一份吧。';}
+  if(kind==='eat'){success=E.eat(state);message='矿工吃好了，现在可以喂一份给狗狗。';}
+  if(kind==='feed'){const p=state.pets.find(p=>p.id===Number($('feed-pet').value));success=E.feed(state,p?.id);message=p?`${p.name} 吃饱啦 · Lv.${E.level(p)}${E.adult(p)?' 已成年，可以成为狩猎同伴':' · 成长 '+p.xp+'/4'}`:'';}
+  $('kitchen-notice').textContent=success?message:'还没有准备好，看看厨房、食材和餐食数量吧。';if(success){persist();updateUI();tone('collect');}
+}
+function drawHunt(t){
+  const c=ctx;c.save();c.scale(1,H/520);rect(c,0,0,800,520,'#e4e6d5');rect(c,0,185,800,335,'#b5c09b');poly(c,[[0,195],[160,83],[330,200],[530,82],[800,185],[800,240],[0,240]],'#a9baa4');for(const x of [55,130,689,756])drawTree(c,x,220,1.8,'#839d82');
+  poly(c,[[185,396],[315,232],[444,396]],'#8e9c78');poly(c,[[282,396],[315,286],[351,396]],'#687b66');rect(c,506,285,165,79,'#a88e6e');rect(c,511,290,155,69,'#eee0ba');label(c,'狩猎营地',589,321,21,'#8c7a58');label(c,state.huntingMode?'模式已开启':'等待成年伙伴',589,347,15,'#81906b');
+  drawCharacter(c,464,409,3);const pet=state.pets.find(p=>p.id===state.huntPetId)||E.companions(state).find(E.adult);if(pet){drawAnimal(c,pet,548,414,3,t);label(c,pet.name+' · Lv.'+E.level(pet),547,452,15,'#7a8264');}
+  label(c,'狩猎地图准备中 · 先把同伴照顾好',400,490,16,'#7d876b');c.restore();
+}
+
+// Household discoveries are shown beside nearby objects, never as a checklist.
+const stick={x:0,y:0,id:null},heldKeys=new Set();let nearTarget=null,nearSignature='',noticeUntil=0;
+function resetStick(){stick.x=stick.y=0;stick.id=null;heldKeys.clear();$('stick-knob').style.transform='translate(0,0)';}
+function homeNotice(message){$('explore-status').textContent=message;noticeUntil=Date.now()+5500;}
+function clearSight(a,b){for(let i=1;i<8;i++){const k=i/8;if(E.blocked(a.x+(b.x-a.x)*k,a.y+(b.y-a.y)*k))return false;}return true;}
+function refreshNearby(){
+  const box=$('near-actions');if(scene!=='home'||!game.started||dialogOpen()||state.sleepUntil>Date.now()||sleepRequested){box.hidden=true;nearTarget=null;return;}
+  const objects=[
+    {kind:'kitchen',x:665,y:300,range:73,title:'厨房里，留一点热乎乎的日常',action:'做点好吃的'},
+    {kind:'fridge',x:726,y:310,range:63,title:'冰箱上的小纸条',action:'打开冰箱'},
+    {kind:'tv',x:130,y:400,range:78,title:state.tvOn?'电视亮着，等你一起看':'客厅的电视',action:state.tvOn?'再看一会儿':'打开电视'},
+    {kind:'bed',x:190,y:140,range:65,title:'枕头已经放好啦',action:'睡个好觉 · 30秒'},
+    ...[0,1,2].map(i=>({kind:'plant',id:i,x:252+i*41,y:420,range:62,title:'阳台的小绿植',action:Date.now()-state.plantWatered[i]<60000?'叶子喝饱水啦':'浇一点水'})),
+    ...petActors.map(a=>({kind:'dog',id:a.pet.id,x:a.x,y:a.y,range:60,title:`${a.pet.name} · Lv.${E.level(a.pet)}`,action:'投喂 '+a.pet.name}))
+  ];
+  const candidates=objects.filter(o=>Math.hypot(homePlayer.x-o.x,homePlayer.y-o.y)<=o.range&&clearSight(homePlayer,o));
+  candidates.sort((a,b)=>Math.hypot(homePlayer.x-a.x,homePlayer.y-a.y)-Math.hypot(homePlayer.x-b.x,homePlayer.y-b.y));
+  const o=candidates[0];nearTarget=o||null;if(!o){box.hidden=true;nearSignature='';return;}box.hidden=false;
+  const hint=o.kind==='dog'?(state.dishes&&state.feedingCredits?'把留好的那一份，分给它吧':'先在厨房吃饭，再带一份来喂它'):o.kind==='plant'?'慢慢照顾，也会慢慢长大':'';
+  const sig=[o.kind,o.id,o.title,o.action,hint].join('|');if(sig!==nearSignature){nearSignature=sig;$('near-title').textContent=o.title;$('near-act').textContent=o.action;$('near-hint').textContent=hint;}
+  box.style.left=Math.max(23,Math.min(77,o.x/8))+'%';box.style.top=Math.max(13,Math.min(83,o.y/5.2-9))+'%';
+  if(Date.now()>noticeUntil)$('explore-status').textContent='在家慢慢走，总会遇见一点小温暖。';
+}
+function showHomeMoment(kind){
+  const tv=kind==='tv';$('home-moment').dataset.kind=kind;$('moment-title').textContent=tv?'I love you':'要按时吃饭哦～';$('moment-copy').textContent=tv?'一起看电视很开心哦！':'冰箱里有收成，厨房里有热饭。\n忙完了，也要记得好好照顾自己。';$('home-moment').showModal();resetStick();refreshNearby();
+}
+function exploreAction(){
+  const o=nearTarget;if(!o||scene!=='home'||state.sleepUntil>Date.now()||Math.hypot(homePlayer.x-o.x,homePlayer.y-o.y)>o.range||!clearSight(homePlayer,o))return;
+  if(o.kind==='dog'){
+    if(E.feed(state,o.id)){const p=state.pets.find(p=>p.id===o.id);homeNotice(`${p.name}吃饱啦，尾巴摇个不停。${E.adult(p)?'已经长大，可以陪你探索更远的地方。':'成长 '+p.xp+'/4'}`);tone('collect');updateUI();}
+    else homeNotice('先去厨房给自己盛一碗饭，再留一份给它吧。');
+  }else if(o.kind==='kitchen'){homePlayer.path=[];resetStick();refreshKitchen();$('kitchen-dialog').showModal();}
+  else if(o.kind==='tv'){if(!state.tvOn)E.toggleTV(state,homePlayer);showHomeMoment('tv');}
+  else if(o.kind==='fridge')showHomeMoment('fridge');
+  else if(o.kind==='bed')requestSleep();
+  else if(o.kind==='plant'){if(E.waterPlant(state,o.id,homePlayer)){homeNotice('水滴落在叶子上，今天的小绿植也被好好照顾了。');tone('collect');}else homeNotice('叶子已经喝饱水啦，过一会儿再来看它。');}
+  persist();refreshNearby();
+}
+$('near-act').addEventListener('click',exploreAction);$('kitchen-close').addEventListener('click',()=>$('kitchen-dialog').close());$('moment-close').addEventListener('click',()=>$('home-moment').close());$('tv-off').addEventListener('click',()=>{E.toggleTV(state,homePlayer);$('home-moment').close();persist();refreshNearby();});
+const joystick=$('joystick');
+function stickMove(event){const r=joystick.getBoundingClientRect(),dx=event.clientX-r.left-r.width/2,dy=event.clientY-r.top-r.height/2,d=Math.hypot(dx,dy),range=r.width*.31,k=Math.min(1,range/(d||1));stick.x=dx*k/range;stick.y=dy*k/range;if(d<r.width*.07)stick.x=stick.y=0;$('stick-knob').style.transform=`translate(${dx*k}px,${dy*k}px)`;}
+joystick.addEventListener('pointerdown',e=>{if(scene!=='home'||dialogOpen()||state.sleepUntil>Date.now())return;e.preventDefault();stick.id=e.pointerId;joystick.setPointerCapture(e.pointerId);homePlayer.path=[];sleepRequested=false;stickMove(e);});
+joystick.addEventListener('pointermove',e=>{if(e.pointerId===stick.id)stickMove(e);});for(const event of ['pointerup','pointercancel','lostpointercapture'])joystick.addEventListener(event,resetStick);
+window.addEventListener('blur',resetStick);document.addEventListener('visibilitychange',resetStick);document.addEventListener('keyup',e=>heldKeys.delete(e.key));
+document.addEventListener('keydown',e=>{if(scene==='home'&&!dialogOpen()&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)&&!['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)){e.preventDefault();heldKeys.add(e.key);homePlayer.path=[];sleepRequested=false;}});
+
+$('start-btn').addEventListener('click',startGame);
+$('drop-btn').addEventListener('click',()=>{if(scene==='mine')state.settled?nextRound():fire();else if(scene==='shop')driveBack();else changeScene('mine');});
+for(const v of ['mine','home','farm','shop','hunt'])$('nav-'+v).addEventListener('click',()=>changeScene(v));
+canvas.addEventListener('pointerdown',event=>{if(event.pointerType==='mouse'&&event.button!==0)return;if(!game.started||dialogOpen())return;event.preventDefault();canvas.focus({preventScroll:true});const r=canvas.getBoundingClientRect(),x=(event.clientX-r.left)/r.width*800,y=(event.clientY-r.top)/r.height*520;if(scene==='mine')fire();else if(scene==='home')moveHome(x,y);else if(scene==='farm'){const i=PLOTS.findIndex(p=>x>=p.x-5&&x<=p.x+p.w+5&&y>=p.y-5&&y<=p.y+p.h+5);if(i>=0)plotAction(i);else if(x>650&&y>380)changeScene('shop');}});
+document.addEventListener('keydown',event=>{if(event.repeat||dialogOpen()||['INPUT','TEXTAREA','SELECT','BUTTON','A'].includes(event.target.tagName))return;if(event.code==='Space'&&scene==='mine'){event.preventDefault();game.started?fire():startGame();}});
+$('recipe-crop').addEventListener('change',refreshKitchen);$('feed-pet').addEventListener('change',refreshKitchen);for(const kind of ['cook','eat','feed'])$(kind+'-btn').addEventListener('click',()=>foodAction(kind));$('hunt-enable').addEventListener('click',()=>{if(E.enableHunt(state,Number($('hunt-pet').value))){persist();updateUI();}});
+$('sleep-btn').addEventListener('click',requestSleep);$('stop-btn').addEventListener('click',()=>{homePlayer.path=[];sleepRequested=false;refreshActivities();persist();});document.querySelectorAll('[data-room]').forEach(b=>b.addEventListener('click',()=>{const [x,y]=b.dataset.room.split(',').map(Number);moveHome(x,y);}));
+$('pet-mode').addEventListener('change',e=>{state.petMode=e.target.value;petActors.forEach(p=>p.path=[]);persist();toast(state.petMode==='stay'?'小伙伴们会在原地等你。':state.petMode==='roam'?'让小伙伴们自由散散步吧。':'小伙伴们跟着你，一起走走。');});
+$('seed-select').addEventListener('change',e=>selectedSeed=e.target.value);
+$('farm-drive').addEventListener('click',()=>changeScene('shop'));$('shop-return').addEventListener('click',driveBack);
+$('sell-all').addEventListener('click',()=>{const amount=E.sell(state);persist();updateUI();if(amount){tone('collect');toast(`作物卖出 +${amount} 金币，已放进小金库。`);}});
+$('harvest-all').addEventListener('click',()=>{let n=0;state.plots.forEach((_,i)=>{if(E.harvest(state,i,Date.now()))n++;});if(n){persist();refreshActivities();tone('collect');toast(`收好 ${n} 份作物，去商店可以卖出。`);}});
+$('next-round').addEventListener('click',nextRound);$('round-home').addEventListener('click',()=>changeScene('home'));$('round-farm').addEventListener('click',()=>changeScene('farm'));$('round-dismiss').addEventListener('click',()=>$('round-dialog').close());
+$('surprise-close').addEventListener('click',()=>$('surprise-dialog').close());$('surprise-dialog').addEventListener('cancel',()=>{});
+$('restart-btn').addEventListener('click',()=>$('reset-dialog').showModal());$('reset-cancel').addEventListener('click',()=>$('reset-dialog').close());$('reset-confirm').addEventListener('click',()=>{document.querySelectorAll('dialog[open]').forEach(d=>d.close());state=E.fresh();scene='mine';game.started=true;homePlayer={x:330,y:390,path:[]};sleepRequested=false;rosterSignature='';game.lastCatch='';initRound();hideStart();updateUI();persist();toast('新旅程开始，愿你一路都有好运。');});
+$('sound-btn').addEventListener('click',()=>{soundEnabled=!soundEnabled;$('sound-btn').classList.toggle('muted',!soundEnabled);$('sound-btn').setAttribute('aria-label',soundEnabled?'关闭音效':'开启音效');$('sound-btn').setAttribute('aria-pressed',String(soundEnabled));tone('start');toast(soundEnabled?'音效开启':'音效已关闭');});
+$('share-btn').addEventListener('click',share);$('note-btn').addEventListener('click',openNote);$('note-close').addEventListener('click',()=>$('note-dialog').close());$('note-form').addEventListener('submit',saveNote);$('secret-message').addEventListener('input',()=>{$('character-count').textContent=`${$('secret-message').value.length} / 60`;$('copy-link-box').hidden=true;});$('copy-note-link').addEventListener('click',async()=>{if(await copyText(lastShareURL))toast('专属链接已复制');else{$('share-link-field').focus();$('share-link-field').select();}});$('share-close').addEventListener('click',()=>$('share-dialog').close());$('fallback-copy').addEventListener('click',async()=>{if(await copyText($('fallback-link').value)){$('share-dialog').close();toast('分享链接已复制');}else{$('fallback-link').focus();$('fallback-link').select();}});
+document.querySelectorAll('dialog').forEach(d=>{d.addEventListener('close',()=>{lastTime=0;updateControls();updateClock();});});
+window.addEventListener('resize',layout);window.addEventListener('hashchange',()=>secret=readSecret());document.addEventListener('visibilitychange',()=>{lastTime=0;if(game.started)persist();});window.addEventListener('pagehide',persist);
+$('import-old').hidden=Boolean(raw)||!legacyRaw;$('import-old').addEventListener('click',()=>{state=E.load(legacyRaw);raw=legacyRaw;homePlayer={...state.homePosition,path:[]};game.lastCatch='';rosterSignature='';initRound();updateUI();persist();$('import-old').hidden=true;showResume();});
+function showResume(){$('start-title').textContent=state.complete?'欢迎回到你的小世界':'小伙伴在等你回来';$('start-copy').textContent=`第 ${state.round} / ${E.TOTAL} 局 · ${state.settled?'本局已结算':'剩余 '+Math.ceil(state.remaining)+' 秒'}\n小金库 ${state.wallet} 金币 · ${state.pets.length} 位小伙伴\n继续挖矿，或去已解锁的家园走走。`;$('start-btn').textContent='继续我的旅程 ↓';}
+layout();initRound();updateUI();if(raw)showResume();requestAnimationFrame(render);
+})();
+
+</script></body></html>
