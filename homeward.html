@@ -29,6 +29,8 @@
 @media(max-width:355px){.home-walkbar{grid-template-columns:67px 68px minmax(0,1fr);gap:7px;padding:9px 7px}.home-walkbar .joystick{width:68px;height:68px}.home-walkbar .stick-knob{width:32px;height:32px;left:17px;top:17px}.people-picker button{font-size:8px}.home-walkbar #explore-status{font-size:8px}}
 
 #kitchen-dialog .food-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#kitchen-dialog .food-buttons button{font-size:11px;line-height:1.7;padding:9px;min-height:48px;white-space:normal}#kitchen-dialog .kitchen-panel label{font-size:11px}#kitchen-dialog #food-ledger{line-height:1.8}
+
+#home-moment[data-kind="together"] .moment-screen{border-color:#c1a5ac;background:#f8e9dd}#home-moment[data-kind="together"] h2{font-size:24px}
 </style></head><body>  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <symbol id="i-heart" viewBox="0 0 24 24"><path d="M3 4h6v3h6V4h6v3h3v8h-3v3h-3v3h-3v3H9v-3H6v-3H3v-3H0V7h3Z" fill="currentColor"/></symbol>
@@ -231,7 +233,7 @@ const MinerLife = (() => {
     const p=s.residents.find(p=>p.id===id),b=BEDS.find(b=>b.id===bedId);if(!p||!b||p.sleepUntil>now||p.windowBed!==bedId||Math.hypot(position.x-b.access.x,position.y-b.access.y)>24)return null;
     p.sleepUntil=now+30000;p.bedId=bedId;p.positions.home={...b.access};
     const sleepers=s.residents.filter(p=>p.sleepUntil>now),split=sleepers.length===2&&sleepers[0].bedId!==sleepers[1].bedId,key=sleepers.map(p=>p.sleepUntil).join(':');
-    const easter=split&&s.splitSleepKey!==key;if(easter)s.splitSleepKey=key;return {easter};
+    const first=sleepers.length===2&&s.splitSleepKey!==key,easter=split&&first,goodnight=!split&&first;if(first)s.splitSleepKey=key;return {easter,goodnight};
   }
   function wakeResidents(s,now=Date.now()){const woke=[];for(const p of s.residents)if(p.sleepUntil&&p.sleepUntil<=now){const b=BEDS.find(b=>b.id===p.bedId)||BEDS[0];p.sleepUntil=0;p.bedId=null;p.windowBed=null;p.positions.home={...b.access};woke.push(p.id);}for(const[id,until]of Object.entries(s.dogRest))if(until<=now)delete s.dogRest[id];return woke;}
   function carryDog(s,who,id,position,dogPosition,now=Date.now()){if(!unlocks(s).home||!s.residents.some(p=>p.id===who&&p.sleepUntil<=now)||!companions(s).some(p=>p.id===id)||s.carrying[who]||Object.values(s.carrying).includes(id)||s.dogRest[id]>now||Math.hypot(position.x-dogPosition.x,position.y-dogPosition.y)>65)return false;s.carrying[who]=id;return true;}
@@ -669,7 +671,7 @@ function refreshNearby(){
  box.style.left=Math.max(23,Math.min(77,o.x/8))+'%';box.style.top=Math.max(13,Math.min(83,o.y/5.2-9))+'%';
  if(Date.now()>noticeUntil)$('explore-status').textContent=state.carrying[homePlayer.id]?'抱着小狗，去右上角的狗狗房找它的小窝吧。':scene==='home'?'一起回家，一起发现生活里的小温暖。':'选中一个小人，走近看看有什么可以做。';
 }
-function showHomeMoment(kind){const tv=kind==='tv',card=tv?E.tvCard(state):null;$('home-moment').dataset.kind=kind;$('moment-title').textContent=tv?card.title:kind==='apart'?'happy wife happy life':'要按时吃饭哦～';$('moment-copy').textContent=tv?card.copy:kind==='apart'?'别生气了嘛～\n矿工抱着枕头，小声说。':'冰箱里有收成，厨房里有热饭。\n忙完了，也要记得好好照顾自己。';$('home-moment').showModal();resetStick();refreshNearby();queueSave();}
+function showHomeMoment(kind){const tv=kind==='tv',card=tv?E.tvCard(state):null;$('home-moment').dataset.kind=kind;$('moment-title').textContent=tv?card.title:kind==='apart'?'happy wife happy life':kind==='together'?'爱你，明天见，晚安':'要按时吃饭哦～';$('moment-copy').textContent=tv?card.copy:kind==='apart'?'别生气了嘛～\n矿工抱着枕头，小声说。':kind==='together'?'把今天的疲惫留在枕头边。\n明天醒来，也想和你一起。':'冰箱里有收成，厨房里有热饭。\n忙完了，也要记得好好照顾自己。';$('home-moment').showModal();resetStick();refreshNearby();queueSave();}
 function exploreAction(){const o=nearTarget;if(!o||!walkingScene()||personSleeping()||Math.hypot(homePlayer.x-o.x,homePlayer.y-o.y)>o.range||!clearSight(homePlayer,o))return;
  if(o.kind==='sofa')scheduleSofa(false);else if(o.kind==='chair'){if(!scheduleDinner([homePlayer.id]))homeNotice('先去厨房做点饭，再过来坐下吃。');}
  else if(o.kind==='bath-door'){if(bathroomOccupant(homePlayer)&&!homePlayer.doorWaitUntil){bathroomWarning(homePlayer,bathroomOccupant(homePlayer));}else{homePlayer.doorAllowedUntil=Date.now()+8000;moveHome(650,410);}}
@@ -687,7 +689,7 @@ function moveHome(x,y){if(busyMeal(homePlayer)){homeNotice('这会儿还在做�
 function requestSleep(bedId='main'){if(busyMeal(homePlayer))return;cancelHousePlans(homePlayer.id);homePlayer.seatId=null;if(personSleeping())return;homePlayer.activity=null;if(state.carrying[homePlayer.id]){homeNotice('先把怀里的小狗送回它的小窝吧。');return;}const b=E.BEDS.find(b=>b.id===bedId)||E.BEDS[0],path=E.route(homePlayer,b.window);if(!path.length&&Math.hypot(homePlayer.x-b.window.x,homePlayer.y-b.window.y)>20)return;homePlayer.path=path;homePlayer.sleepJourney={bed:b.id,stage:'window'};homeNotice(homePlayer.name+'先走到窗边，再轻轻躺下。');refreshPeopleUI();}
 function stepPeople(dt){
  for(const p of people){if(personSleeping(p)||busyMeal(p))continue;const previous={x:p.x,y:p.y};if(p===homePlayer){const kx=(heldKeys.has('ArrowRight')?1:0)-(heldKeys.has('ArrowLeft')?1:0),ky=(heldKeys.has('ArrowDown')?1:0)-(heldKeys.has('ArrowUp')?1:0);let dx=stick.x+kx,dy=stick.y+ky,mag=Math.hypot(dx,dy);if(mag>.05){cancelHousePlans(p.id);if(mag>1){dx/=mag;dy/=mag;}Object.assign(p,E.walkScene(scene,p,dx*125*dt,dy*125*dt));p.path=[];p.sleepJourney=null;p.activity=null;p.seatId=null;}}
- walkActor(p,dt,125);if(scene==='home')checkBathroomDoor(p,previous);if(scene==='home'&&p.sleepJourney&&!p.path.length){const j=p.sleepJourney,b=E.BEDS.find(b=>b.id===j.bed);if(j.stage==='window'){if(E.touchWindow(state,p.id,b.id,p)){j.stage='bed';p.path=E.route(p,b.access);}else p.sleepJourney=null;}else{const result=E.sleepPerson(state,p.id,b.id,p);p.sleepJourney=null;if(result?.easter)showHomeMoment('apart');if(result){homeNotice(p.name+'躺下了，愿今晚做个好梦。');updateUI();queueSave();}}}}
+ walkActor(p,dt,125);if(scene==='home')checkBathroomDoor(p,previous);if(scene==='home'&&p.sleepJourney&&!p.path.length){const j=p.sleepJourney,b=E.BEDS.find(b=>b.id===j.bed);if(j.stage==='window'){if(E.touchWindow(state,p.id,b.id,p)){j.stage='bed';p.path=E.route(p,b.access);}else p.sleepJourney=null;}else{const result=E.sleepPerson(state,p.id,b.id,p);p.sleepJourney=null;if(result?.easter)showHomeMoment('apart');else if(result?.goodnight)showHomeMoment('together');if(result){homeNotice(p.name+'躺下了，愿今晚做个好梦。');updateUI();queueSave();}}}}
  stepHousePlans();
  if(scene==='home')for(const a of petActors){const carrier=people.find(p=>state.carrying[p.id]===a.pet.id);if(carrier){const pos=personDrawPosition(carrier);a.x=pos.x+14;a.y=pos.y-8;a.path=[];continue;}if(state.dogRest[a.pet.id]>Date.now()){Object.assign(a,E.KENNELS[a.pet.id-1]);a.path=[];continue;}if(state.petMode==='stay')continue;if(Math.hypot(a.x-homePlayer.x,a.y-homePlayer.y)<60&&clearSight(homePlayer,a)){a.path=[];a.wait=1.8;continue;}walkActor(a,dt,48+(a.pet.id%4)*5);a.wait-=dt;if(!a.path.length&&a.wait<=0){a.wait=3+Math.random()*4;const target=state.petMode==='follow'?{x:homePlayer.x+(Math.random()-.5)*100,y:homePlayer.y+(Math.random()-.5)*100}:{x:70+Math.random()*660,y:60+Math.random()*390};a.path=E.route(a,target);}}
 }
